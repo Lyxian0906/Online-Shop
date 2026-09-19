@@ -8,8 +8,8 @@ export function HomePage() {
 			<div className="header">
 				<div className="left-section">
 					<a href="index.html" className="header-link">
-						<img className="logo" src="../../public/images/icons/lyxian-logo.png" />
-						<img className="mobile-logo" src="../../public/images/icons/lyxian-logo.png" />
+						<img className="logo" src="/images/icons/lyxian-logo.png" />
+						<img className="mobile-logo" src="/images/icons/lyxian-logo.png" />
 					</a>
 				</div>
 
@@ -40,7 +40,7 @@ export function HomePage() {
 						<div className="product-image-container">
 							<img
 								className="product-image"
-								src="../../public/images/products/zelda_botw.png"
+								src="/images/products/zelda_botw.png"
 							/>
 						</div>
 
@@ -51,7 +51,7 @@ export function HomePage() {
 						<div className="product-rating-container">
 							<img
 								className="product-rating-stars"
-								src="../../public/images/ratings/rating-45.png"
+								src="/images/ratings/rating-45.png"
 							/>
 							<div className="product-rating-count link-primary">87</div>
 						</div>
@@ -76,7 +76,7 @@ export function HomePage() {
 						<div className="product-spacer"></div>
 
 						<div className="added-to-cart">
-							<img src="../../public/images/icons/checkmark.png" />
+							<img src="/images/icons/checkmark.png" />
 							Added
 						</div>
 
@@ -89,7 +89,7 @@ export function HomePage() {
 						<div className="product-image-container">
 							<img
 								className="product-image"
-								src="../../public/images/products/re7_p5.png"
+								src="images/products/re7_p5.png"
 							/>
 						</div>
 
@@ -100,7 +100,7 @@ export function HomePage() {
 						<div className="product-rating-container">
 							<img
 								className="product-rating-stars"
-								src="../../public/images/ratings/rating-35.png"
+								src="images/ratings/rating-35.png"
 							/>
 							<div className="product-rating-count link-primary">127</div>
 						</div>
@@ -125,7 +125,7 @@ export function HomePage() {
 						<div className="product-spacer"></div>
 
 						<div className="added-to-cart">
-							<img src="../../public/images/icons/checkmark.png" />
+							<img src="images/icons/checkmark.png" />
 							Added
 						</div>
 
@@ -138,7 +138,7 @@ export function HomePage() {
 						<div className="product-image-container">
 							<img
 								className="product-image"
-								src="../../public/images/products/zelds_OOT.png"
+								src="images/products/zelds_OOT.png"
 							/>
 						</div>
 
@@ -149,7 +149,7 @@ export function HomePage() {
 						<div className="product-rating-container">
 							<img
 								className="product-rating-stars"
-								src="../../public/images/ratings/rating-45.png"
+								src="images/ratings/rating-45.png"
 							/>
 							<div className="product-rating-count link-primary">56</div>
 						</div>
