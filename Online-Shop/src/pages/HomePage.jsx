@@ -1,3 +1,6 @@
+import './header.css';
+import './HomePage.css';
+
 export function HomePage() {
     //We can't return 2 pages so we wrap it into a segment
 	return (
