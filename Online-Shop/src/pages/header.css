@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(8, 79, 45);
+  background: linear-gradient(90deg, #1a0f3d 0%, #12082b 60%, #1a0f3d 100%);
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -13,6 +13,9 @@
   left: 0;
   right: 0;
   height: 60px;
+
+  border-bottom: 1px solid rgba(0, 212, 255, 0.25);
+  box-shadow: 0 2px 12px rgba(124, 77, 255, 0.3);
 }
 
 .header .left-section {
@@ -28,19 +31,23 @@
 .header .header-link {
   display: inline-block;
   padding: 6px 9.5px;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0);
+  color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .header .header-link:hover {
-  border: 1px solid white;
+  border: 1px solid #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .header .logo {
   height: 26px;
   margin-top: 1px;
+  filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
 }
 
 .header .mobile-logo {
@@ -56,6 +63,7 @@
     display: block;
     height: 26px;
     margin-top: 1px;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
   }
 }
 
@@ -78,16 +86,34 @@
   border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+
+  background-color: #241350;
+  color: #e6e0ff;
+  outline: none;
+}
+
+.header .search-bar::placeholder {
+  color: #9a8fd6;
+}
+
+.header .search-bar:focus {
+  box-shadow: inset 0 0 0 2px #00d4ff;
 }
 
 .header .search-button {
-  background-color: rgb(186, 255, 190);
+  background: linear-gradient(90deg, #7c4dff 0%, #00d4ff 100%);
   border: none;
   width: 45px;
   height: 40px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.header .search-button:hover {
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.7);
 }
 
 .header .search-icon {
@@ -127,6 +153,7 @@
 
 .header .cart-icon {
   width: 38px;
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
 }
 
 .header .cart-text {
@@ -136,14 +163,19 @@
 }
 
 .header .cart-quantity {
-  color: rgb(8, 79, 45);
+  color: #12082b;
   font-size: 14px;
   font-weight: 700;
+  background-color: #00d4ff;
+  border-radius: 50%;
 
   position: absolute;
-  top: 8.5px;
-  right: 46px;
+  top: 4.5px;
+  right: 42px;
 
-  width: 26px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
   text-align: center;
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
 }
