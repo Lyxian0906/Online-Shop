@@ -40,7 +40,7 @@
 }
 
 .header .header-link:hover {
-  border: 1px solid #00d4ff;
+  border: 1px solid #f3fdff;
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
@@ -101,7 +101,7 @@
 }
 
 .header .search-button {
-  background: linear-gradient(90deg, #7c4dff 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #f2f0f7 0%, #57319c 100%);
   border: none;
   width: 45px;
   height: 40px;

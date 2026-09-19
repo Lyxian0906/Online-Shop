@@ -1,5 +1,8 @@
 .home-page {
   margin-top: 60px;
+  background-color: #0d0620;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .home-page .products-grid {
@@ -15,6 +18,7 @@
        repeat(...) is a special property that works with
        display: grid; */
   grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
 }
 
 /* @media is used to create responsive design (making the
@@ -71,11 +75,21 @@
   padding-left: 25px;
   padding-right: 25px;
 
-  border-right: 1px solid rgb(240, 240, 240);
-  border-bottom: 1px solid rgb(240, 240, 240);
+  background: linear-gradient(160deg, #1a0f3d 0%, #12082b 100%);
+  border-right: 1px solid rgba(124, 77, 255, 0.15);
+  border-bottom: 1px solid rgba(124, 77, 255, 0.15);
+  border-radius: 8px;
 
   display: flex;
   flex-direction: column;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.home-page .product-container:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.25), 0 0 40px rgba(124, 77, 255, 0.15);
 }
 
 .home-page .product-image-container {
@@ -85,6 +99,9 @@
 
   height: 180px;
   margin-bottom: 20px;
+
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  border-radius: 8px;
 }
 
 .home-page .product-image {
@@ -98,6 +115,8 @@
 .home-page .product-name {
   height: 40px;
   margin-bottom: 5px;
+  color: #e6e0ff;
+  font-weight: 600;
 }
 
 .home-page .product-rating-container {
@@ -112,7 +131,7 @@
 }
 
 .home-page .product-rating-count {
-  color: rgb(25, 135, 84);
+  color: #fbfeff;
   cursor: auto;
   margin-top: 3px;
 }
@@ -120,6 +139,8 @@
 .home-page .product-price {
   font-weight: 700;
   margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(53, 12, 35, 0.719);
 }
 
 .home-page .product-quantity-container {
@@ -131,7 +152,7 @@
 }
 
 .home-page .added-to-cart {
-  color: rgb(25, 135, 84);
+  color: #00ffb3;
   font-size: 16px;
 
   display: flex;
@@ -154,4 +175,21 @@
   padding: 8px;
   height: 34px;
   margin-top: 1px;
+
+  background: linear-gradient(90deg, #7c4dff 0%, #edeff0 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.home-page .add-to-cart-button:hover {
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.home-page .add-to-cart-button:active {
+  transform: translateY(0);
 }
