@@ -5,6 +5,7 @@ export function HomePage() {
     //We can't return 2 pages so we wrap it into a segment
 	return (
 		<>
+            <Title>Home page</Title>
 			<div className="header">
 				<div className="left-section">
 					<a href="index.html" className="header-link">
