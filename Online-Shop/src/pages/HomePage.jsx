@@ -8,8 +8,8 @@ export function HomePage() {
 			<div className="header">
 				<div className="left-section">
 					<a href="index.html" className="header-link">
-						<img className="logo" src="images/logo-white.png" />
-						<img className="mobile-logo" src="images/mobile-logo-white.png" />
+						<img className="logo" src="../../public/images/icons/lyxian-logo.png" />
+						<img className="mobile-logo" src="../../public/images/icons/lyxian-logo.png" />
 					</a>
 				</div>
 
@@ -40,23 +40,23 @@ export function HomePage() {
 						<div className="product-image-container">
 							<img
 								className="product-image"
-								src="images/products/athletic-cotton-socks-6-pairs.jpg"
+								src="../../public/images/products/zelda_botw.png"
 							/>
 						</div>
 
 						<div className="product-name limit-text-to-2-lines">
-							Black and Gray Athletic Cotton Socks - 6 Pairs
+							Zelda Breath Of the Wild
 						</div>
 
 						<div className="product-rating-container">
 							<img
 								className="product-rating-stars"
-								src="images/ratings/rating-45.png"
+								src="../../public/images/ratings/rating-45.png"
 							/>
 							<div className="product-rating-count link-primary">87</div>
 						</div>
 
-						<div className="product-price">$10.90</div>
+						<div className="product-price">$60</div>
 
 						<div className="product-quantity-container">
 							<select>
@@ -76,7 +76,7 @@ export function HomePage() {
 						<div className="product-spacer"></div>
 
 						<div className="added-to-cart">
-							<img src="images/icons/checkmark.png" />
+							<img src="../../public/images/icons/checkmark.png" />
 							Added
 						</div>
 
@@ -89,23 +89,23 @@ export function HomePage() {
 						<div className="product-image-container">
 							<img
 								className="product-image"
-								src="images/products/intermediate-composite-basketball.jpg"
+								src="../../public/images/products/re7_p5.png"
 							/>
 						</div>
 
 						<div className="product-name limit-text-to-2-lines">
-							Intermediate Size Basketball
+							Resident Evel 7 Biohard - PS5 Edition
 						</div>
 
 						<div className="product-rating-container">
 							<img
 								className="product-rating-stars"
-								src="images/ratings/rating-40.png"
+								src="../../public/images/ratings/rating-35.png"
 							/>
 							<div className="product-rating-count link-primary">127</div>
 						</div>
 
-						<div className="product-price">$20.95</div>
+						<div className="product-price">$26.38</div>
 
 						<div className="product-quantity-container">
 							<select>
@@ -125,7 +125,7 @@ export function HomePage() {
 						<div className="product-spacer"></div>
 
 						<div className="added-to-cart">
-							<img src="images/icons/checkmark.png" />
+							<img src="../../public/images/icons/checkmark.png" />
 							Added
 						</div>
 
@@ -138,18 +138,18 @@ export function HomePage() {
 						<div className="product-image-container">
 							<img
 								className="product-image"
-								src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg"
+								src="../../public/images/products/zelds_OOT.png"
 							/>
 						</div>
 
 						<div className="product-name limit-text-to-2-lines">
-							Adults Plain Cotton T-Shirt - 2 Pack
+							The Legend Of Zelda: Ocarina Of Time
 						</div>
 
 						<div className="product-rating-container">
 							<img
 								className="product-rating-stars"
-								src="images/ratings/rating-45.png"
+								src="../../public/images/ratings/rating-45.png"
 							/>
 							<div className="product-rating-count link-primary">56</div>
 						</div>

@@ -45,7 +45,8 @@
 }
 
 .header .logo {
-  height: 26px;
+  height: 36px;
+  width: 200px;
   margin-top: 1px;
   filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
 }
