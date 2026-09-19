@@ -1,6 +1,6 @@
 import "./App.css";
-import { HomePage } from "./pages/HomePage";
-import { CheckoutPage } from './pages/CheckoutPage'
+import { HomePage } from "./pages/home_page/HomePage";
+import { CheckoutPage } from './pages/checkout/CheckoutPage'
 import { Routes, Route } from "react-router";
 function App() {
 	return (
