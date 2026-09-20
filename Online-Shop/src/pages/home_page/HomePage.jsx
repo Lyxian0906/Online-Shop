@@ -4,6 +4,11 @@ import "./HomePage.css";
 
 export function HomePage() {
 	//We can't return 2 pages so we wrap it into a segment
+	fetch('http://localhost:3000/api/products')
+	.then((response) => {
+		console.log(response)
+
+	})
 	return (
 		<>
 			<Header />
