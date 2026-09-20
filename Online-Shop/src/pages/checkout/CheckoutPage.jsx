@@ -11,7 +11,7 @@ export function CheckoutPage() {
 					<div className="checkout-header-left-section">
 						<Link to="/">
 							<img className="logo" src="/images/icons/lyxian-logo.png" />
-							<img className="mobile-logo" src="/images/icons/lyxian-logo.png" />
+							<img className="mobile-logo" src="/images/icons/favicon.png" />
 						</Link>
 					</div>
 
