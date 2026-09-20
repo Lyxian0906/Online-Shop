@@ -69,7 +69,7 @@ export function HomePage() {
 						</div>
 
 						<div className="product-name limit-text-to-2-lines">
-							Resident Evel 7 Biohard - PS5 Edition
+							Resident Evil 7 Biohard - PS5 Edition
 						</div>
 
 						<div className="product-rating-container">
