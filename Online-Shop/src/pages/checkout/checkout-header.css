@@ -1,8 +1,13 @@
+body{
+ 
+  background-color: #12082b;
+}
+
 .checkout-header {
   height: 60px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: white;
+  background: linear-gradient(90deg, #1a0f3d 0%, #12082b 60%, #1a0f3d 100%);
 
   display: flex;
   justify-content: center;
@@ -12,6 +17,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
+
+  border-bottom: 1px solid rgba(0, 212, 255, 0.25);
+  box-shadow: 0 2px 12px rgba(124, 77, 255, 0.3);
 }
 
 .checkout-header .header-content {
@@ -29,6 +37,7 @@
 .checkout-header .logo {
   height: 26px;
   margin-top: 0px;
+  filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
 }
 
 .checkout-header .mobile-logo {
@@ -51,6 +60,7 @@
   .checkout-header .mobile-logo {
     display: inline-block;
     height: 26px;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6));
   }
 }
 
@@ -61,16 +71,22 @@
 
   font-size: 22px;
   font-weight: 500;
+  color: #e6e0ff;
 
   display: flex;
   justify-content: center;
 }
 
 .checkout-header .return-to-home-link {
-  color: rgb(25, 135, 84);
+  color: #00d4ff;
 
   text-decoration: none;
   cursor: pointer;
+  transition: text-shadow 0.2s ease;
+}
+
+.checkout-header .return-to-home-link:hover {
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
 }
 
 @media (max-width: 1000px) {
@@ -100,6 +116,7 @@
 
 .checkout-header .checkout-header-right-section img {
   height: 32px;
+  filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
 }
 
 @media (max-width: 1000px) {
