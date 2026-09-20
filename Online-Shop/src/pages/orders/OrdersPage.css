@@ -11,12 +11,16 @@
      without needing a container. */
   margin-left: auto;
   margin-right: auto;
+
+  background-color: #0d0620;
+  color: #e6e0ff;
 }
 
 .orders-page .page-title {
   font-weight: 700;
   font-size: 26px;
   margin-bottom: 25px;
+  color: #ffffff;
 }
 
 .orders-page .orders-grid {
@@ -26,8 +30,8 @@
 }
 
 .orders-page .order-header {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(222, 222, 222);
+  background: linear-gradient(90deg, #1a0f3d 0%, #12082b 100%);
+  border: 1px solid rgba(124, 77, 255, 0.25);
 
   display: flex;
   align-items: center;
@@ -45,15 +49,18 @@
 
 .orders-page .order-header-label {
   font-weight: 700;
+  color: #9a8fd6;
 }
 
 .orders-page .order-date,
 .orders-page .order-total {
   margin-right: 45px;
+  color: #e6e0ff;
 }
 
 .orders-page .order-header-right-section {
   flex-shrink: 1;
+  color: #e6e0ff;
 }
 
 @media (max-width: 575px) {
@@ -87,10 +94,12 @@
 
 .orders-page .order-details-grid {
   padding: 40px 25px;
-  border: 1px solid rgb(222, 222, 222);
+  background: linear-gradient(160deg, #1a0f3d 0%, #12082b 100%);
+  border: 1px solid rgba(124, 77, 255, 0.25);
   border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: 0 0 20px rgba(124, 77, 255, 0.12);
 
   display: grid;
   grid-template-columns: 110px 1fr 220px;
@@ -120,19 +129,23 @@
 .orders-page .product-image-container img {
   max-width: 110px;
   max-height: 110px;
+  border-radius: 5px;
 }
 
 .orders-page .product-name {
   font-weight: 700;
   margin-bottom: 5px;
+  color: #e6e0ff;
 }
 
 .orders-page .product-delivery-date {
   margin-bottom: 3px;
+  color: #00ffb3;
 }
 
 .orders-page .product-quantity {
   margin-bottom: 8px;
+  color: #b8aee0;
 }
 
 .orders-page .buy-again-button {
@@ -144,6 +157,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: linear-gradient(90deg, #7c4dff 0%, #00d4ff 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.orders-page .buy-again-button:hover {
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.6);
+  transform: translateY(-1px);
 }
 
 .orders-page .buy-again-icon {
@@ -159,6 +184,18 @@
   width: 100%;
   font-size: 14px;
   padding: 8px;
+
+  background-color: transparent;
+  color: #00d4ff;
+  border: 1px solid #00d4ff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.orders-page .track-package-button:hover {
+  background-color: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
 }
 
 @media (max-width: 800px) {
