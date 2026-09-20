@@ -1,25 +1,25 @@
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
-    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    image: "images/products/re7_p5.png",
+    name: "Resident Evil 7 Biohard - PS5 Edition",
     rating: {
-      stars: 4.5,
+      stars: 4,
       count: 87
     },
     priceCents: 1090,
-    keywords: ["socks", "sports", "apparel"]
+    keywords: ["RE7", "Capcom", "Zombies"]
   },
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    image: "images/products/intermediate-composite-basketball.jpg",
-    name: "Intermediate Size Basketball",
+    image: "images/products/zelds_OOT.png",
+    name: "The Legend Of Zelda: Ocarina Of Time",
     rating: {
-      stars: 4,
+      stars: 4.5,
       count: 127
     },
-    priceCents: 2095,
-    keywords: ["sports", "basketballs"]
+    priceCents: 799,
+    keywords: ["nintendo", "zelda"]
   },
   {
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
