@@ -34,13 +34,13 @@ export const products = [
   },
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-    image: "images/products/2-slot-toaster-white.jpg",
-    name: "2 Slot Toaster - White",
+    image: "/images/products/zelda_botw.png",
+    name: "Zelda Breath Of the Wild",
     rating: {
       stars: 5,
-      count: 2197
+      count: 87
     },
-    priceCents: 1899,
+    priceCents: 6000,
     keywords: ["toaster", "kitchen", "appliances"]
   },
   {
