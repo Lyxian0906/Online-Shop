@@ -1,16 +1,16 @@
 import { Header } from "../../components/Header";
 import { products } from "../../data/products";
+import { useEffect } from "react"
+import axios from 'axios';
 import "./HomePage.css";
 
 export function HomePage() {
 	//We can't return 2 pages so we wrap it into a segment
-	fetch("http://localhost:3000/api/products")
+	axios.get("http://localhost:3000/api/products")
 		.then((response) => {
-			return response.json();
+			console.log(response.data)
 		})
-		.then((data) => {
-			
-		});
+		
 	return (
 		<>
 			<Header />
