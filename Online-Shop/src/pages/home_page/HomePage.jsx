@@ -1,13 +1,14 @@
 import { Header } from "../../components/Header";
-import { products } from "../../data/products";
 import { useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import "./HomePage.css";
 
 export function HomePage() {
+	const [products, setProducts] = useState([]);
 	useEffect(() => { 
 		axios.get("http://localhost:3000/api/products").then((response) => {
-			response.data;
+			setProducts(response.data)
 		});
 	}, []);
 	//We can't return 2 pages so we wrap it into a segment
