@@ -1,626 +1,944 @@
 [
-
   {
-    "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    "image": "images/products/re7_p5.png",
-    "name": "Resident Evil 7 Biohard - PS5 Edition",
-    "rating": {
-      "stars": 4,
-      "count": 87
-    },
-    "priceCents": 1090,
-    "keywords": [
-      "RE7",
-      "Capcom",
-      "Zombies"
-    ]
-  },
-  {
-    "id": "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    "image": "images/products/zelds_OOT.png",
-    "name": "The Legend Of Zelda: Ocarina Of Time",
+    "id": "3d67f004-b715-43b3-a7af-761b93adee53",
+    "image": "images/products/animal_crossing_new_horizons.png",
+    "name": "Animal Crossing: New Horizons",
     "rating": {
       "stars": 4.5,
-      "count": 127
+      "count": 58940
     },
-    "priceCents": 799,
+    "priceCents": 5999,
     "keywords": [
       "nintendo",
-      "zelda"
+      "switch",
+      "simulation"
     ]
   },
   {
-    "id": "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    "image": "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-    "name": "Adults Plain Cotton T-Shirt - 2 Pack",
+    "id": "fe318821-e578-4aca-8d3f-38dd48266dc9",
+    "image": "images/products/assassins_creed_mirage.png",
+    "name": "Assassin's Creed Mirage",
     "rating": {
-      "stars": 4.5,
-      "count": 56
+      "stars": 4,
+      "count": 8760
     },
-    "priceCents": 799,
+    "priceCents": 4999,
     "keywords": [
-      "tshirts",
-      "apparel",
-      "mens"
+      "ubisoft",
+      "action",
+      "adventure"
     ]
   },
   {
-    "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
-    "image": "/images/products/zelda_botw.png",
-    "name": "Zelda Breath Of the Wild",
+    "id": "fa06f0ce-455a-4826-800c-d555bd574f5a",
+    "image": "images/products/assassins_creed_shadows.png",
+    "name": "Assassin's Creed Shadows",
+    "rating": {
+      "stars": 4,
+      "count": 4230
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "ubisoft",
+      "action",
+      "adventure",
+      "ps5"
+    ]
+  },
+  {
+    "id": "c6b37438-51fc-4bac-bcd8-28794d8fd889",
+    "image": "images/products/astro_bot.png",
+    "name": "Astro Bot",
     "rating": {
       "stars": 5,
-      "count": 87
+      "count": 6540
     },
-    "priceCents": 6000,
+    "priceCents": 5999,
     "keywords": [
-      "toaster",
-      "kitchen",
-      "appliances"
+      "ps5",
+      "platformer"
     ]
   },
-
   {
-    "id": "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-    "image": "images/products/3-piece-cooking-set.jpg",
-    "name": "3 Piece Non-Stick, Black Cooking Pot Set",
+    "id": "6c263962-964b-4229-9b3c-35d8b0d57b13",
+    "image": "images/products/baldurs_gate_3.png",
+    "name": "Baldur's Gate 3",
+    "rating": {
+      "stars": 5,
+      "count": 41230
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "steam",
+      "pc",
+      "rpg"
+    ]
+  },
+  {
+    "id": "bf056482-a558-4d2c-a31a-a6328c3839a5",
+    "image": "images/products/bloodborne.png",
+    "name": "Bloodborne",
     "rating": {
       "stars": 4.5,
-      "count": 175
+      "count": 22340
+    },
+    "priceCents": 1999,
+    "keywords": [
+      "ps4",
+      "action",
+      "rpg"
+    ]
+  },
+  {
+    "id": "adbd972a-45ce-43b0-b3ab-2b599d1ce348",
+    "image": "images/products/cyberpunk_2077.png",
+    "name": "Cyberpunk 2077",
+    "rating": {
+      "stars": 4,
+      "count": 33210
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "steam",
+      "pc",
+      "rpg",
+      "action"
+    ]
+  },
+  {
+    "id": "825b7372-44fa-452d-8545-e896b835870b",
+    "image": "images/products/donkey_kong_bananza.png",
+    "name": "Donkey Kong Bananza",
+    "rating": {
+      "stars": 4.5,
+      "count": 3670
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "nintendo",
+      "switch2",
+      "platformer"
+    ]
+  },
+  {
+    "id": "b4cf1fbf-519a-48bb-a08f-2f092440f181",
+    "image": "images/products/elden_ring.png",
+    "name": "Elden Ring",
+    "rating": {
+      "stars": 4.5,
+      "count": 38760
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "steam",
+      "pc",
+      "action",
+      "rpg"
+    ]
+  },
+  {
+    "id": "d87b38ae-0d22-4e0b-b2e7-bf2fe5038459",
+    "image": "images/products/far_cry_6.png",
+    "name": "Far Cry 6",
+    "rating": {
+      "stars": 4,
+      "count": 9230
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "ubisoft",
+      "shooter",
+      "action"
+    ]
+  },
+  {
+    "id": "7e698b62-1233-41a6-bc5f-7733c479ecd4",
+    "image": "images/products/final_fantasy_vii_rebirth.png",
+    "name": "Final Fantasy VII Rebirth",
+    "rating": {
+      "stars": 4.5,
+      "count": 8760
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "ps5",
+      "rpg"
+    ]
+  },
+  {
+    "id": "64e6bf74-a061-4ca2-9336-5f31e7fe57f3",
+    "image": "images/products/fire_emblem_engage.png",
+    "name": "Fire Emblem Engage",
+    "rating": {
+      "stars": 4,
+      "count": 5430
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "nintendo",
+      "switch",
+      "strategy",
+      "rpg"
+    ]
+  },
+  {
+    "id": "7d76bd67-a1f7-48a1-9b81-3942d6ae8864",
+    "image": "images/products/ghost_of_tsushima_directors_cut.png",
+    "name": "Ghost of Tsushima Director's Cut",
+    "rating": {
+      "stars": 4.5,
+      "count": 9230
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "ps5",
+      "action",
+      "adventure"
+    ]
+  },
+  {
+    "id": "a5c09e4d-6b62-4eb1-9598-a75d5af508f3",
+    "image": "images/products/god_of_war_2018.png",
+    "name": "God of War",
+    "rating": {
+      "stars": 4.5,
+      "count": 31230
+    },
+    "priceCents": 1999,
+    "keywords": [
+      "ps4",
+      "action",
+      "adventure"
+    ]
+  },
+  {
+    "id": "618d76ef-5248-4a70-a45b-3f134780ddb3",
+    "image": "images/products/god_of_war_ragnarok.png",
+    "name": "God of War Ragnarok",
+    "rating": {
+      "stars": 4.5,
+      "count": 19870
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "ps5",
+      "action",
+      "adventure"
+    ]
+  },
+  {
+    "id": "bfb2323e-cc3c-4a8f-83da-a422ed95fd45",
+    "image": "images/products/hades_ii.png",
+    "name": "Hades II",
+    "rating": {
+      "stars": 4.5,
+      "count": 12340
+    },
+    "priceCents": 2999,
+    "keywords": [
+      "steam",
+      "pc",
+      "action",
+      "indie"
+    ]
+  },
+  {
+    "id": "28488d54-a894-4ea9-8f22-8c2add51bde0",
+    "image": "images/products/horizon_forbidden_west.png",
+    "name": "Horizon Forbidden West",
+    "rating": {
+      "stars": 4.5,
+      "count": 14230
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "ps5",
+      "action",
+      "adventure"
+    ]
+  },
+  {
+    "id": "c44be429-43b6-456c-b0cc-d4efb8332235",
+    "image": "images/products/just_dance_2024.png",
+    "name": "Just Dance 2024",
+    "rating": {
+      "stars": 4,
+      "count": 3210
+    },
+    "priceCents": 4999,
+    "keywords": [
+      "ubisoft",
+      "switch",
+      "party"
+    ]
+  },
+  {
+    "id": "e927cd2a-9436-4c6b-9ffa-779e584ad7f9",
+    "image": "images/products/kirby_and_the_forgotten_land.png",
+    "name": "Kirby and the Forgotten Land",
+    "rating": {
+      "stars": 4.5,
+      "count": 9980
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "nintendo",
+      "switch",
+      "platformer"
+    ]
+  },
+  {
+    "id": "6fbbe73e-edbf-4719-bd61-aca2483c7ac6",
+    "image": "images/products/luigis_mansion.png",
+    "name": "Luigi's Mansion",
+    "rating": {
+      "stars": 4,
+      "count": 5670
+    },
+    "priceCents": 2999,
+    "keywords": [
+      "nintendo",
+      "gamecube",
+      "adventure"
+    ]
+  },
+  {
+    "id": "34e3d24b-b2e8-4d28-a1b2-b1fbea8ef09f",
+    "image": "images/products/mario_kart_8_wiiu.png",
+    "name": "Mario Kart 8",
+    "rating": {
+      "stars": 4.5,
+      "count": 11230
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "mario",
+      "nintendo",
+      "wiiu",
+      "racing"
+    ]
+  },
+  {
+    "id": "195e6543-fb46-419c-a236-b95af22c99fc",
+    "image": "images/products/mario_kart_8_deluxe.png",
+    "name": "Mario Kart 8 Deluxe",
+    "rating": {
+      "stars": 4.5,
+      "count": 63210
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "mario",
+      "nintendo",
+      "switch",
+      "racing"
+    ]
+  },
+  {
+    "id": "29d9fcb9-c8f2-494b-9cf6-92cac8c919a4",
+    "image": "images/products/mario_kart_wii.png",
+    "name": "Mario Kart Wii",
+    "rating": {
+      "stars": 4.5,
+      "count": 22870
+    },
+    "priceCents": 2999,
+    "keywords": [
+      "mario",
+      "nintendo",
+      "wii",
+      "racing"
+    ]
+  },
+  {
+    "id": "10e22ce0-865a-4a99-be0e-d7198fa6ebf5",
+    "image": "images/products/mario_kart_world.png",
+    "name": "Mario Kart World",
+    "rating": {
+      "stars": 4.5,
+      "count": 4210
+    },
+    "priceCents": 7999,
+    "keywords": [
+      "mario",
+      "nintendo",
+      "switch2",
+      "racing"
+    ]
+  },
+  {
+    "id": "7adaf21a-eab7-492d-849a-6ace5ecdebfb",
+    "image": "images/products/mario_kart_double_dash.png",
+    "name": "Mario Kart: Double Dash",
+    "rating": {
+      "stars": 4.5,
+      "count": 9870
     },
     "priceCents": 3499,
     "keywords": [
-      "kitchen",
-      "cookware"
+      "mario",
+      "nintendo",
+      "gamecube",
+      "racing"
     ]
   },
   {
-    "id": "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-    "image": "images/products/women-plain-cotton-oversized-sweater-gray.jpg",
-    "name": "Cotton Oversized Sweater - Gray",
+    "id": "fe91d255-06ea-4503-9e6d-034fc6205461",
+    "image": "images/products/marvels_spider_man_ps4.png",
+    "name": "Marvel's Spider-Man",
     "rating": {
       "stars": 4.5,
-      "count": 317
+      "count": 24560
     },
-    "priceCents": 2400,
+    "priceCents": 3999,
     "keywords": [
-      "sweaters",
-      "apparel"
+      "ps4",
+      "action",
+      "adventure"
     ]
   },
   {
-    "id": "77919bbe-0e56-475b-adde-4f24dfed3a04",
-    "image": "images/products/luxury-towel-set.jpg",
-    "name": "2 Piece Luxury Towel Set - White",
+    "id": "61334f3c-a477-46c4-944a-073ce20eb40b",
+    "image": "images/products/marvels_spider_man_2.png",
+    "name": "Marvel's Spider-Man 2",
     "rating": {
       "stars": 4.5,
-      "count": 144
+      "count": 12340
     },
-    "priceCents": 3599,
+    "priceCents": 6999,
     "keywords": [
-      "bathroom",
-      "washroom",
-      "restroom",
-      "towels",
-      "bath towels"
+      "ps5",
+      "action",
+      "adventure"
     ]
   },
   {
-    "id": "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
-    "image": "images/products/facial-tissue-2-ply-8-boxes.jpg",
-    "name": "Ultra Soft Tissue 2-Ply - 8 Boxes",
+    "id": "6832e3c0-1731-41d0-b7ee-b01de9e80982",
+    "image": "images/products/metroid_dread.png",
+    "name": "Metroid Dread",
+    "rating": {
+      "stars": 4.5,
+      "count": 14200
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "nintendo",
+      "switch",
+      "metroid",
+      "action"
+    ]
+  },
+  {
+    "id": "eaec1e4f-bd3b-4ca7-9b17-48a91f7b99ac",
+    "image": "images/products/metroid_prime.png",
+    "name": "Metroid Prime",
+    "rating": {
+      "stars": 4.5,
+      "count": 10120
+    },
+    "priceCents": 3499,
+    "keywords": [
+      "nintendo",
+      "gamecube",
+      "metroid",
+      "action"
+    ]
+  },
+  {
+    "id": "39ecc28a-24a7-489d-8bff-536bda9bfbc5",
+    "image": "images/products/pikmin_2.png",
+    "name": "Pikmin 2",
     "rating": {
       "stars": 4,
-      "count": 99
+      "count": 4320
     },
-    "priceCents": 2374,
+    "priceCents": 2999,
     "keywords": [
-      "kleenex",
-      "tissues",
-      "kitchen",
-      "napkins"
+      "nintendo",
+      "gamecube",
+      "strategy"
     ]
   },
   {
-    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
-    "image": "images/products/women-striped-beach-dress.jpg",
-    "name": "Women's Striped Beach Dress",
+    "id": "24930e83-9397-431d-8e0e-0fc26c175ef5",
+    "image": "images/products/pikmin_4.png",
+    "name": "Pikmin 4",
     "rating": {
       "stars": 4.5,
-      "count": 235
+      "count": 8120
     },
-    "priceCents": 2970,
+    "priceCents": 5999,
     "keywords": [
-      "robe",
-      "swimsuit",
-      "swimming",
-      "bathing",
-      "apparel"
+      "nintendo",
+      "switch",
+      "strategy"
     ]
   },
   {
-    "id": "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-    "image": "images/products/women-sandal-heels-white-pink.jpg",
-    "name": "Women's Sandal Heels - Pink",
-    "rating": {
-      "stars": 4.5,
-      "count": 2286
-    },
-    "priceCents": 5300,
-    "keywords": [
-      "womens",
-      "shoes",
-      "heels",
-      "sandals"
-    ]
-  },
-  {
-    "id": "aad29d11-ea98-41ee-9285-b916638cac4a",
-    "image": "images/products/round-sunglasses-gold.jpg",
-    "name": "Round Sunglasses",
-    "rating": {
-      "stars": 4.5,
-      "count": 30
-    },
-    "priceCents": 3560,
-    "keywords": [
-      "accessories",
-      "shades"
-    ]
-  },
-  {
-    "id": "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
-    "image": "images/products/blackout-curtain-set-beige.jpg",
-    "name": "Blackout Curtains Set - Beige",
-    "rating": {
-      "stars": 4.5,
-      "count": 232
-    },
-    "priceCents": 4599,
-    "keywords": [
-      "bedroom",
-      "curtains",
-      "home"
-    ]
-  },
-  {
-    "id": "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
-    "image": "images/products/women-summer-jean-shorts.jpg",
-    "name": "Women's Summer Jean Shorts",
+    "id": "2000517f-a756-4602-b806-4984c225bf49",
+    "image": "images/products/pokemon_scarlet.png",
+    "name": "Pokemon Scarlet",
     "rating": {
       "stars": 4,
-      "count": 160
+      "count": 32100
     },
-    "priceCents": 1699,
+    "priceCents": 5999,
     "keywords": [
-      "shorts",
-      "apparel",
-      "womens"
+      "pokemon",
+      "nintendo",
+      "switch",
+      "rpg"
     ]
   },
   {
-    "id": "c2a82c5e-aff4-435f-9975-517cfaba2ece",
-    "image": "images/products/electric-steel-hot-water-kettle-white.jpg",
-    "name": "Electric Hot Water Kettle - White",
+    "id": "fc0adb62-1b14-48db-b1e4-c20177281649",
+    "image": "images/products/pokemon_violet.png",
+    "name": "Pokemon Violet",
+    "rating": {
+      "stars": 4,
+      "count": 31870
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "pokemon",
+      "nintendo",
+      "switch",
+      "rpg"
+    ]
+  },
+  {
+    "id": "53987cc0-5e86-40c4-9c15-ae364767a106",
+    "image": "images/products/prince_of_persia_the_lost_crown.png",
+    "name": "Prince of Persia: The Lost Crown",
+    "rating": {
+      "stars": 4.5,
+      "count": 5430
+    },
+    "priceCents": 4999,
+    "keywords": [
+      "ubisoft",
+      "platformer",
+      "action"
+    ]
+  },
+  {
+    "id": "1110a75e-9fb2-4651-8ef7-2af878ab2525",
+    "image": "images/products/rainbow_six_siege.png",
+    "name": "Rainbow Six Siege",
+    "rating": {
+      "stars": 4,
+      "count": 21340
+    },
+    "priceCents": 1999,
+    "keywords": [
+      "ubisoft",
+      "shooter",
+      "steam"
+    ]
+  },
+  {
+    "id": "0d381886-d1b7-4551-a11b-888c3caeefdd",
+    "image": "images/products/splatoon_wiiu.png",
+    "name": "Splatoon",
+    "rating": {
+      "stars": 4,
+      "count": 6540
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "nintendo",
+      "wiiu",
+      "shooter"
+    ]
+  },
+  {
+    "id": "5b3c86b6-903a-43b9-8bea-151397b71b5d",
+    "image": "images/products/splatoon_3.png",
+    "name": "Splatoon 3",
+    "rating": {
+      "stars": 4.5,
+      "count": 21030
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "nintendo",
+      "switch",
+      "shooter"
+    ]
+  },
+  {
+    "id": "733d6773-3a8c-4d93-8e27-2cfcf0dc409b",
+    "image": "images/products/star_wars_outlaws.png",
+    "name": "Star Wars Outlaws",
+    "rating": {
+      "stars": 4,
+      "count": 3120
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "ubisoft",
+      "action",
+      "adventure",
+      "ps5"
+    ]
+  },
+  {
+    "id": "fb68c89e-7428-45de-b79f-267e06f17669",
+    "image": "images/products/stardew_valley.png",
+    "name": "Stardew Valley",
     "rating": {
       "stars": 5,
-      "count": 846
+      "count": 45210
     },
-    "priceCents": 5074,
+    "priceCents": 1499,
     "keywords": [
-      "water kettle",
-      "appliances",
-      "kitchen"
+      "steam",
+      "pc",
+      "simulation",
+      "indie"
     ]
   },
   {
-    "id": "58b4fc92-e98c-42aa-8c55-b6b79996769a",
-    "image": "images/products/knit-athletic-sneakers-gray.jpg",
-    "name": "Waterproof Knit Athletic Sneakers - Gray",
-    "rating": {
-      "stars": 4,
-      "count": 89
-    },
-    "priceCents": 5390,
-    "keywords": [
-      "shoes",
-      "running shoes",
-      "footwear"
-    ]
-  },
-  {
-    "id": "a82c6bac-3067-4e68-a5ba-d827ac0be010",
-    "image": "images/products/straw-sunhat.jpg",
-    "name": "Straw Wide Brim Sun Hat",
-    "rating": {
-      "stars": 4,
-      "count": 215
-    },
-    "priceCents": 2200,
-    "keywords": [
-      "hats",
-      "straw hats",
-      "summer",
-      "apparel"
-    ]
-  },
-  {
-    "id": "1c079479-8586-494f-ab53-219325432536",
-    "image": "images/products/men-athletic-shoes-white.jpg",
-    "name": "Men's Athletic Sneaker - White",
-    "rating": {
-      "stars": 4,
-      "count": 229
-    },
-    "priceCents": 4590,
-    "keywords": [
-      "shoes",
-      "running shoes",
-      "footwear",
-      "mens"
-    ]
-  },
-  {
-    "id": "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
-    "image": "images/products/men-stretch-wool-sweater-black.jpg",
-    "name": "Men's Wool Sweater - Black",
+    "id": "90bcbccb-0b6c-4fab-b506-3f533fc39def",
+    "image": "images/products/super_mario_3d_world_wiiu.png",
+    "name": "Super Mario 3D World",
     "rating": {
       "stars": 4.5,
-      "count": 2465
+      "count": 8760
     },
-    "priceCents": 3374,
+    "priceCents": 3999,
     "keywords": [
-      "sweaters",
-      "apparel"
+      "mario",
+      "nintendo",
+      "wiiu",
+      "platformer"
     ]
   },
   {
-    "id": "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
-    "image": "images/products/bathroom-mat.jpg",
-    "name": "Bathroom Bath Mat 16 x 32 Inch - Grey",
+    "id": "d51b2b08-439b-4807-b0fd-bad3407d78a4",
+    "image": "images/products/super_mario_bros_wonder.png",
+    "name": "Super Mario Bros. Wonder",
     "rating": {
       "stars": 4.5,
-      "count": 119
+      "count": 15980
     },
-    "priceCents": 1850,
+    "priceCents": 5999,
     "keywords": [
-      "bathmat",
-      "bathroom",
-      "home"
+      "mario",
+      "nintendo",
+      "switch",
+      "platformer"
     ]
   },
   {
-    "id": "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
-    "image": "images/products/women-knit-ballet-flat-white.jpg",
-    "name": "Women's Ballet Flat - White",
-    "rating": {
-      "stars": 4,
-      "count": 326
-    },
-    "priceCents": 2640,
-    "keywords": [
-      "shoes",
-      "flats",
-      "womens",
-      "footwear"
-    ]
-  },
-  {
-    "id": "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
-    "image": "images/products/men-golf-polo-t-shirt-gray.jpg",
-    "name": "Men's Golf Polo Shirt - Gray",
-    "rating": {
-      "stars": 4.5,
-      "count": 2556
-    },
-    "priceCents": 1599,
-    "keywords": [
-      "tshirts",
-      "shirts",
-      "apparel",
-      "mens"
-    ]
-  },
-  {
-    "id": "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-    "image": "images/products/laundry-detergent-tabs.jpg",
-    "name": "Laundry Detergent Tabs, 50 Loads",
-    "rating": {
-      "stars": 4.5,
-      "count": 305
-    },
-    "priceCents": 2899,
-    "keywords": [
-      "bathroom",
-      "cleaning"
-    ]
-  },
-  {
-    "id": "e4f64a65-1377-42bc-89a5-e572d19252e2",
-    "image": "images/products/sky-leaf-branch-earrings.jpg",
-    "name": "Sterling Silver Leaf Branch Earrings",
-    "rating": {
-      "stars": 4.5,
-      "count": 52
-    },
-    "priceCents": 6799,
-    "keywords": [
-      "jewelry",
-      "accessories",
-      "womens"
-    ]
-  },
-  {
-    "id": "19c6a64a-5463-4d45-9af8-e41140a4100c",
-    "image": "images/products/duvet-cover-set-gray-queen.jpg",
-    "name": "Duvet Cover Set, Diamond Pattern",
-    "rating": {
-      "stars": 4,
-      "count": 456
-    },
-    "priceCents": 4399,
-    "keywords": [
-      "bedroom",
-      "bed sheets",
-      "sheets",
-      "covers",
-      "home"
-    ]
-  },
-  {
-    "id": "d2785924-743d-49b3-8f03-ec258e640503",
-    "image": "images/products/women-knit-beanie-pom-pom-blue.jpg",
-    "name": "Women's Knit Winter Beanie - Blue",
+    "id": "28ba3fd7-79f2-4899-b2ba-87c990199698",
+    "image": "images/products/super_mario_galaxy.png",
+    "name": "Super Mario Galaxy",
     "rating": {
       "stars": 5,
-      "count": 83
+      "count": 17650
     },
-    "priceCents": 1950,
+    "priceCents": 2999,
     "keywords": [
-      "hats",
-      "winter hats",
-      "beanies",
-      "apparel",
-      "womens"
+      "mario",
+      "nintendo",
+      "wii",
+      "platformer"
     ]
   },
   {
-    "id": "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
-    "image": "images/products/men-chino-pants-beige.jpg",
-    "name": "Men's Chino Pants - Beige",
+    "id": "2e0245d4-737d-42b9-b666-c38eba49015f",
+    "image": "images/products/super_mario_odyssey.png",
+    "name": "Super Mario Odyssey",
     "rating": {
       "stars": 4.5,
-      "count": 9017
+      "count": 27650
     },
-    "priceCents": 2290,
+    "priceCents": 5999,
     "keywords": [
-      "pants",
-      "apparel",
-      "mens"
+      "mario",
+      "nintendo",
+      "switch",
+      "platformer"
     ]
   },
   {
-    "id": "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
-    "image": "images/products/men-navigator-sunglasses-black.jpg",
-    "name": "Men's Navigator Sunglasses",
+    "id": "c31e134c-677c-40f8-a330-86812dbc3646",
+    "image": "images/products/super_mario_sunshine.png",
+    "name": "Super Mario Sunshine",
+    "rating": {
+      "stars": 4,
+      "count": 8340
+    },
+    "priceCents": 3499,
+    "keywords": [
+      "mario",
+      "nintendo",
+      "gamecube",
+      "platformer"
+    ]
+  },
+  {
+    "id": "8abeea5c-838b-4e38-b725-6ae0add8f240",
+    "image": "images/products/super_smash_bros_brawl.png",
+    "name": "Super Smash Bros. Brawl",
+    "rating": {
+      "stars": 4.5,
+      "count": 19870
+    },
+    "priceCents": 2999,
+    "keywords": [
+      "nintendo",
+      "wii",
+      "fighting"
+    ]
+  },
+  {
+    "id": "4eb73905-55e4-4948-aace-d75e7fb9770e",
+    "image": "images/products/super_smash_bros_melee.png",
+    "name": "Super Smash Bros. Melee",
+    "rating": {
+      "stars": 4.5,
+      "count": 15230
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "nintendo",
+      "gamecube",
+      "fighting"
+    ]
+  },
+  {
+    "id": "ed11f180-e5ae-48e7-a3ea-69a51d6a81a0",
+    "image": "images/products/super_smash_bros_ultimate.png",
+    "name": "Super Smash Bros. Ultimate",
+    "rating": {
+      "stars": 4.5,
+      "count": 41230
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "nintendo",
+      "switch",
+      "fighting"
+    ]
+  },
+  {
+    "id": "dd84e6c1-9623-4a71-a3e9-0f5134593151",
+    "image": "images/products/super_smash_bros_wiiu.png",
+    "name": "Super Smash Bros. for Wii U",
+    "rating": {
+      "stars": 4,
+      "count": 7890
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "nintendo",
+      "wiiu",
+      "fighting"
+    ]
+  },
+  {
+    "id": "81659118-291a-4184-92b0-de4a0abdb5c8",
+    "image": "images/products/the_last_of_us_part_ii.png",
+    "name": "The Last of Us Part II",
+    "rating": {
+      "stars": 4.5,
+      "count": 27890
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "ps4",
+      "action",
+      "adventure"
+    ]
+  },
+  {
+    "id": "d515e975-420d-4416-ac2f-eb93a0c4c14e",
+    "image": "images/products/zelda_breath_of_the_wild.png",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "rating": {
+      "stars": 4.5,
+      "count": 45210
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "switch",
+      "adventure"
+    ]
+  },
+  {
+    "id": "e89364dd-b880-4bbc-b641-e2ea0a76df9d",
+    "image": "images/products/zelda_echoes_of_wisdom.png",
+    "name": "The Legend of Zelda: Echoes of Wisdom",
+    "rating": {
+      "stars": 4.5,
+      "count": 5320
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "switch",
+      "adventure"
+    ]
+  },
+  {
+    "id": "2a17ec16-e328-4cc8-a0f5-94f130b99233",
+    "image": "images/products/zelda_links_awakening.png",
+    "name": "The Legend of Zelda: Link's Awakening",
+    "rating": {
+      "stars": 4.5,
+      "count": 12040
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "switch",
+      "adventure"
+    ]
+  },
+  {
+    "id": "18ffba3b-d51e-474f-bb5a-a6219fcf698d",
+    "image": "images/products/zelda_skyward_sword_hd.png",
+    "name": "The Legend of Zelda: Skyward Sword HD",
+    "rating": {
+      "stars": 4,
+      "count": 9870
+    },
+    "priceCents": 5999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "switch",
+      "adventure"
+    ]
+  },
+  {
+    "id": "462f2bf5-52ff-4344-8e22-fd49d2ea570c",
+    "image": "images/products/zelda_tears_of_the_kingdom.png",
+    "name": "The Legend of Zelda: Tears of the Kingdom",
+    "rating": {
+      "stars": 5,
+      "count": 38900
+    },
+    "priceCents": 6999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "switch",
+      "adventure"
+    ]
+  },
+  {
+    "id": "77717bc3-1518-482b-8651-7ae58fd59bfc",
+    "image": "images/products/zelda_wind_waker_gamecube.png",
+    "name": "The Legend of Zelda: The Wind Waker",
+    "rating": {
+      "stars": 4.5,
+      "count": 9210
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "gamecube",
+      "adventure"
+    ]
+  },
+  {
+    "id": "268c6c15-9a12-4aef-85c0-1671167eb5cc",
+    "image": "images/products/zelda_wind_waker_hd.png",
+    "name": "The Legend of Zelda: The Wind Waker HD",
+    "rating": {
+      "stars": 4.5,
+      "count": 7230
+    },
+    "priceCents": 3999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "wiiu",
+      "adventure"
+    ]
+  },
+  {
+    "id": "339fc7d5-f8b4-417c-bc6d-118f648f1214",
+    "image": "images/products/zelda_twilight_princess.png",
+    "name": "The Legend of Zelda: Twilight Princess",
+    "rating": {
+      "stars": 4.5,
+      "count": 14980
+    },
+    "priceCents": 2999,
+    "keywords": [
+      "zelda",
+      "nintendo",
+      "wii",
+      "adventure"
+    ]
+  },
+  {
+    "id": "c41b916e-8785-44d1-b06a-4fee23cd25af",
+    "image": "images/products/watch_dogs_legion.png",
+    "name": "Watch Dogs: Legion",
     "rating": {
       "stars": 3.5,
-      "count": 42
+      "count": 6120
     },
-    "priceCents": 3690,
+    "priceCents": 2999,
     "keywords": [
-      "sunglasses",
-      "glasses",
-      "accessories",
-      "shades"
+      "ubisoft",
+      "action",
+      "open world"
     ]
   },
   {
-    "id": "04701903-bc79-49c6-bc11-1af7e3651358",
-    "image": "images/products/men-brown-flat-sneakers.jpg",
-    "name": "Men's Brown Flat Sneakers",
-    "rating": {
-      "stars": 4.5,
-      "count": 562
-    },
-    "priceCents": 2499,
-    "keywords": [
-      "footwear",
-      "men",
-      "sneakers"
-    ]
-  },
-  {
-    "id": "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
-    "image": "images/products/non-stick-cooking-set-4-pieces.jpg",
-    "name": "Non-Stick Cook Set With Lids - 4 Pieces",
-    "rating": {
-      "stars": 4.5,
-      "count": 511
-    },
-    "priceCents": 6797,
-    "keywords": [
-      "cooking set",
-      "kitchen"
-    ]
-  },
-  {
-    "id": "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
-    "image": "images/products/vanity-mirror-pink.jpg",
-    "name": "Vanity Mirror with LED Lights - Pink",
-    "rating": {
-      "stars": 4.5,
-      "count": 130
-    },
-    "priceCents": 2549,
-    "keywords": [
-      "bathroom",
-      "washroom",
-      "mirrors",
-      "home"
-    ]
-  },
-  {
-    "id": "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
-    "image": "images/products/women-relaxed-lounge-pants-pink.jpg",
-    "name": "Women's Relaxed Lounge Pants - Pink",
-    "rating": {
-      "stars": 4.5,
-      "count": 248
-    },
-    "priceCents": 3400,
-    "keywords": [
-      "pants",
-      "apparel",
-      "womens"
-    ]
-  },
-  {
-    "id": "d339adf3-e004-4c20-a120-40e8874c66cb",
-    "image": "images/products/crystal-zirconia-stud-earrings-pink.jpg",
-    "name": "Crystal Zirconia Stud Earrings - Pink",
-    "rating": {
-      "stars": 4.5,
-      "count": 117
-    },
-    "priceCents": 3467,
-    "keywords": [
-      "accessories",
-      "womens"
-    ]
-  },
-  {
-    "id": "d37a651a-d501-483b-aae6-a9659b0757a0",
-    "image": "images/products/glass-screw-lid-food-containers.jpg",
-    "name": "Glass Screw Lid Containers - 3 Pieces",
+    "id": "0382abdf-7cbb-4c3e-92c9-78c3cc56982d",
+    "image": "images/products/wii_sports.png",
+    "name": "Wii Sports",
     "rating": {
       "stars": 4,
-      "count": 126
+      "count": 18230
     },
-    "priceCents": 2899,
+    "priceCents": 1999,
     "keywords": [
-      "food containers",
-      "kitchen"
+      "nintendo",
+      "wii",
+      "sports"
     ]
   },
   {
-    "id": "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
-    "image": "images/products/black-and-silver-espresso-maker.jpg",
-    "name": "Black and Silver Espresso Maker",
-    "rating": {
-      "stars": 4.5,
-      "count": 1211
-    },
-    "priceCents": 8250,
-    "keywords": [
-      "espresso makers",
-      "kitchen",
-      "appliances"
-    ]
-  },
-  {
-    "id": "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
-    "image": "images/products/blackout-curtains-set-teal.jpg",
-    "name": "Blackout Curtains Set 42 x 84-Inch - Teal",
-    "rating": {
-      "stars": 4.5,
-      "count": 363
-    },
-    "priceCents": 3099,
-    "keywords": [
-      "bedroom",
-      "home",
-      "curtains"
-    ]
-  },
-  {
-    "id": "8a53b080-6d40-4a65-ab26-b24ecf700bce",
-    "image": "images/products/bath-towel-set-gray-rosewood.jpg",
-    "name": "Bath Towels 2 Pack - Gray, Rosewood",
-    "rating": {
-      "stars": 4.5,
-      "count": 93
-    },
-    "priceCents": 2990,
-    "keywords": [
-      "bathroom",
-      "home",
-      "towels"
-    ]
-  },
-  {
-    "id": "10ed8504-57db-433c-b0a3-fc71a35c88a1",
-    "image": "images/products/athletic-skateboard-shoes-gray.jpg",
-    "name": "Athletic Skateboard Shoes - Gray",
+    "id": "e0988bd8-74a7-45c1-8e6c-f7629721fe53",
+    "image": "images/products/wii_sports_resort.png",
+    "name": "Wii Sports Resort",
     "rating": {
       "stars": 4,
-      "count": 89
+      "count": 12040
     },
-    "priceCents": 3390,
+    "priceCents": 2999,
     "keywords": [
-      "shoes",
-      "running shoes",
-      "footwear"
+      "nintendo",
+      "wii",
+      "sports"
     ]
   },
   {
-    "id": "77a845b1-16ed-4eac-bdf9-5b591882113d",
-    "image": "images/products/countertop-push-blender-black.jpg",
-    "name": "Countertop Push Blender - Black",
-    "rating": {
-      "stars": 4,
-      "count": 3
-    },
-    "priceCents": 10747,
-    "keywords": [
-      "food blenders",
-      "kitchen",
-      "appliances"
-    ]
-  },
-  {
-    "id": "bc2847e9-5323-403f-b7cf-57fde044a955",
-    "image": "images/products/men-cozy-fleece-hoodie-light-teal.jpg",
-    "name": "Men's Fleece Hoodie - Light Teal",
+    "id": "c520bbc8-a7a5-4da3-bb35-2ce0580c50c3",
+    "image": "images/products/xenoblade_chronicles_3.png",
+    "name": "Xenoblade Chronicles 3",
     "rating": {
       "stars": 4.5,
-      "count": 3157
+      "count": 6890
     },
-    "priceCents": 3800,
+    "priceCents": 5999,
     "keywords": [
-      "sweaters",
-      "hoodies",
-      "apparel",
-      "mens"
-    ]
-  },
-  {
-    "id": "36c64692-677f-4f58-b5ec-0dc2cf109e27",
-    "image": "images/products/artistic-bowl-set-6-piece.jpg",
-    "name": "Artistic Bowl and Plate Set - 6 Pieces",
-    "rating": {
-      "stars": 5,
-      "count": 679
-    },
-    "priceCents": 3899,
-    "keywords": [
-      "bowls set",
-      "kitchen"
-    ]
-  },
-  {
-    "id": "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
-    "image": "images/products/kitchen-paper-towels-8-pack.jpg",
-    "name": "2-Ply Kitchen Paper Towels - 8 Pack",
-    "rating": {
-      "stars": 4.5,
-      "count": 1045
-    },
-    "priceCents": 1899,
-    "keywords": [
-      "kitchen",
-      "kitchen towels",
-      "tissues"
+      "nintendo",
+      "switch",
+      "rpg"
     ]
   }
 ]
