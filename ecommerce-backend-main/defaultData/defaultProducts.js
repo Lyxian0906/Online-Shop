@@ -1,5 +1,5 @@
 export const defaultProducts = [
- 
+
   {
     "id": "3d67f004-b715-43b3-a7af-761b93adee53",
     "image": "images/products/animal_crossing_new_horizons.png",
