@@ -6,20 +6,23 @@ import "./HomePage.css";
 
 export function HomePage() {
 	const [products, setProducts] = useState([]);
+	const [cart, serCart] = useState([]);
 	useEffect(() => { 
 		axios.get("http://localhost:3000/api/products").then((response) => {
 			setProducts(response.data)
 		});
 		axios.get('http://localhost:3000/api/cart-items')
 		.then((response) => {
-			console.log(response.data)
+			serCart(response.data)
 		})
 	}, []);
+
+
 	//We can't return 2 pages so we wrap it into a segment
 
 	return (
 		<>
-			<Header />
+			<Header  cart={cart}/>
 			<title>Home page</title>
 
 			<div className="home-page">
