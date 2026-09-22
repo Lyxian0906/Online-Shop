@@ -10,6 +10,10 @@ export function HomePage() {
 		axios.get("http://localhost:3000/api/products").then((response) => {
 			setProducts(response.data)
 		});
+		axios.get('http://localhost:3000/api/cart-items')
+		.then((response) => {
+			console.log(response.data)
+		})
 	}, []);
 	//We can't return 2 pages so we wrap it into a segment
 
