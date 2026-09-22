@@ -10,7 +10,7 @@ import { OrdersPage } from "./pages/orders/OrdersPage";
 function App() {
 	const [cart, serCart] = useState([]);
 	useEffect(() => {
-		axios.get("/api/cart-items").then((response) => {
+		axios.get("/api/cart-items?expand=product").then((response) => {
 			serCart(response.data);
 		});
 	}, []);
