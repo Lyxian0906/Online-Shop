@@ -1,944 +1,1453 @@
 [
-  {
-    "id": "3d67f004-b715-43b3-a7af-761b93adee53",
-    "image": "images/products/animal_crossing_new_horizons.png",
-    "name": "Animal Crossing: New Horizons",
-    "rating": {
-      "stars": 4.5,
-      "count": 58940
+  [
+    {
+      "id": "a1e4531e-937c-40f5-9c0f-9ac9ba9f3382",
+      "image": "/images/products/animal_crossing_gamecube.png",
+      "name": "Animal Crossing",
+      "rating": {
+        "stars": 3.5,
+        "count": 3120
+      },
+      "priceCents": 1799,
+      "keywords": [
+        "nintendo",
+        "gamecube",
+        "simulation"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "simulation"
-    ]
-  },
-  {
-    "id": "fe318821-e578-4aca-8d3f-38dd48266dc9",
-    "image": "images/products/assassins_creed_mirage.png",
-    "name": "Assassin's Creed Mirage",
-    "rating": {
-      "stars": 4,
-      "count": 8760
+    {
+      "id": "b39d05f5-8599-4be1-ab2c-14b78970d31b",
+      "image": "/images/products/animal_crossing_new_horizons.png",
+      "name": "Animal Crossing: New Horizons",
+      "rating": {
+        "stars": 4.5,
+        "count": 58940
+      },
+      "priceCents": 4499,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "simulation"
+      ]
     },
-    "priceCents": 4999,
-    "keywords": [
-      "ubisoft",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "fa06f0ce-455a-4826-800c-d555bd574f5a",
-    "image": "images/products/assassins_creed_shadows.png",
-    "name": "Assassin's Creed Shadows",
-    "rating": {
-      "stars": 4,
-      "count": 4230
+    {
+      "id": "daaa0771-3567-4f39-94bc-6656330e2b66",
+      "image": "/images/products/assassins_creed_mirage.png",
+      "name": "Assassin's Creed Mirage",
+      "rating": {
+        "stars": 4,
+        "count": 8760
+      },
+      "priceCents": 3999,
+      "keywords": [
+        "ubisoft",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "ubisoft",
-      "action",
-      "adventure",
-      "ps5"
-    ]
-  },
-  {
-    "id": "c6b37438-51fc-4bac-bcd8-28794d8fd889",
-    "image": "images/products/astro_bot.png",
-    "name": "Astro Bot",
-    "rating": {
-      "stars": 5,
-      "count": 6540
+    {
+      "id": "555908be-f1df-4c4d-9e9b-cb83eff19cb8",
+      "image": "/images/products/assassins_creed_shadows.png",
+      "name": "Assassin's Creed Shadows",
+      "rating": {
+        "stars": 4,
+        "count": 4230
+      },
+      "priceCents": 6999,
+      "keywords": [
+        "ubisoft",
+        "action",
+        "adventure",
+        "ps5"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "ps5",
-      "platformer"
-    ]
-  },
-  {
-    "id": "6c263962-964b-4229-9b3c-35d8b0d57b13",
-    "image": "images/products/baldurs_gate_3.png",
-    "name": "Baldur's Gate 3",
-    "rating": {
-      "stars": 5,
-      "count": 41230
+    {
+      "id": "6e69c09c-048f-4040-9861-7c8c92b55d6f",
+      "image": "/images/products/assassins_creed_valhalla.png",
+      "name": "Assassin's Creed Valhalla",
+      "rating": {
+        "stars": 4,
+        "count": 15230
+      },
+      "priceCents": 2999,
+      "keywords": [
+        "ubisoft",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "steam",
-      "pc",
-      "rpg"
-    ]
-  },
-  {
-    "id": "bf056482-a558-4d2c-a31a-a6328c3839a5",
-    "image": "images/products/bloodborne.png",
-    "name": "Bloodborne",
-    "rating": {
-      "stars": 4.5,
-      "count": 22340
+    {
+      "id": "0ca4d669-aec6-4864-a6bf-4f3df9ae7d11",
+      "image": "/images/products/astro_bot.png",
+      "name": "Astro Bot",
+      "rating": {
+        "stars": 5,
+        "count": 6540
+      },
+      "priceCents": 3949,
+      "keywords": [
+        "ps5",
+        "platformer"
+      ]
     },
-    "priceCents": 1999,
-    "keywords": [
-      "ps4",
-      "action",
-      "rpg"
-    ]
-  },
-  {
-    "id": "adbd972a-45ce-43b0-b3ab-2b599d1ce348",
-    "image": "images/products/cyberpunk_2077.png",
-    "name": "Cyberpunk 2077",
-    "rating": {
-      "stars": 4,
-      "count": 33210
+    {
+      "id": "ba12be4d-30ea-4d44-abd7-4276eb7d65bc",
+      "image": "/images/products/avatar_frontiers_of_pandora.png",
+      "name": "Avatar: Frontiers of Pandora",
+      "rating": {
+        "stars": 4,
+        "count": 2890
+      },
+      "priceCents": 4449,
+      "keywords": [
+        "ubisoft",
+        "action",
+        "adventure",
+        "ps5"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "steam",
-      "pc",
-      "rpg",
-      "action"
-    ]
-  },
-  {
-    "id": "825b7372-44fa-452d-8545-e896b835870b",
-    "image": "images/products/donkey_kong_bananza.png",
-    "name": "Donkey Kong Bananza",
-    "rating": {
-      "stars": 4.5,
-      "count": 3670
+    {
+      "id": "5c6f4959-5e33-45af-a2ce-046da94c5e59",
+      "image": "/images/products/balatro.png",
+      "name": "Balatro",
+      "rating": {
+        "stars": 4.5,
+        "count": 10230
+      },
+      "priceCents": 1499,
+      "keywords": [
+        "steam",
+        "pc",
+        "card",
+        "indie"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "nintendo",
-      "switch2",
-      "platformer"
-    ]
-  },
-  {
-    "id": "b4cf1fbf-519a-48bb-a08f-2f092440f181",
-    "image": "images/products/elden_ring.png",
-    "name": "Elden Ring",
-    "rating": {
-      "stars": 4.5,
-      "count": 38760
+    {
+      "id": "198ad2e0-4d7a-4b14-ab38-b462f1b458d7",
+      "image": "/images/products/baldurs_gate_3.png",
+      "name": "Baldur's Gate 3",
+      "rating": {
+        "stars": 5,
+        "count": 41230
+      },
+      "priceCents": 5999,
+      "keywords": [
+        "steam",
+        "pc",
+        "rpg"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "steam",
-      "pc",
-      "action",
-      "rpg"
-    ]
-  },
-  {
-    "id": "d87b38ae-0d22-4e0b-b2e7-bf2fe5038459",
-    "image": "images/products/far_cry_6.png",
-    "name": "Far Cry 6",
-    "rating": {
-      "stars": 4,
-      "count": 9230
+    {
+      "id": "9239a624-f991-4300-b6a0-b2b1ea4bf81b",
+      "image": "/images/products/bayonetta_2_wiiu.png",
+      "name": "Bayonetta 2",
+      "rating": {
+        "stars": 4.5,
+        "count": 3450
+      },
+      "priceCents": 2199,
+      "keywords": [
+        "nintendo",
+        "wiiu",
+        "action"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "ubisoft",
-      "shooter",
-      "action"
-    ]
-  },
-  {
-    "id": "7e698b62-1233-41a6-bc5f-7733c479ecd4",
-    "image": "images/products/final_fantasy_vii_rebirth.png",
-    "name": "Final Fantasy VII Rebirth",
-    "rating": {
-      "stars": 4.5,
-      "count": 8760
+    {
+      "id": "f78ce22c-518b-4dbe-832d-21415587a930",
+      "image": "/images/products/bayonetta_3.png",
+      "name": "Bayonetta 3",
+      "rating": {
+        "stars": 4,
+        "count": 4870
+      },
+      "priceCents": 3499,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "action"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "ps5",
-      "rpg"
-    ]
-  },
-  {
-    "id": "64e6bf74-a061-4ca2-9336-5f31e7fe57f3",
-    "image": "images/products/fire_emblem_engage.png",
-    "name": "Fire Emblem Engage",
-    "rating": {
-      "stars": 4,
-      "count": 5430
+    {
+      "id": "d1800c4b-c9ae-4a5e-9ea1-f6fcd5fbff6b",
+      "image": "/images/products/bloodborne.png",
+      "name": "Bloodborne",
+      "rating": {
+        "stars": 4.5,
+        "count": 22340
+      },
+      "priceCents": 1449,
+      "keywords": [
+        "ps4",
+        "action",
+        "rpg"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "strategy",
-      "rpg"
-    ]
-  },
-  {
-    "id": "7d76bd67-a1f7-48a1-9b81-3942d6ae8864",
-    "image": "images/products/ghost_of_tsushima_directors_cut.png",
-    "name": "Ghost of Tsushima Director's Cut",
-    "rating": {
-      "stars": 4.5,
-      "count": 9230
+    {
+      "id": "52bdb921-695f-4c8f-ab47-7f366cfd6852",
+      "image": "/images/products/cyberpunk_2077.png",
+      "name": "Cyberpunk 2077",
+      "rating": {
+        "stars": 4,
+        "count": 33210
+      },
+      "priceCents": 3979,
+      "keywords": [
+        "steam",
+        "pc",
+        "rpg",
+        "action"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "ps5",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "a5c09e4d-6b62-4eb1-9598-a75d5af508f3",
-    "image": "images/products/god_of_war_2018.png",
-    "name": "God of War",
-    "rating": {
-      "stars": 4.5,
-      "count": 31230
+    {
+      "id": "e07b522f-b533-442d-ab75-b9120cb0f8f4",
+      "image": "/images/products/demons_souls_ps5.png",
+      "name": "Demon's Souls",
+      "rating": {
+        "stars": 4.5,
+        "count": 5670
+      },
+      "priceCents": 3449,
+      "keywords": [
+        "ps5",
+        "action",
+        "rpg"
+      ]
     },
-    "priceCents": 1999,
-    "keywords": [
-      "ps4",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "618d76ef-5248-4a70-a45b-3f134780ddb3",
-    "image": "images/products/god_of_war_ragnarok.png",
-    "name": "God of War Ragnarok",
-    "rating": {
-      "stars": 4.5,
-      "count": 19870
+    {
+      "id": "b282534d-df0a-4534-b501-bd6849826f3b",
+      "image": "/images/products/donkey_kong_bananza.png",
+      "name": "Donkey Kong Bananza",
+      "rating": {
+        "stars": 4.5,
+        "count": 3670
+      },
+      "priceCents": 6949,
+      "keywords": [
+        "nintendo",
+        "switch2",
+        "platformer"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "ps5",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "bfb2323e-cc3c-4a8f-83da-a422ed95fd45",
-    "image": "images/products/hades_ii.png",
-    "name": "Hades II",
-    "rating": {
-      "stars": 4.5,
-      "count": 12340
+    {
+      "id": "c7242740-2943-4ae4-ab52-78fd2ba8b549",
+      "image": "/images/products/elden_ring.png",
+      "name": "Elden Ring",
+      "rating": {
+        "stars": 4.5,
+        "count": 38760
+      },
+      "priceCents": 4479,
+      "keywords": [
+        "steam",
+        "pc",
+        "action",
+        "rpg"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "steam",
-      "pc",
-      "action",
-      "indie"
-    ]
-  },
-  {
-    "id": "28488d54-a894-4ea9-8f22-8c2add51bde0",
-    "image": "images/products/horizon_forbidden_west.png",
-    "name": "Horizon Forbidden West",
-    "rating": {
-      "stars": 4.5,
-      "count": 14230
+    {
+      "id": "433d666c-3cf0-43c3-a3bb-2303841a3013",
+      "image": "/images/products/factorio.png",
+      "name": "Factorio",
+      "rating": {
+        "stars": 4.5,
+        "count": 9870
+      },
+      "priceCents": 3479,
+      "keywords": [
+        "steam",
+        "pc",
+        "strategy",
+        "indie"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "ps5",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "c44be429-43b6-456c-b0cc-d4efb8332235",
-    "image": "images/products/just_dance_2024.png",
-    "name": "Just Dance 2024",
-    "rating": {
-      "stars": 4,
-      "count": 3210
+    {
+      "id": "b5b7e266-4ccf-4a1f-9de7-fd3051fd0a66",
+      "image": "/images/products/far_cry_5.png",
+      "name": "Far Cry 5",
+      "rating": {
+        "stars": 4,
+        "count": 11230
+      },
+      "priceCents": 1999,
+      "keywords": [
+        "ubisoft",
+        "shooter",
+        "action"
+      ]
     },
-    "priceCents": 4999,
-    "keywords": [
-      "ubisoft",
-      "switch",
-      "party"
-    ]
-  },
-  {
-    "id": "e927cd2a-9436-4c6b-9ffa-779e584ad7f9",
-    "image": "images/products/kirby_and_the_forgotten_land.png",
-    "name": "Kirby and the Forgotten Land",
-    "rating": {
-      "stars": 4.5,
-      "count": 9980
+    {
+      "id": "06a349e0-5bcd-466c-96e6-4ab1f6f75858",
+      "image": "/images/products/far_cry_6.png",
+      "name": "Far Cry 6",
+      "rating": {
+        "stars": 4,
+        "count": 9230
+      },
+      "priceCents": 2499,
+      "keywords": [
+        "ubisoft",
+        "shooter",
+        "action"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "platformer"
-    ]
-  },
-  {
-    "id": "6fbbe73e-edbf-4719-bd61-aca2483c7ac6",
-    "image": "images/products/luigis_mansion.png",
-    "name": "Luigi's Mansion",
-    "rating": {
-      "stars": 4,
-      "count": 5670
+    {
+      "id": "a5b04afe-7717-4d6c-804d-7a7210b1dae4",
+      "image": "/images/products/final_fantasy_vii_rebirth.png",
+      "name": "Final Fantasy VII Rebirth",
+      "rating": {
+        "stars": 4.5,
+        "count": 8760
+      },
+      "priceCents": 5949,
+      "keywords": [
+        "ps5",
+        "rpg"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "nintendo",
-      "gamecube",
-      "adventure"
-    ]
-  },
-  {
-    "id": "34e3d24b-b2e8-4d28-a1b2-b1fbea8ef09f",
-    "image": "images/products/mario_kart_8_wiiu.png",
-    "name": "Mario Kart 8",
-    "rating": {
-      "stars": 4.5,
-      "count": 11230
+    {
+      "id": "7b7403d7-9567-4394-898a-67c7070e4ffe",
+      "image": "/images/products/fire_emblem_engage.png",
+      "name": "Fire Emblem Engage",
+      "rating": {
+        "stars": 4,
+        "count": 5430
+      },
+      "priceCents": 3995,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "strategy",
+        "rpg"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "wiiu",
-      "racing"
-    ]
-  },
-  {
-    "id": "195e6543-fb46-419c-a236-b95af22c99fc",
-    "image": "images/products/mario_kart_8_deluxe.png",
-    "name": "Mario Kart 8 Deluxe",
-    "rating": {
-      "stars": 4.5,
-      "count": 63210
+    {
+      "id": "f695acc5-acd3-4a5f-8e4a-ee4f1183ef16",
+      "image": "/images/products/ghost_of_tsushima_directors_cut.png",
+      "name": "Ghost of Tsushima Director's Cut",
+      "rating": {
+        "stars": 4.5,
+        "count": 9230
+      },
+      "priceCents": 4999,
+      "keywords": [
+        "ps5",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "switch",
-      "racing"
-    ]
-  },
-  {
-    "id": "29d9fcb9-c8f2-494b-9cf6-92cac8c919a4",
-    "image": "images/products/mario_kart_wii.png",
-    "name": "Mario Kart Wii",
-    "rating": {
-      "stars": 4.5,
-      "count": 22870
+    {
+      "id": "0bc814c2-9bb5-4b69-bda8-280d34c2186f",
+      "image": "/images/products/god_of_war_2018.png",
+      "name": "God of War",
+      "rating": {
+        "stars": 4.5,
+        "count": 31230
+      },
+      "priceCents": 1479,
+      "keywords": [
+        "ps4",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "wii",
-      "racing"
-    ]
-  },
-  {
-    "id": "10e22ce0-865a-4a99-be0e-d7198fa6ebf5",
-    "image": "images/products/mario_kart_world.png",
-    "name": "Mario Kart World",
-    "rating": {
-      "stars": 4.5,
-      "count": 4210
+    {
+      "id": "bc8030bf-d14d-41bd-8bca-4ac978a667a4",
+      "image": "/images/products/god_of_war_ragnarok.png",
+      "name": "God of War Ragnarok",
+      "rating": {
+        "stars": 4.5,
+        "count": 19870
+      },
+      "priceCents": 5979,
+      "keywords": [
+        "ps5",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 7999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "switch2",
-      "racing"
-    ]
-  },
-  {
-    "id": "7adaf21a-eab7-492d-849a-6ace5ecdebfb",
-    "image": "images/products/mario_kart_double_dash.png",
-    "name": "Mario Kart: Double Dash",
-    "rating": {
-      "stars": 4.5,
-      "count": 9870
+    {
+      "id": "b6e720ec-74f6-4627-8209-05e443c984fe",
+      "image": "/images/products/gran_turismo_7.png",
+      "name": "Gran Turismo 7",
+      "rating": {
+        "stars": 4.5,
+        "count": 12340
+      },
+      "priceCents": 4495,
+      "keywords": [
+        "ps5",
+        "racing"
+      ]
     },
-    "priceCents": 3499,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "gamecube",
-      "racing"
-    ]
-  },
-  {
-    "id": "fe91d255-06ea-4503-9e6d-034fc6205461",
-    "image": "images/products/marvels_spider_man_ps4.png",
-    "name": "Marvel's Spider-Man",
-    "rating": {
-      "stars": 4.5,
-      "count": 24560
+    {
+      "id": "88df66a3-785f-48a7-a2d2-f9bb3cb5dc5f",
+      "image": "/images/products/hades_ii.png",
+      "name": "Hades II",
+      "rating": {
+        "stars": 4.5,
+        "count": 12340
+      },
+      "priceCents": 2449,
+      "keywords": [
+        "steam",
+        "pc",
+        "action",
+        "indie"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "ps4",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "61334f3c-a477-46c4-944a-073ce20eb40b",
-    "image": "images/products/marvels_spider_man_2.png",
-    "name": "Marvel's Spider-Man 2",
-    "rating": {
-      "stars": 4.5,
-      "count": 12340
+    {
+      "id": "95df2fd7-a64c-4286-9a64-a0c13ae51267",
+      "image": "/images/products/helldivers_2.png",
+      "name": "Helldivers 2",
+      "rating": {
+        "stars": 4,
+        "count": 19870
+      },
+      "priceCents": 3988,
+      "keywords": [
+        "steam",
+        "pc",
+        "shooter",
+        "ps5"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "ps5",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "6832e3c0-1731-41d0-b7ee-b01de9e80982",
-    "image": "images/products/metroid_dread.png",
-    "name": "Metroid Dread",
-    "rating": {
-      "stars": 4.5,
-      "count": 14200
+    {
+      "id": "dc28415b-ed6c-4a7a-b9fe-cf374a9f8cc3",
+      "image": "/images/products/hollow_knight.png",
+      "name": "Hollow Knight",
+      "rating": {
+        "stars": 4.5,
+        "count": 28760
+      },
+      "priceCents": 1495,
+      "keywords": [
+        "steam",
+        "pc",
+        "platformer",
+        "indie"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "metroid",
-      "action"
-    ]
-  },
-  {
-    "id": "eaec1e4f-bd3b-4ca7-9b17-48a91f7b99ac",
-    "image": "images/products/metroid_prime.png",
-    "name": "Metroid Prime",
-    "rating": {
-      "stars": 4.5,
-      "count": 10120
+    {
+      "id": "3917a251-690e-442e-b7d3-97c1a0ca4aaa",
+      "image": "/images/products/horizon_forbidden_west.png",
+      "name": "Horizon Forbidden West",
+      "rating": {
+        "stars": 4.5,
+        "count": 14230
+      },
+      "priceCents": 4949,
+      "keywords": [
+        "ps5",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 3499,
-    "keywords": [
-      "nintendo",
-      "gamecube",
-      "metroid",
-      "action"
-    ]
-  },
-  {
-    "id": "39ecc28a-24a7-489d-8bff-536bda9bfbc5",
-    "image": "images/products/pikmin_2.png",
-    "name": "Pikmin 2",
-    "rating": {
-      "stars": 4,
-      "count": 4320
+    {
+      "id": "082655ba-d6a9-4c7e-a2eb-e416db455361",
+      "image": "/images/products/horizon_zero_dawn.png",
+      "name": "Horizon Zero Dawn",
+      "rating": {
+        "stars": 4.5,
+        "count": 21230
+      },
+      "priceCents": 1949,
+      "keywords": [
+        "ps4",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "nintendo",
-      "gamecube",
-      "strategy"
-    ]
-  },
-  {
-    "id": "24930e83-9397-431d-8e0e-0fc26c175ef5",
-    "image": "images/products/pikmin_4.png",
-    "name": "Pikmin 4",
-    "rating": {
-      "stars": 4.5,
-      "count": 8120
+    {
+      "id": "f6c0e034-9fd4-4e56-b3ab-279f398f2ec8",
+      "image": "/images/products/just_dance_2024.png",
+      "name": "Just Dance 2024",
+      "rating": {
+        "stars": 4,
+        "count": 3210
+      },
+      "priceCents": 3959,
+      "keywords": [
+        "ubisoft",
+        "switch",
+        "party"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "strategy"
-    ]
-  },
-  {
-    "id": "2000517f-a756-4602-b806-4984c225bf49",
-    "image": "images/products/pokemon_scarlet.png",
-    "name": "Pokemon Scarlet",
-    "rating": {
-      "stars": 4,
-      "count": 32100
+    {
+      "id": "6019c60e-5927-4224-bf4c-946323f931c5",
+      "image": "/images/products/kirby_air_riders.png",
+      "name": "Kirby Air Riders",
+      "rating": {
+        "stars": 4,
+        "count": 1230
+      },
+      "priceCents": 6499,
+      "keywords": [
+        "nintendo",
+        "switch2",
+        "racing"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "pokemon",
-      "nintendo",
-      "switch",
-      "rpg"
-    ]
-  },
-  {
-    "id": "fc0adb62-1b14-48db-b1e4-c20177281649",
-    "image": "images/products/pokemon_violet.png",
-    "name": "Pokemon Violet",
-    "rating": {
-      "stars": 4,
-      "count": 31870
+    {
+      "id": "af59b477-389a-4663-bc36-bf175851363e",
+      "image": "/images/products/kirby_and_the_forgotten_land.png",
+      "name": "Kirby and the Forgotten Land",
+      "rating": {
+        "stars": 4.5,
+        "count": 9980
+      },
+      "priceCents": 4488,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "platformer"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "pokemon",
-      "nintendo",
-      "switch",
-      "rpg"
-    ]
-  },
-  {
-    "id": "53987cc0-5e86-40c4-9c15-ae364767a106",
-    "image": "images/products/prince_of_persia_the_lost_crown.png",
-    "name": "Prince of Persia: The Lost Crown",
-    "rating": {
-      "stars": 4.5,
-      "count": 5430
+    {
+      "id": "f923f68b-dacf-4c8e-a02c-1944418923a8",
+      "image": "/images/products/luigis_mansion.png",
+      "name": "Luigi's Mansion",
+      "rating": {
+        "stars": 4,
+        "count": 5670
+      },
+      "priceCents": 1979,
+      "keywords": [
+        "nintendo",
+        "gamecube",
+        "adventure"
+      ]
     },
-    "priceCents": 4999,
-    "keywords": [
-      "ubisoft",
-      "platformer",
-      "action"
-    ]
-  },
-  {
-    "id": "1110a75e-9fb2-4651-8ef7-2af878ab2525",
-    "image": "images/products/rainbow_six_siege.png",
-    "name": "Rainbow Six Siege",
-    "rating": {
-      "stars": 4,
-      "count": 21340
+    {
+      "id": "a1437763-8895-46dc-8118-bb30791268de",
+      "image": "/images/products/luigis_mansion_3.png",
+      "name": "Luigi's Mansion 3",
+      "rating": {
+        "stars": 4.5,
+        "count": 9230
+      },
+      "priceCents": 3939,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "adventure"
+      ]
     },
-    "priceCents": 1999,
-    "keywords": [
-      "ubisoft",
-      "shooter",
-      "steam"
-    ]
-  },
-  {
-    "id": "0d381886-d1b7-4551-a11b-888c3caeefdd",
-    "image": "images/products/splatoon_wiiu.png",
-    "name": "Splatoon",
-    "rating": {
-      "stars": 4,
-      "count": 6540
+    {
+      "id": "630bed53-08ca-409a-b950-1642a1bf2df3",
+      "image": "/images/products/mario_kart_8_wiiu.png",
+      "name": "Mario Kart 8",
+      "rating": {
+        "stars": 4.5,
+        "count": 11230
+      },
+      "priceCents": 2949,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "wiiu",
+        "racing"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "nintendo",
-      "wiiu",
-      "shooter"
-    ]
-  },
-  {
-    "id": "5b3c86b6-903a-43b9-8bea-151397b71b5d",
-    "image": "images/products/splatoon_3.png",
-    "name": "Splatoon 3",
-    "rating": {
-      "stars": 4.5,
-      "count": 21030
+    {
+      "id": "80d4ff3b-0682-4b5a-b48b-f1050f943247",
+      "image": "/images/products/mario_kart_8_deluxe.png",
+      "name": "Mario Kart 8 Deluxe",
+      "rating": {
+        "stars": 4.5,
+        "count": 63210
+      },
+      "priceCents": 5499,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "switch",
+        "racing"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "shooter"
-    ]
-  },
-  {
-    "id": "733d6773-3a8c-4d93-8e27-2cfcf0dc409b",
-    "image": "images/products/star_wars_outlaws.png",
-    "name": "Star Wars Outlaws",
-    "rating": {
-      "stars": 4,
-      "count": 3120
+    {
+      "id": "2ca8ae72-b781-431e-aee9-f6d94bc08122",
+      "image": "/images/products/mario_kart_wii.png",
+      "name": "Mario Kart Wii",
+      "rating": {
+        "stars": 4.5,
+        "count": 22870
+      },
+      "priceCents": 1995,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "wii",
+        "racing"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "ubisoft",
-      "action",
-      "adventure",
-      "ps5"
-    ]
-  },
-  {
-    "id": "fb68c89e-7428-45de-b79f-267e06f17669",
-    "image": "images/products/stardew_valley.png",
-    "name": "Stardew Valley",
-    "rating": {
-      "stars": 5,
-      "count": 45210
+    {
+      "id": "6236257f-74fd-4127-ae7f-e96cd4b94aea",
+      "image": "/images/products/mario_kart_world.png",
+      "name": "Mario Kart World",
+      "rating": {
+        "stars": 4.5,
+        "count": 4210
+      },
+      "priceCents": 7999,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "switch2",
+        "racing"
+      ]
     },
-    "priceCents": 1499,
-    "keywords": [
-      "steam",
-      "pc",
-      "simulation",
-      "indie"
-    ]
-  },
-  {
-    "id": "90bcbccb-0b6c-4fab-b506-3f533fc39def",
-    "image": "images/products/super_mario_3d_world_wiiu.png",
-    "name": "Super Mario 3D World",
-    "rating": {
-      "stars": 4.5,
-      "count": 8760
+    {
+      "id": "99e2b850-d8d8-40e6-90d1-8f8fdb1d02c7",
+      "image": "/images/products/mario_kart_double_dash.png",
+      "name": "Mario Kart: Double Dash",
+      "rating": {
+        "stars": 4.5,
+        "count": 9870
+      },
+      "priceCents": 2899,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "gamecube",
+        "racing"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "wiiu",
-      "platformer"
-    ]
-  },
-  {
-    "id": "d51b2b08-439b-4807-b0fd-bad3407d78a4",
-    "image": "images/products/super_mario_bros_wonder.png",
-    "name": "Super Mario Bros. Wonder",
-    "rating": {
-      "stars": 4.5,
-      "count": 15980
+    {
+      "id": "377719c9-97ed-4b6a-af2f-46ffbb7bad18",
+      "image": "/images/products/mario_party_superstars.png",
+      "name": "Mario Party Superstars",
+      "rating": {
+        "stars": 4,
+        "count": 8760
+      },
+      "priceCents": 4979,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "switch",
+        "party"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "switch",
-      "platformer"
-    ]
-  },
-  {
-    "id": "28ba3fd7-79f2-4899-b2ba-87c990199698",
-    "image": "images/products/super_mario_galaxy.png",
-    "name": "Super Mario Galaxy",
-    "rating": {
-      "stars": 5,
-      "count": 17650
+    {
+      "id": "d692c0e5-e0ef-44ac-89ad-d648168e285e",
+      "image": "/images/products/marvels_spider_man_ps4.png",
+      "name": "Marvel's Spider-Man",
+      "rating": {
+        "stars": 4.5,
+        "count": 24560
+      },
+      "priceCents": 2979,
+      "keywords": [
+        "ps4",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "wii",
-      "platformer"
-    ]
-  },
-  {
-    "id": "2e0245d4-737d-42b9-b666-c38eba49015f",
-    "image": "images/products/super_mario_odyssey.png",
-    "name": "Super Mario Odyssey",
-    "rating": {
-      "stars": 4.5,
-      "count": 27650
+    {
+      "id": "25e54655-731e-4982-9f92-dc2609374724",
+      "image": "/images/products/marvels_spider_man_2.png",
+      "name": "Marvel's Spider-Man 2",
+      "rating": {
+        "stars": 4.5,
+        "count": 12340
+      },
+      "priceCents": 6979,
+      "keywords": [
+        "ps5",
+        "action",
+        "adventure"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "switch",
-      "platformer"
-    ]
-  },
-  {
-    "id": "c31e134c-677c-40f8-a330-86812dbc3646",
-    "image": "images/products/super_mario_sunshine.png",
-    "name": "Super Mario Sunshine",
-    "rating": {
-      "stars": 4,
-      "count": 8340
+    {
+      "id": "caedebf7-e21b-4585-b790-e4d93f966f2f",
+      "image": "/images/products/metroid_dread.png",
+      "name": "Metroid Dread",
+      "rating": {
+        "stars": 4.5,
+        "count": 14200
+      },
+      "priceCents": 3919,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "metroid",
+        "action"
+      ]
     },
-    "priceCents": 3499,
-    "keywords": [
-      "mario",
-      "nintendo",
-      "gamecube",
-      "platformer"
-    ]
-  },
-  {
-    "id": "8abeea5c-838b-4e38-b725-6ae0add8f240",
-    "image": "images/products/super_smash_bros_brawl.png",
-    "name": "Super Smash Bros. Brawl",
-    "rating": {
-      "stars": 4.5,
-      "count": 19870
+    {
+      "id": "0ffc54c0-904d-49df-977d-c66cf1fb726d",
+      "image": "/images/products/metroid_prime.png",
+      "name": "Metroid Prime",
+      "rating": {
+        "stars": 4.5,
+        "count": 10120
+      },
+      "priceCents": 2299,
+      "keywords": [
+        "nintendo",
+        "gamecube",
+        "metroid",
+        "action"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "nintendo",
-      "wii",
-      "fighting"
-    ]
-  },
-  {
-    "id": "4eb73905-55e4-4948-aace-d75e7fb9770e",
-    "image": "images/products/super_smash_bros_melee.png",
-    "name": "Super Smash Bros. Melee",
-    "rating": {
-      "stars": 4.5,
-      "count": 15230
+    {
+      "id": "b8fa0331-31b1-436e-9ead-5ba6ee065b1c",
+      "image": "/images/products/metroid_prime_2_echoes.png",
+      "name": "Metroid Prime 2: Echoes",
+      "rating": {
+        "stars": 4,
+        "count": 4560
+      },
+      "priceCents": 1988,
+      "keywords": [
+        "nintendo",
+        "gamecube",
+        "metroid",
+        "action"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "nintendo",
-      "gamecube",
-      "fighting"
-    ]
-  },
-  {
-    "id": "ed11f180-e5ae-48e7-a3ea-69a51d6a81a0",
-    "image": "images/products/super_smash_bros_ultimate.png",
-    "name": "Super Smash Bros. Ultimate",
-    "rating": {
-      "stars": 4.5,
-      "count": 41230
+    {
+      "id": "828683bb-eeca-4edd-9b3a-b2432339e24a",
+      "image": "/images/products/metroid_prime_remastered.png",
+      "name": "Metroid Prime Remastered",
+      "rating": {
+        "stars": 4.5,
+        "count": 6210
+      },
+      "priceCents": 3965,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "metroid",
+        "action"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "fighting"
-    ]
-  },
-  {
-    "id": "dd84e6c1-9623-4a71-a3e9-0f5134593151",
-    "image": "images/products/super_smash_bros_wiiu.png",
-    "name": "Super Smash Bros. for Wii U",
-    "rating": {
-      "stars": 4,
-      "count": 7890
+    {
+      "id": "2f4ee1bb-662c-4762-be37-8fe48a60db97",
+      "image": "/images/products/palworld.png",
+      "name": "Palworld",
+      "rating": {
+        "stars": 4,
+        "count": 14230
+      },
+      "priceCents": 2995,
+      "keywords": [
+        "steam",
+        "pc",
+        "rpg",
+        "survival"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "nintendo",
-      "wiiu",
-      "fighting"
-    ]
-  },
-  {
-    "id": "81659118-291a-4184-92b0-de4a0abdb5c8",
-    "image": "images/products/the_last_of_us_part_ii.png",
-    "name": "The Last of Us Part II",
-    "rating": {
-      "stars": 4.5,
-      "count": 27890
+    {
+      "id": "ce04a940-2f25-41e2-9fdd-36556a306c14",
+      "image": "/images/products/persona_5_royal.png",
+      "name": "Persona 5 Royal",
+      "rating": {
+        "stars": 5,
+        "count": 16540
+      },
+      "priceCents": 2988,
+      "keywords": [
+        "ps4",
+        "rpg"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "ps4",
-      "action",
-      "adventure"
-    ]
-  },
-  {
-    "id": "d515e975-420d-4416-ac2f-eb93a0c4c14e",
-    "image": "images/products/zelda_breath_of_the_wild.png",
-    "name": "The Legend of Zelda: Breath of the Wild",
-    "rating": {
-      "stars": 4.5,
-      "count": 45210
+    {
+      "id": "2a94e3da-51a2-406a-b390-eb1984ca0edc",
+      "image": "/images/products/pikmin_2.png",
+      "name": "Pikmin 2",
+      "rating": {
+        "stars": 4,
+        "count": 4320
+      },
+      "priceCents": 1849,
+      "keywords": [
+        "nintendo",
+        "gamecube",
+        "strategy"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "switch",
-      "adventure"
-    ]
-  },
-  {
-    "id": "e89364dd-b880-4bbc-b641-e2ea0a76df9d",
-    "image": "images/products/zelda_echoes_of_wisdom.png",
-    "name": "The Legend of Zelda: Echoes of Wisdom",
-    "rating": {
-      "stars": 4.5,
-      "count": 5320
+    {
+      "id": "90d67002-3ea1-478e-a802-30ee11cc5944",
+      "image": "/images/products/pikmin_3_wiiu.png",
+      "name": "Pikmin 3",
+      "rating": {
+        "stars": 4,
+        "count": 3120
+      },
+      "priceCents": 1959,
+      "keywords": [
+        "nintendo",
+        "wiiu",
+        "strategy"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "switch",
-      "adventure"
-    ]
-  },
-  {
-    "id": "2a17ec16-e328-4cc8-a0f5-94f130b99233",
-    "image": "images/products/zelda_links_awakening.png",
-    "name": "The Legend of Zelda: Link's Awakening",
-    "rating": {
-      "stars": 4.5,
-      "count": 12040
+    {
+      "id": "8b64973f-c93f-4728-8e1e-aa4c44d0b468",
+      "image": "/images/products/pikmin_4.png",
+      "name": "Pikmin 4",
+      "rating": {
+        "stars": 4.5,
+        "count": 8120
+      },
+      "priceCents": 4995,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "strategy"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "switch",
-      "adventure"
-    ]
-  },
-  {
-    "id": "18ffba3b-d51e-474f-bb5a-a6219fcf698d",
-    "image": "images/products/zelda_skyward_sword_hd.png",
-    "name": "The Legend of Zelda: Skyward Sword HD",
-    "rating": {
-      "stars": 4,
-      "count": 9870
+    {
+      "id": "2b445eb8-d8bb-4415-91ff-8ae3e39698e9",
+      "image": "/images/products/pokemon_legends_arceus.png",
+      "name": "Pokemon Legends: Arceus",
+      "rating": {
+        "stars": 4,
+        "count": 18760
+      },
+      "priceCents": 3929,
+      "keywords": [
+        "pokemon",
+        "nintendo",
+        "switch",
+        "rpg"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "switch",
-      "adventure"
-    ]
-  },
-  {
-    "id": "462f2bf5-52ff-4344-8e22-fd49d2ea570c",
-    "image": "images/products/zelda_tears_of_the_kingdom.png",
-    "name": "The Legend of Zelda: Tears of the Kingdom",
-    "rating": {
-      "stars": 5,
-      "count": 38900
+    {
+      "id": "e66caffe-15a5-491e-9ad7-144da9b21e57",
+      "image": "/images/products/pokemon_scarlet.png",
+      "name": "Pokemon Scarlet",
+      "rating": {
+        "stars": 4,
+        "count": 32100
+      },
+      "priceCents": 5449,
+      "keywords": [
+        "pokemon",
+        "nintendo",
+        "switch",
+        "rpg"
+      ]
     },
-    "priceCents": 6999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "switch",
-      "adventure"
-    ]
-  },
-  {
-    "id": "77717bc3-1518-482b-8651-7ae58fd59bfc",
-    "image": "images/products/zelda_wind_waker_gamecube.png",
-    "name": "The Legend of Zelda: The Wind Waker",
-    "rating": {
-      "stars": 4.5,
-      "count": 9210
+    {
+      "id": "46290410-2485-42d8-b961-cda6d4f50252",
+      "image": "/images/products/pokemon_violet.png",
+      "name": "Pokemon Violet",
+      "rating": {
+        "stars": 4,
+        "count": 31870
+      },
+      "priceCents": 5479,
+      "keywords": [
+        "pokemon",
+        "nintendo",
+        "switch",
+        "rpg"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "gamecube",
-      "adventure"
-    ]
-  },
-  {
-    "id": "268c6c15-9a12-4aef-85c0-1671167eb5cc",
-    "image": "images/products/zelda_wind_waker_hd.png",
-    "name": "The Legend of Zelda: The Wind Waker HD",
-    "rating": {
-      "stars": 4.5,
-      "count": 7230
+    {
+      "id": "84b61373-98d2-424f-bf44-00c0dbc7a681",
+      "image": "/images/products/prince_of_persia_the_lost_crown.png",
+      "name": "Prince of Persia: The Lost Crown",
+      "rating": {
+        "stars": 4.5,
+        "count": 5430
+      },
+      "priceCents": 4459,
+      "keywords": [
+        "ubisoft",
+        "platformer",
+        "action"
+      ]
     },
-    "priceCents": 3999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "wiiu",
-      "adventure"
-    ]
-  },
-  {
-    "id": "339fc7d5-f8b4-417c-bc6d-118f648f1214",
-    "image": "images/products/zelda_twilight_princess.png",
-    "name": "The Legend of Zelda: Twilight Princess",
-    "rating": {
-      "stars": 4.5,
-      "count": 14980
+    {
+      "id": "0f345567-c352-49b5-b724-53735ce9fd83",
+      "image": "/images/products/rainbow_six_siege.png",
+      "name": "Rainbow Six Siege",
+      "rating": {
+        "stars": 4,
+        "count": 21340
+      },
+      "priceCents": 1488,
+      "keywords": [
+        "ubisoft",
+        "shooter",
+        "steam"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "zelda",
-      "nintendo",
-      "wii",
-      "adventure"
-    ]
-  },
-  {
-    "id": "c41b916e-8785-44d1-b06a-4fee23cd25af",
-    "image": "images/products/watch_dogs_legion.png",
-    "name": "Watch Dogs: Legion",
-    "rating": {
-      "stars": 3.5,
-      "count": 6120
+    {
+      "id": "a3b3723e-3eb0-4cf8-8106-2d7d9e871043",
+      "image": "/images/products/ratchet_and_clank_rift_apart.png",
+      "name": "Ratchet & Clank: Rift Apart",
+      "rating": {
+        "stars": 4.5,
+        "count": 6780
+      },
+      "priceCents": 3899,
+      "keywords": [
+        "ps5",
+        "platformer",
+        "action"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "ubisoft",
-      "action",
-      "open world"
-    ]
-  },
-  {
-    "id": "0382abdf-7cbb-4c3e-92c9-78c3cc56982d",
-    "image": "images/products/wii_sports.png",
-    "name": "Wii Sports",
-    "rating": {
-      "stars": 4,
-      "count": 18230
+    {
+      "id": "5b58b6f5-33cb-4036-b42a-9f8507275dc9",
+      "image": "/images/products/rayman_legends.png",
+      "name": "Rayman Legends",
+      "rating": {
+        "stars": 4.5,
+        "count": 6540
+      },
+      "priceCents": 1459,
+      "keywords": [
+        "ubisoft",
+        "platformer"
+      ]
     },
-    "priceCents": 1999,
-    "keywords": [
-      "nintendo",
-      "wii",
-      "sports"
-    ]
-  },
-  {
-    "id": "e0988bd8-74a7-45c1-8e6c-f7629721fe53",
-    "image": "images/products/wii_sports_resort.png",
-    "name": "Wii Sports Resort",
-    "rating": {
-      "stars": 4,
-      "count": 12040
+    {
+      "id": "3659eaeb-37ed-4f79-9943-9974bfffa60f",
+      "image": "/images/products/returnal.png",
+      "name": "Returnal",
+      "rating": {
+        "stars": 4,
+        "count": 4320
+      },
+      "priceCents": 2959,
+      "keywords": [
+        "ps5",
+        "action",
+        "roguelike"
+      ]
     },
-    "priceCents": 2999,
-    "keywords": [
-      "nintendo",
-      "wii",
-      "sports"
-    ]
-  },
-  {
-    "id": "c520bbc8-a7a5-4da3-bb35-2ce0580c50c3",
-    "image": "images/products/xenoblade_chronicles_3.png",
-    "name": "Xenoblade Chronicles 3",
-    "rating": {
-      "stars": 4.5,
-      "count": 6890
+    {
+      "id": "7b230a2d-3e1e-48cf-889c-8d72e3e1395e",
+      "image": "/images/products/splatoon_wiiu.png",
+      "name": "Splatoon",
+      "rating": {
+        "stars": 4,
+        "count": 6540
+      },
+      "priceCents": 2479,
+      "keywords": [
+        "nintendo",
+        "wiiu",
+        "shooter"
+      ]
     },
-    "priceCents": 5999,
-    "keywords": [
-      "nintendo",
-      "switch",
-      "rpg"
-    ]
-  }
+    {
+      "id": "3f6dc3c1-aeec-4473-8a9a-f3ed05689435",
+      "image": "/images/products/splatoon_3.png",
+      "name": "Splatoon 3",
+      "rating": {
+        "stars": 4.5,
+        "count": 21030
+      },
+      "priceCents": 5495,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "shooter"
+      ]
+    },
+    {
+      "id": "833ff354-f7d9-44d1-8901-7cfd6505d293",
+      "image": "/images/products/star_wars_outlaws.png",
+      "name": "Star Wars Outlaws",
+      "rating": {
+        "stars": 4,
+        "count": 3120
+      },
+      "priceCents": 5995,
+      "keywords": [
+        "ubisoft",
+        "action",
+        "adventure",
+        "ps5"
+      ]
+    },
+    {
+      "id": "8b6342df-0c2b-45fc-8525-8790ca307c44",
+      "image": "/images/products/stardew_valley.png",
+      "name": "Stardew Valley",
+      "rating": {
+        "stars": 5,
+        "count": 45210
+      },
+      "priceCents": 1439,
+      "keywords": [
+        "steam",
+        "pc",
+        "simulation",
+        "indie"
+      ]
+    },
+    {
+      "id": "b51efbb1-a4d5-47a7-8011-5576538e8251",
+      "image": "/images/products/super_mario_3d_world_wiiu.png",
+      "name": "Super Mario 3D World",
+      "rating": {
+        "stars": 4.5,
+        "count": 8760
+      },
+      "priceCents": 2799,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "wiiu",
+        "platformer"
+      ]
+    },
+    {
+      "id": "d53b3ebb-08a1-4b21-af7c-145df6e6b1a9",
+      "image": "/images/products/super_mario_bros_wonder.png",
+      "name": "Super Mario Bros. Wonder",
+      "rating": {
+        "stars": 4.5,
+        "count": 15980
+      },
+      "priceCents": 5488,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "switch",
+        "platformer"
+      ]
+    },
+    {
+      "id": "567cdb88-7e2e-4b72-ac33-a4cba0bdfeff",
+      "image": "/images/products/super_mario_galaxy.png",
+      "name": "Super Mario Galaxy",
+      "rating": {
+        "stars": 5,
+        "count": 17650
+      },
+      "priceCents": 1749,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "wii",
+        "platformer"
+      ]
+    },
+    {
+      "id": "93a97a3a-a7e1-4b72-816d-9df1b7c86232",
+      "image": "/images/products/super_mario_galaxy_2.png",
+      "name": "Super Mario Galaxy 2",
+      "rating": {
+        "stars": 5,
+        "count": 14320
+      },
+      "priceCents": 1879,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "wii",
+        "platformer"
+      ]
+    },
+    {
+      "id": "a3100134-b938-4af5-9574-c7dece2db65d",
+      "image": "/images/products/super_mario_odyssey.png",
+      "name": "Super Mario Odyssey",
+      "rating": {
+        "stars": 4.5,
+        "count": 27650
+      },
+      "priceCents": 4988,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "switch",
+        "platformer"
+      ]
+    },
+    {
+      "id": "5ef85c7c-8f5f-496f-8ceb-a2f38fdf6330",
+      "image": "/images/products/super_mario_sunshine.png",
+      "name": "Super Mario Sunshine",
+      "rating": {
+        "stars": 4,
+        "count": 8340
+      },
+      "priceCents": 2599,
+      "keywords": [
+        "mario",
+        "nintendo",
+        "gamecube",
+        "platformer"
+      ]
+    },
+    {
+      "id": "56a8de86-5cd2-4cad-8924-fd201504e14a",
+      "image": "/images/products/super_smash_bros_brawl.png",
+      "name": "Super Smash Bros. Brawl",
+      "rating": {
+        "stars": 4.5,
+        "count": 19870
+      },
+      "priceCents": 2249,
+      "keywords": [
+        "nintendo",
+        "wii",
+        "fighting"
+      ]
+    },
+    {
+      "id": "13f177a4-9580-4897-90db-1e1fc112dab3",
+      "image": "/images/products/super_smash_bros_melee.png",
+      "name": "Super Smash Bros. Melee",
+      "rating": {
+        "stars": 4.5,
+        "count": 15230
+      },
+      "priceCents": 3299,
+      "keywords": [
+        "nintendo",
+        "gamecube",
+        "fighting"
+      ]
+    },
+    {
+      "id": "c8b719a9-89af-4119-9686-f6d4b232f23b",
+      "image": "/images/products/super_smash_bros_ultimate.png",
+      "name": "Super Smash Bros. Ultimate",
+      "rating": {
+        "stars": 4.5,
+        "count": 41230
+      },
+      "priceCents": 4959,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "fighting"
+      ]
+    },
+    {
+      "id": "049e31da-9867-4a67-8c4a-8ab20650965b",
+      "image": "/images/products/super_smash_bros_wiiu.png",
+      "name": "Super Smash Bros. for Wii U",
+      "rating": {
+        "stars": 4,
+        "count": 7890
+      },
+      "priceCents": 2699,
+      "keywords": [
+        "nintendo",
+        "wiiu",
+        "fighting"
+      ]
+    },
+    {
+      "id": "417e2874-075b-4d62-8cbb-585ddc899368",
+      "image": "/images/products/terraria.png",
+      "name": "Terraria",
+      "rating": {
+        "stars": 4.5,
+        "count": 51230
+      },
+      "priceCents": 999,
+      "keywords": [
+        "steam",
+        "pc",
+        "simulation",
+        "indie"
+      ]
+    },
+    {
+      "id": "058e7507-2a34-40ca-9366-ab08fdb61c65",
+      "image": "/images/products/the_last_of_us_part_ii.png",
+      "name": "The Last of Us Part II",
+      "rating": {
+        "stars": 4.5,
+        "count": 27890
+      },
+      "priceCents": 2939,
+      "keywords": [
+        "ps4",
+        "action",
+        "adventure"
+      ]
+    },
+    {
+      "id": "db8c526a-62b3-4aec-af6d-9039b78ed35f",
+      "image": "/images/products/zelda_link_between_worlds.png",
+      "name": "The Legend of Zelda: A Link Between Worlds",
+      "rating": {
+        "stars": 4.5,
+        "count": 4210
+      },
+      "priceCents": 1939,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "3ds",
+        "adventure"
+      ]
+    },
+    {
+      "id": "babac5dc-edb5-42ab-9839-25ac7e93cc15",
+      "image": "/images/products/zelda_breath_of_the_wild.png",
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "rating": {
+        "stars": 4.5,
+        "count": 45210
+      },
+      "priceCents": 4939,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "switch",
+        "adventure"
+      ]
+    },
+    {
+      "id": "9621f936-28c8-45f1-8ed8-88b8b44a48d9",
+      "image": "/images/products/zelda_echoes_of_wisdom.png",
+      "name": "The Legend of Zelda: Echoes of Wisdom",
+      "rating": {
+        "stars": 4.5,
+        "count": 5320
+      },
+      "priceCents": 5459,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "switch",
+        "adventure"
+      ]
+    },
+    {
+      "id": "34fef380-0e9a-4cd8-9997-c98adcc33e28",
+      "image": "/images/products/zelda_four_swords_adventures.png",
+      "name": "The Legend of Zelda: Four Swords Adventures",
+      "rating": {
+        "stars": 4,
+        "count": 2340
+      },
+      "priceCents": 1919,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "gamecube",
+        "adventure"
+      ]
+    },
+    {
+      "id": "9ff7b102-55ec-4368-a462-8d0e97a78e86",
+      "image": "/images/products/zelda_links_awakening.png",
+      "name": "The Legend of Zelda: Link's Awakening",
+      "rating": {
+        "stars": 4.5,
+        "count": 12040
+      },
+      "priceCents": 4439,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "switch",
+        "adventure"
+      ]
+    },
+    {
+      "id": "546a5d63-1e90-420b-a375-0509821307f6",
+      "image": "/images/products/zelda_skyward_sword.png",
+      "name": "The Legend of Zelda: Skyward Sword",
+      "rating": {
+        "stars": 4,
+        "count": 8760
+      },
+      "priceCents": 1965,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "wii",
+        "adventure"
+      ]
+    },
+    {
+      "id": "95cd382f-36d2-4831-aa50-bdd98770e14c",
+      "image": "/images/products/zelda_skyward_sword_hd.png",
+      "name": "The Legend of Zelda: Skyward Sword HD",
+      "rating": {
+        "stars": 4,
+        "count": 9870
+      },
+      "priceCents": 4419,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "switch",
+        "adventure"
+      ]
+    },
+    {
+      "id": "e80d382f-6eaa-46d5-9867-f47d0d3a7a99",
+      "image": "/images/products/zelda_tears_of_the_kingdom.png",
+      "name": "The Legend of Zelda: Tears of the Kingdom",
+      "rating": {
+        "stars": 5,
+        "count": 38900
+      },
+      "priceCents": 6995,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "switch",
+        "adventure"
+      ]
+    },
+    {
+      "id": "279354c2-9931-4f0c-bdb7-bd8b2136824a",
+      "image": "/images/products/zelda_wind_waker_gamecube.png",
+      "name": "The Legend of Zelda: The Wind Waker",
+      "rating": {
+        "stars": 4.5,
+        "count": 9210
+      },
+      "priceCents": 2919,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "gamecube",
+        "adventure"
+      ]
+    },
+    {
+      "id": "e1079b7b-3875-435b-809e-e9d266779c85",
+      "image": "/images/products/zelda_wind_waker_hd.png",
+      "name": "The Legend of Zelda: The Wind Waker HD",
+      "rating": {
+        "stars": 4.5,
+        "count": 7230
+      },
+      "priceCents": 2965,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "wiiu",
+        "adventure"
+      ]
+    },
+    {
+      "id": "5e82e31f-9eea-48ae-a6d2-b6502ca3eaf7",
+      "image": "/images/products/zelda_twilight_princess.png",
+      "name": "The Legend of Zelda: Twilight Princess",
+      "rating": {
+        "stars": 4.5,
+        "count": 14980
+      },
+      "priceCents": 2149,
+      "keywords": [
+        "zelda",
+        "nintendo",
+        "wii",
+        "adventure"
+      ]
+    },
+    {
+      "id": "fc9fef90-1c5b-4eb1-9c34-6ee58f619f84",
+      "image": "/images/products/uncharted_4_a_thiefs_end.png",
+      "name": "Uncharted 4: A Thief's End",
+      "rating": {
+        "stars": 4.5,
+        "count": 18760
+      },
+      "priceCents": 1929,
+      "keywords": [
+        "ps4",
+        "action",
+        "adventure"
+      ]
+    },
+    {
+      "id": "abe0b4d0-570d-45f1-85eb-a63e458e8184",
+      "image": "/images/products/watch_dogs_legion.png",
+      "name": "Watch Dogs: Legion",
+      "rating": {
+        "stars": 3.5,
+        "count": 6120
+      },
+      "priceCents": 1899,
+      "keywords": [
+        "ubisoft",
+        "action",
+        "open world"
+      ]
+    },
+    {
+      "id": "d2acfdb5-5783-4b84-8f51-8c0bdadbd9e1",
+      "image": "/images/products/wii_play.png",
+      "name": "Wii Play",
+      "rating": {
+        "stars": 3.5,
+        "count": 5340
+      },
+      "priceCents": 899,
+      "keywords": [
+        "nintendo",
+        "wii",
+        "party"
+      ]
+    },
+    {
+      "id": "ce493d8d-17b8-4727-bd04-437f5ded673d",
+      "image": "/images/products/wii_sports.png",
+      "name": "Wii Sports",
+      "rating": {
+        "stars": 4,
+        "count": 18230
+      },
+      "priceCents": 949,
+      "keywords": [
+        "nintendo",
+        "wii",
+        "sports"
+      ]
+    },
+    {
+      "id": "ec0d1e73-1d4b-41b3-b08a-c98568b51aa8",
+      "image": "/images/products/wii_sports_resort.png",
+      "name": "Wii Sports Resort",
+      "rating": {
+        "stars": 4,
+        "count": 12040
+      },
+      "priceCents": 1419,
+      "keywords": [
+        "nintendo",
+        "wii",
+        "sports"
+      ]
+    },
+    {
+      "id": "6f95cdf6-4d69-448c-9a8d-0dd3a98559cb",
+      "image": "/images/products/xenoblade_chronicles_wii.png",
+      "name": "Xenoblade Chronicles",
+      "rating": {
+        "stars": 4.5,
+        "count": 6540
+      },
+      "priceCents": 2929,
+      "keywords": [
+        "nintendo",
+        "wii",
+        "rpg"
+      ]
+    },
+    {
+      "id": "93db6344-5c58-4627-a768-1f25afd0321b",
+      "image": "/images/products/xenoblade_chronicles_3.png",
+      "name": "Xenoblade Chronicles 3",
+      "rating": {
+        "stars": 4.5,
+        "count": 6890
+      },
+      "priceCents": 4919,
+      "keywords": [
+        "nintendo",
+        "switch",
+        "rpg"
+      ]
+    }
+  ]
 ]
