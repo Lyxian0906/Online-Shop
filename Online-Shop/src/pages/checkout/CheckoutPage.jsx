@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 export function CheckoutPage() {
 	return (
+		
 		<>
 			<title>Checkout</title>
 			<div className="checkout-header">
