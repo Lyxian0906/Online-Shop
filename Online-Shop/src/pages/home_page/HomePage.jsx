@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header";
 import { useEffect } from "react";
 import { useState } from "react";
-import { ProductsGrid } from "./ProductsGrid";
+import { ProductsGrid } from "./components/ProductsGrid";
 import axios from "axios";
 import "./HomePage.css";
 
