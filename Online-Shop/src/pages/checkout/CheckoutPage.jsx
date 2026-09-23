@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import "./CheckoutPage.css";
+import "./checkout-header.css"
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
