@@ -1,7 +1,7 @@
 import { formatMoney } from "../../../utils/money";
 import axios from "axios";
 
-export function ProductsGrid({products}) {
+export function ProductsGrid({products, loadCart}) {
 	return (
 		<div className="products-grid">
 			{products.map((product) => {
@@ -51,12 +51,16 @@ export function ProductsGrid({products}) {
 								<img src="images/icons/checkmark.png" />
 								Added
 							</div>
-
-							<button className="add-to-cart-button button-primary" onClick={() =>{
-								axios.post('/api/cart-items', {
+							
+							<button className="add-to-cart-button button-primary" onClick={async() =>{
+								//We will update it in backend
+								//We use async since the backend doesn't load right up
+								await axios.post('/api/cart-items', {
 									productId: product.id,
 									quantity: 1
 								});
+								await loadCart(); //We will upload the page without refresh
+								//The cart doesn't load right up either
 							}}>
 								Add to Cart
 							</button>
