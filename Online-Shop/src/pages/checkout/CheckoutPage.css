@@ -1,3 +1,7 @@
+#root{
+  padding-bottom: 10px;  /*Ask why when I delete this the lower page is like strange*/
+}
+
 .checkout-page {
   max-width: 1100px;
   padding-left: 30px;
