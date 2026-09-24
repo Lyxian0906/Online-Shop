@@ -9,21 +9,21 @@ export function Product({ product, loadCart }) {
 	const [quantity, setQuantity] = useState(1);
 
 	const addToCart = async () => {
-			//We will update it in backend
-			//We use async since the backend doesn't load right up
-			await axios.post("/api/cart-items", {
-				productId: product.id,
-				quantity,
-			});
-			await loadCart(); //We will upload the page without refresh
-			//The cart doesn't load right up either
-		};
+		//We will update it in backend
+		//We use async since the backend doesn't load right up
+		await axios.post("/api/cart-items", {
+			productId: product.id,
+			quantity,
+		});
+		await loadCart(); //We will upload the page without refresh
+		//The cart doesn't load right up either
+	};
 
-    const selectQuantity = (event) => {
-						//Convert string into number
-						const quantitySelected = Number(event.target.value);
-						setQuantity(quantitySelected);
-					}
+	const selectQuantity = (event) => {
+		//Convert string into number
+		const quantitySelected = Number(event.target.value);
+		setQuantity(quantitySelected);
+	};
 	return (
 		<div className="product-container">
 			<div className="product-image-container">
@@ -45,10 +45,7 @@ export function Product({ product, loadCart }) {
 			<div className="product-price">{formatMoney(product.priceCents)}</div>
 
 			<div className="product-quantity-container">
-				<select
-					value={quantity}
-					onChange={selectQuantity}
-				>
+				<select value={quantity} onChange={selectQuantity}>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -69,10 +66,7 @@ export function Product({ product, loadCart }) {
 				Added
 			</div>
 
-			<button
-				className="add-to-cart-button button-primary"
-				onClick={addToCart}
-			>
+			<button className="add-to-cart-button button-primary" onClick={addToCart}>
 				Add to Cart
 			</button>
 		</div>
