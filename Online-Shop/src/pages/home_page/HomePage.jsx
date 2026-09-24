@@ -5,26 +5,27 @@ import { ProductsGrid } from "./components/ProductsGrid";
 import axios from "axios";
 import "./HomePage.css";
 
-export function HomePage({cart}) {
+export function HomePage({ cart }) {
 	const [products, setProducts] = useState([]);
-	
-	useEffect(() => { 
-		axios.get("/api/products").then((response) => {
-			setProducts(response.data)
-		});
-		
-	}, []);
 
+	useEffect(() => {
+		const getHomeData = async () => {
+			const response = await axios.get("/api/products");
+			setProducts(response.data);
+		};
+
+		getHomeData();
+	}, []);
 
 	//We can't return 2 pages so we wrap it into a segment
 
 	return (
 		<>
-			<Header  cart={cart}/>
+			<Header cart={cart} />
 			<title>Home page</title>
 
 			<div className="home-page">
-				<ProductsGrid products={products}/>
+				<ProductsGrid products={products} />
 			</div>
 		</>
 	);
