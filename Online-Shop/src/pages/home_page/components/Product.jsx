@@ -64,7 +64,7 @@ export function Product({product, loadCart}) {
 					//We use async since the backend doesn't load right up
 					await axios.post("/api/cart-items", {
 						productId: product.id,
-						quantity: 1,
+						quantity: quantity,
 					});
 					await loadCart(); //We will upload the page without refresh
 					//The cart doesn't load right up either
