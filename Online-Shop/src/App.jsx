@@ -6,19 +6,20 @@ import { CheckoutPage } from "./pages/checkout/CheckoutPage";
 import { Routes, Route } from "react-router";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 
-
 function App() {
 	const [cart, serCart] = useState([]);
 	useEffect(() => {
-		axios.get("/api/cart-items?expand=product").then((response) => {
+		const fetchData = async () => {
+			const response = await axios.get("/api/cart-items?expand=product");
 			serCart(response.data);
-		});
+		};
+		fetchData();
 	}, []);
 	return (
 		<Routes>
 			<Route index element={<HomePage cart={cart} />} />
 			<Route path="/checkout" element={<CheckoutPage cart={cart} />} />
-			<Route path="/orders" element={<OrdersPage cart={cart}/>} />
+			<Route path="/orders" element={<OrdersPage cart={cart} />} />
 		</Routes>
 	);
 }
