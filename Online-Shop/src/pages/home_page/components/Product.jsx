@@ -5,8 +5,25 @@ import axios from "axios";
 //Each product has his own state it's won quantity, because we cant have
 //the use state inside the loop of map, it breaks the hooks rules
 
-export function Product({product, loadCart}) {
-    const [quantity, setQuantity] = useState(1); 
+export function Product({ product, loadCart }) {
+	const [quantity, setQuantity] = useState(1);
+
+	const addToCart = async () => {
+			//We will update it in backend
+			//We use async since the backend doesn't load right up
+			await axios.post("/api/cart-items", {
+				productId: product.id,
+				quantity,
+			});
+			await loadCart(); //We will upload the page without refresh
+			//The cart doesn't load right up either
+		};
+
+    const selectQuantity = (event) => {
+						//Convert string into number
+						const quantitySelected = Number(event.target.value);
+						setQuantity(quantitySelected);
+					}
 	return (
 		<div className="product-container">
 			<div className="product-image-container">
@@ -30,12 +47,7 @@ export function Product({product, loadCart}) {
 			<div className="product-quantity-container">
 				<select
 					value={quantity}
-					onChange={(event) => {
-						//Convert string into number
-						const quantitySelected = Number(event.target.value);
-						setQuantity(quantitySelected);
-						console.log(quantitySelected);
-					}}
+					onChange={selectQuantity}
 				>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -59,16 +71,7 @@ export function Product({product, loadCart}) {
 
 			<button
 				className="add-to-cart-button button-primary"
-				onClick={async () => {
-					//We will update it in backend
-					//We use async since the backend doesn't load right up
-					await axios.post("/api/cart-items", {
-						productId: product.id,
-						quantity: quantity,
-					});
-					await loadCart(); //We will upload the page without refresh
-					//The cart doesn't load right up either
-				}}
+				onClick={addToCart}
 			>
 				Add to Cart
 			</button>
