@@ -1,5 +1,5 @@
 #root{
-  padding-bottom: 10px;  /*Ask why when I delete this the lower page is like strange*/
+  padding-bottom: 40px;  /*Ask why when I delete this the lower page is like strange*/
 }
 
 .checkout-page {
@@ -8,8 +8,9 @@
   padding-right: 30px;
 
   margin-top: 70px;
-  margin-bottom: 100px;
+  margin-bottom: 400px;
 
+  /*Ask why when I delete this the lower page is like strange*/
   /* margin-left: auto;
      margin-right auto;
      Is a trick for centering an element horizontally
