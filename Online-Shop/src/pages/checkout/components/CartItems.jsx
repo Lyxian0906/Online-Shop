@@ -1,7 +1,7 @@
 import { formatMoney } from "../../../utils/money";
 import { DeliveryOptions } from "./DeliveryOptions";
 
-export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartitem}) {
+export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartItem}) {
 	return (
 		<div className="cart-item-details-grid">
 			<img className="product-image" src={cartItem.product.image} />
@@ -18,7 +18,7 @@ export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartitem})
 					</span>
 					<span className="update-quantity-link link-primary">Update</span>
 					<span className="delete-quantity-link link-primary"
-					onClick={deleteCartitem}>Delete</span>
+					onClick={deleteCartItem}>Delete</span>
 				</div>
 			</div>
 
@@ -26,3 +26,4 @@ export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartitem})
 		</div>
 	);
 }
+/*I need to make the update button*/

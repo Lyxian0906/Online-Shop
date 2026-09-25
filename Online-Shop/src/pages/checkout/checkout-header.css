@@ -54,6 +54,9 @@ body {
 
 	.checkout-header .logo {
 		display: none;
+		height: 36px;
+		width: 200px;
+		margin-top: 1px;
 	}
 
 	.checkout-header .mobile-logo {
