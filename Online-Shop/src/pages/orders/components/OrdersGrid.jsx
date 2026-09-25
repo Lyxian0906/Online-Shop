@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
+import { formatMoney } from "../../../utils/money";
 
-export function OrdersGrid({order}){
+export function OrdersGrid({orders}){
     return(
         <div className="orders-grid">
 					{orders.map((order) => {

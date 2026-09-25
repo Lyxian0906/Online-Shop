@@ -1,10 +1,8 @@
 import "./OrdersPage.css";
 import axios from "axios";
-import dayjs from "dayjs";
 import { Header } from "../../components/Header";
 import { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router";
-import { formatMoney } from "../../utils/money";
 import { OrderDetailGrid } from "./components/OrdersDetailGrid";
 import { OrdersGrid } from "./components/OrdersGrid";
 
@@ -22,7 +20,7 @@ export function OrdersPage({ cart }) {
 
 			<div className="orders-page">
 				<div className="page-title">Your Orders</div>
-				<OrdersGrid order={order}/>
+				<OrdersGrid order={orders}/>
 				
 			</div>
 		</>
