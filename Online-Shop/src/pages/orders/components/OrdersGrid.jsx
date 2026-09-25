@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { formatMoney } from "../../../utils/money";
+import { OrderDetailGrid } from "./OrdersDetailGrid";
 
 export function OrdersGrid({orders}){
     return(
