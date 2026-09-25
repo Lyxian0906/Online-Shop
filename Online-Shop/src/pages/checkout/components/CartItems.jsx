@@ -1,7 +1,7 @@
 import { formatMoney } from "../../../utils/money";
 import { DeliveryOptions } from "./DeliveryOptions";
 
-export function CartItems({cartItem, deliveryOptions, loadCart}) {
+export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartitem}) {
 	return (
 		<div className="cart-item-details-grid">
 			<img className="product-image" src={cartItem.product.image} />
@@ -17,7 +17,8 @@ export function CartItems({cartItem, deliveryOptions, loadCart}) {
 						<span className="quantity-label">{cartItem.quantity}</span>
 					</span>
 					<span className="update-quantity-link link-primary">Update</span>
-					<span className="delete-quantity-link link-primary">Delete</span>
+					<span className="delete-quantity-link link-primary"
+					onClick={deleteCartitem}>Delete</span>
 				</div>
 			</div>
 
