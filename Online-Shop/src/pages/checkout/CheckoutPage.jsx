@@ -24,7 +24,22 @@ export function CheckoutPage({ cart, loadCart }) {
 			setPaymentSummary(response.data);
 		};
 		fetchCheckoutData();
-	}, []);
+	}, [cart]);
+
+/*
+If we left the dependency array empty if would only run the use effect once
+and that was only when the component mounts when it first loads.
+
+
+Now if we put cart it will reload everytime the cart changes. So this will allow us to 
+modify the delivery options and this will update the payment summary after the cart is updated.
+
+We could also separete it into a function and the used it in the other component like we did with loadCart()
+
+NOTE
+I need to separate both components in differents use effects since we don't need to çupdate the deliveryOptions 
+everytime.
+*/
 
 	return (
 		<>
