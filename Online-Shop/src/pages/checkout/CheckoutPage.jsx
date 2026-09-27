@@ -9,6 +9,7 @@ import { CheckoutHeader } from "./components/CheckoutHeader";
 import { OrderSummary } from "./components/OrderSummary";
 import { PaymentSummary } from "./components/PaymentSummary";
 
+
 export function CheckoutPage({ cart, loadCart }) {
 	const [deliveryOptions, setDeliveryOptions] = useState([]);
 	const [paymentSummary, setPaymentSummary] = useState(null);
@@ -44,7 +45,7 @@ everytime.
 	return (
 		<>
 			<title>Checkout</title>
-			<CheckoutHeader />
+			<CheckoutHeader cart={cart} />
 			<div className="checkout-page">
 				<div className="page-title">Review your order</div>
 
