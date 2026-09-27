@@ -6,6 +6,7 @@ export function TrackingPage() {
 		<>
 			<title>Tracking</title>
 			<Header />
+            <div className={"order-tracking-card"} >
 			<div className="tracking-page">
 				<div className="order-tracking">
 					<Link className="back-to-orders-link link-primary" href="/orders">
@@ -36,6 +37,7 @@ export function TrackingPage() {
 					</div>
 				</div>
 			</div>
+        </div>
 		</>
 	);
 }
