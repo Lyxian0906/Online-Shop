@@ -59,7 +59,7 @@ export function CheckoutHeader({ cart }) {
   <Link className="return-to-home-link" to="/">{totalQuantity} items</Link>
 ```
 
-- [ ] Done
+- [x] Done
 
 ### A4. Fix the date format (extra comma)
 **Files:** `OrderSummary.jsx`, `DeliveryOptions.jsx`
