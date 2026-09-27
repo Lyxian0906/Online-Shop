@@ -1,0 +1,52 @@
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.not-found-code {
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, rgb(25, 135, 84), rgb(80, 190, 140));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.not-found-message {
+  font-size: 20px;
+  color: rgb(100, 100, 100);
+  margin-bottom: 30px;
+}
+
+.not-found-link {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: rgb(25, 135, 84);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.not-found-link:hover {
+  background-color: rgb(15, 105, 65);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 450px) {
+  .not-found-code {
+    font-size: 80px;
+  }
+
+  .not-found-message {
+    font-size: 16px;
+  }
+}
