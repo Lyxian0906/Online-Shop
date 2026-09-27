@@ -65,8 +65,8 @@ export function CheckoutHeader({ cart }) {
 **Files:** `OrderSummary.jsx`, `DeliveryOptions.jsx`
 Change `"dddd, MMMM, D"` to `"dddd, MMMM D"`.
 
-- [ ] `OrderSummary.jsx`
-- [ ] `DeliveryOptions.jsx`
+- [x] `OrderSummary.jsx`
+- [x] `DeliveryOptions.jsx`
 
 ### A5. Make image paths consistent
 **Files:** `Header.jsx`, `CheckoutHeader.jsx`, `ProductsGrid.jsx`, `OrdersDetailGrid.jsx`

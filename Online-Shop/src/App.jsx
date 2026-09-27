@@ -8,10 +8,10 @@ import { OrdersPage } from "./pages/orders/OrdersPage";
 //If we take the function out from use effect we can share it with out components by using a promp on the
 //component we want it to be used in
 function App() {
-	const [cart, serCart] = useState([]);
+	const [cart, setCart] = useState([]);
 	const loadCart = async () => {
 		const response = await axios.get("/api/cart-items?expand=product");
-		serCart(response.data);
+		setCart(response.data);
 	};
 	useEffect(() => {
 		loadCart();
