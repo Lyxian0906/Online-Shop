@@ -27,9 +27,9 @@ return (
 );
 ```
 
-- [ ] `ProductsGrid.jsx`
-- [ ] `OrderSummary.jsx` (`key={cartItem.productId}`)
-- [ ] `DeliveryOptions.jsx` (`key={deliveryOption.id}`)
+- [x] `ProductsGrid.jsx`
+- [x] `OrderSummary.jsx` (`key={cartItem.productId}`)
+- [x] `DeliveryOptions.jsx` (`key={deliveryOption.id}`)
 
 ### A2. Guard against a missing delivery option
 **File:** `OrderSummary.jsx`
