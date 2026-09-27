@@ -40,7 +40,7 @@ return (
 {dayjs(selectedDeliveryOption?.estimatedDeliveryTimeMs).format("dddd, MMMM D")}
 ```
 
-- [ ] Done
+- [x] Done
 
 ### A3. Fix the checkout header count ("3 items")
 **Files:** `CheckoutPage.jsx`, `CheckoutHeader.jsx`
