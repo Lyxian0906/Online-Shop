@@ -1,0 +1,110 @@
+.tracking-page {
+  max-width: 850px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tracking-page .back-to-orders-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: rgb(25, 135, 84);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tracking-page .back-to-orders-link:hover {
+  color: rgb(15, 100, 65);
+  text-decoration: underline;
+}
+
+.tracking-page .delivery-date {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.tracking-page .order-tracking-card {
+  background: #fff;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.tracking-page .product-info {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.tracking-page .product-quantity {
+  color: rgb(120, 120, 120);
+  font-size: 14px;
+}
+
+.tracking-page .product-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tracking-page .progress-labels-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: rgb(150, 150, 150);
+}
+
+.tracking-page .progress-label {
+  transition: color 0.3s ease;
+}
+
+.tracking-page .current-status {
+  color: rgb(25, 135, 84);
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .tracking-page .progress-labels-container {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .tracking-page .progress-labels-container {
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 4px;
+  }
+
+  .tracking-page .progress-label {
+    margin-bottom: 3px;
+  }
+}
+
+.tracking-page .progress-bar-container {
+  height: 22px;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.tracking-page .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, rgb(45, 155, 100), rgb(25, 135, 84));
+  border-radius: 50px;
+  width: 50%;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
