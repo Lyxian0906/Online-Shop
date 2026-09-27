@@ -4,7 +4,6 @@ import "./CheckoutPage.css";
 import "./checkout-header.css";
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
 import { CheckoutHeader } from "./components/CheckoutHeader";
 import { OrderSummary } from "./components/OrderSummary";
 import { PaymentSummary } from "./components/PaymentSummary";

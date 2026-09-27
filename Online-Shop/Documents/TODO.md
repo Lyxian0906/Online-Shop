@@ -87,13 +87,13 @@ Change `"dddd, MMMM, D"` to `"dddd, MMMM D"`.
 
 ## Part B: Cleanup — about 15 min
 
-- [ ] `App.jsx`: rename `serCart` → `setCart` (2 places)
+- [x] `App.jsx`: rename `serCart` → `setCart` (2 places)
 - [ ] `main.jsx`: change `import App from "../src/App"` → `import App from "./App"`
-- [ ] Remove unused imports: `Link` in `CheckoutPage.jsx`; `Link` and `Fragment` in `OrdersPage.jsx`
+- [x] Remove unused imports: `Link` in `CheckoutPage.jsx`; `Link` and `Fragment` in `OrdersPage.jsx`
 - [ ] Delete `src/data/products.js` (not used) or keep it only if you want offline sample data
 - [ ] Decide on naming: `OrdersDetailGrid.jsx` file vs `OrderDetailGrid` component; make them match
-- [ ] Empty `App.css`: delete it (and its import) or use it
-- [ ] Run `npm run lint` and check there are no errors
+- [x] Empty `App.css`: delete it (and its import) or use it
+- [x] Run `npm run lint` and check there are no errors
 
 ---
 

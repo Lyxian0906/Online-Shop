@@ -2,8 +2,6 @@ import "./OrdersPage.css";
 import axios from "axios";
 import { Header } from "../../components/Header";
 import { useState, useEffect, Fragment } from "react";
-import { Link } from "react-router";
-import { OrderDetailGrid } from "./components/OrdersDetailGrid";
 import { OrdersGrid } from "./components/OrdersGrid";
 
 export function OrdersPage({ cart }) {
