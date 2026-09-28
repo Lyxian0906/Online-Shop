@@ -32,6 +32,15 @@ export function CartItems({
 
     };
 
+	const keyPress = (event) => {
+		if(event.key === 'Enter'){ //If we press enter we update the quantity
+			updateQuantity();
+		} if (event.key === 'Escape'){ //If we press Escape we exit and leave the previous quantity as it is
+			quantity === cartItem.quantity
+			setAdded(!added);
+		}
+	}
+
 	/*
 If the user click on the update button, we run the function update.... so if added is false, like at the start
 then !added is true, because added is NOT,
@@ -56,7 +65,7 @@ and that goes on and on and on....
 					<span>
 						Quantity:{" "}
 						{added ? (
-							<input type="text" className="quantity-input" value={quantity} onChange={saveStateQuantity} />
+							<input type="text" className="quantity-input" value={quantity} onChange={saveStateQuantity} onKeyDown={keyPress} />
 						) : (
 							<span className="quantity-label">{cartItem.quantity}</span>
 						)}
