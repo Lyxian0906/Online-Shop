@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/tracking/TrackingPage";
 import { NotFound } from "./pages/notFound/NotFound";
+window.axios = axios;
 
 //If we take the function out from use effect we can share it with out components by using a promp on the
 //component we want it to be used in

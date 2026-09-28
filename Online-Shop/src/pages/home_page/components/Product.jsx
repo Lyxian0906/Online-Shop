@@ -7,6 +7,7 @@ import axios from "axios";
 
 export function Product({ product, loadCart }) {
 	const [quantity, setQuantity] = useState(1);
+	const [added, setAdded] = useState(false);
 
 	const addToCart = async () => {
 		//We will update it in backend
@@ -15,8 +16,16 @@ export function Product({ product, loadCart }) {
 			productId: product.id,
 			quantity,
 		});
+
+
 		await loadCart(); //We will upload the page without refresh
 		//The cart doesn't load right up either
+
+		setAdded(true);
+        setTimeout(() => {
+            setAdded(false);
+        }, 2000);
+		
 	};
 
 	const selectQuantity = (event) => {
@@ -61,8 +70,8 @@ export function Product({ product, loadCart }) {
 
 			<div className="product-spacer"></div>
 
-			<div className="added-to-cart">
-				<img src="images/icons/checkmark.png" />
+			<div className="added-to-cart" style={{ opacity: added ? 1 : 0 }}>
+				<img src="/images/icons/checkmark.png" />
 				Added
 			</div>
 
