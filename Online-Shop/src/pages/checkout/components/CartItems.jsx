@@ -1,6 +1,8 @@
 import { formatMoney } from "../../../utils/money";
 import { DeliveryOptions } from "./DeliveryOptions";
 import { useState } from "react";
+import axios from "axios";
+
 
 export function CartItems({
 	cartItem,
@@ -9,10 +11,27 @@ export function CartItems({
 	deleteCartItem,
 }) {
 	const [added, setAdded] = useState(false);
-	const updateQuantity = () => {
-		setAdded(!added);
-	};
-	
+	const [quantity, setquantity] = useState(cartItem.quantity);
+
+
+
+// Runs every time the user types in the input
+    const saveStateQuantity = (event) => {
+        setquantity(event.target.value);
+    };
+
+    // Runs when the user clicks "Update" / "Save"
+    const updateQuantity = async () => {
+        if (added) {
+            await axios.put(`/api/cart-items/${cartItem.productId}`, {
+                quantity: Number(quantity), //We pick the quantity we saved before and updates it, so we can see the number getting updated
+            });
+            await loadCart(); // refresh the cart with the new data
+        }
+        setAdded(!added); //We don't need the other function since we put it here plus the put apart js doesn't allow two const with same name
+
+    };
+
 	/*
 If the user click on the update button, we run the function update.... so if added is false, like at the start
 then !added is true, because added is NOT,
@@ -37,7 +56,7 @@ and that goes on and on and on....
 					<span>
 						Quantity:{" "}
 						{added ? (
-							<input type="text" className="quantity-input" />
+							<input type="text" className="quantity-input" value={quantity} onChange={saveStateQuantity} />
 						) : (
 							<span className="quantity-label">{cartItem.quantity}</span>
 						)}
