@@ -1,6 +1,7 @@
 import "./Header.css";
 import { NavLink } from "react-router";
 import { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router"; 
 
 export function Header({ cart }) {
 	let totalQuantity = 0;
@@ -8,14 +9,19 @@ export function Header({ cart }) {
 		totalQuantity += cartItem.quantity;
 	});
 
-	const [search, setSearch] = useState("");
+	const navigate = useNavigate();
+	const [searchParams] = useSearchParams();
+    const searchText = searchParams.get("search");
+	
+
+	const [search, setSearch] = useState(searchText || "");
 
 	const updateSearchInput = (event) => {
 		setSearch(event.target.value);
 	};
 
 	const searchProducts = () => {
-		console.log(search);
+		navigate(`/?search=${search}`);
 	};
 	return (
 		<div className="header">
