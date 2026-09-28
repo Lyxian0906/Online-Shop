@@ -5,8 +5,9 @@ import { Link } from "react-router";
 
 export function OrderDetailGrid({ order, loadCart }) {
 	const addToCart = async (productId) => {
-		await axios.post("/api/cart-items", { productId });
+		await axios.post("/api/cart-items", { productId, quantity: 1 });
 		await loadCart();
+		
 	};
 
 	return (
