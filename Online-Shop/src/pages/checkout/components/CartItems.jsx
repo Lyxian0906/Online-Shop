@@ -1,7 +1,11 @@
 import { formatMoney } from "../../../utils/money";
 import { DeliveryOptions } from "./DeliveryOptions";
+import { useState } from "react";
 
 export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartItem}) {
+	const [added, setAdded] = useState(false);
+	
+
 	return (
 		<div className="cart-item-details-grid">
 			<img className="product-image" src={cartItem.product.image} />
@@ -14,6 +18,7 @@ export function CartItems({cartItem, deliveryOptions, loadCart, deleteCartItem})
 				<div className="product-quantity">
 					<span>
 						Quantity:{" "}
+						<input className="quantity-input" type="text" style={{width: added ? 50 : 20}} onClick={() => setAdded(true)}/>
 						<span className="quantity-label">{cartItem.quantity}</span>
 					</span>
 					<span className="update-quantity-link link-primary">Update</span>
