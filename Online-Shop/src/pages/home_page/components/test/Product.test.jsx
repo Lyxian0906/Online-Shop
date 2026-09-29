@@ -31,6 +31,15 @@ describe("Prouct Component", () => {
 			screen.getByTestId('product-image'),
 		).toHaveAttribute('src', 'images/products/re7_p5.png');
         
+
+         expect(
+			screen.getByTestId('product-rating-stars-image'),
+		).toHaveAttribute('src', '/images/ratings/rating-40.png');
+
+
+        expect(
+			screen.getByText('87'),
+		).toBeInTheDocument();
 	});
 });
 
