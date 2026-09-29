@@ -17,15 +17,13 @@ export function Product({ product, loadCart }) {
 			quantity,
 		});
 
-
 		await loadCart(); //We will upload the page without refresh
 		//The cart doesn't load right up either
 
 		setAdded(true);
-        setTimeout(() => {
-            setAdded(false);
-        }, 2000);
-		
+		setTimeout(() => {
+			setAdded(false);
+		}, 2000);
 	};
 
 	const selectQuantity = (event) => {
@@ -36,7 +34,11 @@ export function Product({ product, loadCart }) {
 	return (
 		<div className="product-container">
 			<div className="product-image-container">
-				<img className="product-image" src={product.image} />
+				<img
+					className="product-image"
+					src={product.image}
+					data-testid="product-image"
+				/>
 			</div>
 
 			<div className="product-name limit-text-to-2-lines">{product.name}</div>

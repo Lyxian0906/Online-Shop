@@ -22,6 +22,15 @@ describe("Prouct Component", () => {
 		expect(
 			screen.getByText("Resident Evil 7 Biohard - PS5 Edition"),
 		).toBeInTheDocument();
+
+        expect(
+			screen.getByText("$10.90"),
+		).toBeInTheDocument();
+
+         expect(
+			screen.getByTestId('product-image'),
+		).toHaveAttribute('src', 'images/products/re7_p5.png');
+        
 	});
 });
 
