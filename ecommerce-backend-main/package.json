@@ -16,6 +16,7 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^18.0.5",
     "express": "^4.21.2",
     "mysql2": "^3.14.1",
     "patch-package": "8.0.0",
