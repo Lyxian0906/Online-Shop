@@ -13,6 +13,11 @@ const defaultPort = defaultPorts[dbType];
 export let sequelize;
 
 if (isUsingRDS) {
+  const dialectOptions = {};
+
+  if(dbType === 'postgres'){
+    dialectOptions.ssl = {require: true, rejectUnauthorized: false};
+  }
   sequelize = new Sequelize({
     database: process.env.RDS_DB_NAME,
     username: process.env.RDS_USERNAME,
