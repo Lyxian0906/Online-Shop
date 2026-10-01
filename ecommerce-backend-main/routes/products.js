@@ -16,7 +16,11 @@ function cleanKeywords(keywords) {
   return null;
 }
 
-// Public: anyone can browse products (sold-out ones included, with inStock: false).
+/* 
+Public
+Anyone can browse products (sold-out ones included, with inStock: false).
+*/
+
 router.get('/', async (req, res) => {
   const search = req.query.search;
 
@@ -41,8 +45,9 @@ router.get('/', async (req, res) => {
 
   res.json(products);
 });
-
-// Admin: add a product
+/*
+Admin adds product
+*/
 router.post('/', requireAuth, requireAdmin, async (req, res) => {
   const { name, image, priceCents, keywords, rating, inStock } = req.body;
 

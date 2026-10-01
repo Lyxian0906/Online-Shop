@@ -8,6 +8,9 @@ const router = express.Router();
 
 /*
 Every cart need to have a logged user
+every route now requires a logged user, so each
+user can change their own cart and orders.
+If a user trys to add an sold out product it won't work
 
 */
 router.use(requireAuth);
