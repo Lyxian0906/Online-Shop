@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/tracking/TrackingPage";
 import { NotFound } from "./pages/notFound/NotFound";
+import { LoginPage } from "./pages/login/LoginPage";
 window.axios = axios;
 
 //If we take the function out from use effect we can share it with out components by using a promp on the
@@ -22,9 +23,27 @@ function App() {
 	return (
 		<Routes>
 			<Route index element={<HomePage cart={cart} loadCart={loadCart} />} />
-			<Route path="/checkout" element={<CheckoutPage cart={cart} loadCart={loadCart} />} />
-			<Route path="/orders" element={<OrdersPage cart={cart} loadCart={loadCart} />} />
-			<Route path="tracking/:orderId/:productId" element={<TrackingPage cart={cart}/>} />
+			<Route
+				path="/checkout"
+				element={
+					<RequireAuth>
+						<CheckoutPage cart={cart} loadCart={loadCart} />{" "}
+					</RequireAuth>
+				}
+			/>
+			<Route
+				path="/orders"
+				element={
+					<RequireAuth>
+						<OrdersPage cart={cart} loadCart={loadCart} />{" "}
+					</RequireAuth>
+				}
+			/>
+			<Route
+				path="tracking/:orderId/:productId"
+				element={<TrackingPage cart={cart} />}
+			/>
+			<Route path="/login" element={<LoginPage />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>
 	);
