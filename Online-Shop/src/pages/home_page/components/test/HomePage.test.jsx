@@ -1,5 +1,5 @@
-import { it, describe, vi, beforeEach } from "vitest"; //describe groups test together (test suite)
-import { render } from "@testing-library/react";
+import { it, describe, vi, beforeEach, expect } from "vitest"; //describe groups test together (test suite)
+import { render, screen, within } from "@testing-library/react";
 import { Product } from "../Product";
 import { MemoryRouter } from "react-router";
 import { HomePage } from "../../HomePage";
@@ -44,12 +44,27 @@ describe("HomePage component", () => {
 			}
 		});
 	});
-	it("displays the products correct", () => {
+	it("displays the products correct", async () => {
 		render(
 			<MemoryRouter>
 				<HomePage cart={[]} loadCart={loadCart} />
 			</MemoryRouter>,
 		);
+		const productContainers = await screen.findAllByTestId("product-container");
+
+		expect(productContainers.length).toBe(2);
+
+		expect(
+			within(productContainers[0]).getByText(
+				"Resident Evil 7 Biohard - PS5 Edition",
+			),
+		).toBeInTheDocument();
+
+        expect(
+			within(productContainers[1]).getByText(
+				"The Legend Of Zelda: Ocarina Of Time",
+			),
+		).toBeInTheDocument();
 	});
 });
 
@@ -72,4 +87,12 @@ but our test is NOT in a router so this is why we got this warning
 
 
 Memory router is specifically for testing
+
+When our HomePage is loading it doesn't have any products till is loaded
+fully, so we have to wait, by using the...findAllByTestId we wait for the
+page to load, so it becomes async since we WAIT for the products
+
+
+within(), let us find things within a specific element
+or inside an specific element
 */
