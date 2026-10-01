@@ -1,5 +1,5 @@
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { Navigate } from 'react-router';
+import { useAuth } from '../../context/AuthContext';
 
 // Wrap any page that needs a logged-in user:
 //   <Route path="/checkout" element={<RequireAuth><Checkout /></RequireAuth>} />

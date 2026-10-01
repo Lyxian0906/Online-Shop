@@ -7,6 +7,8 @@ import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/tracking/TrackingPage";
 import { NotFound } from "./pages/notFound/NotFound";
 import { LoginPage } from "./pages/login/LoginPage";
+import { RequireAuth } from "./components/RequireAuth";
+
 window.axios = axios;
 
 //If we take the function out from use effect we can share it with out components by using a promp on the
