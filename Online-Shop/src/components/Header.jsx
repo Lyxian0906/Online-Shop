@@ -2,7 +2,7 @@ import "./Header.css";
 import { NavLink } from "react-router";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 export function Header({ cart }) {
 	let totalQuantity = 0;
