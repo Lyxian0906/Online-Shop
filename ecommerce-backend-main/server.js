@@ -2,6 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 import path from 'path';
+import { Profile } from './models/Profile.js';
 import { fileURLToPath } from 'url';
 import { sequelize } from './models/index.js';
 import productRoutes from './routes/products.js';
@@ -62,7 +63,7 @@ app.use((err, req, res, next) => {
 /* eslint-enable no-unused-vars */
 
 // Sync database and load default data if none exist
-await sequelize.sync();
+await sequelize.sync({alter: true});
 
 const productCount = await Product.count();
 if (productCount === 0) {
