@@ -2,6 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 import path from 'path';
+import meRoutes from './routes/me.js';
 import { Profile } from './models/Profile.js';
 import { fileURLToPath } from 'url';
 import { sequelize } from './models/index.js';
@@ -9,7 +10,6 @@ import productRoutes from './routes/products.js';
 import deliveryOptionRoutes from './routes/deliveryOptions.js';
 import cartItemRoutes from './routes/cartItems.js';
 import orderRoutes from './routes/orders.js';
-import resetRoutes from './routes/reset.js';
 import paymentSummaryRoutes from './routes/paymentSummary.js';
 import { Product } from './models/Product.js';
 import { DeliveryOption } from './models/DeliveryOption.js';
@@ -38,8 +38,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/delivery-options', deliveryOptionRoutes);
 app.use('/api/cart-items', cartItemRoutes);
 app.use('/api/orders', orderRoutes);
-app.use('/api/reset', resetRoutes);
 app.use('/api/payment-summary', paymentSummaryRoutes);
+app.use('/api/me', meRoutes);
 
 // Serve static files from the dist folder
 app.use(express.static(path.join(__dirname, 'dist')));

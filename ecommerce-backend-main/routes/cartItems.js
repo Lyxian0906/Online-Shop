@@ -2,12 +2,19 @@ import express from 'express';
 import { CartItem } from '../models/CartItem.js';
 import { Product } from '../models/Product.js';
 import { DeliveryOption } from '../models/DeliveryOption.js';
+import { requireAuth } from '../middleware/auth.js';
 
 const router = express.Router();
 
+/*
+Every cart needs a user
+
+*/
+router.use(requireAuth);
+
 router.get('/', async (req, res) => {
   const expand = req.query.expand;
-  let cartItems = await CartItem.findAll();
+  let cartItems = await CartItem.findAll({ where: { userId: req.user.id } });
 
   if (expand === 'product') {
     cartItems = await Promise.all(cartItems.map(async (item) => {
@@ -34,12 +41,12 @@ router.post('/', async (req, res) => {
     return res.status(400).json({ error: 'Quantity must be a number between 1 and 10' });
   }
 
-  let cartItem = await CartItem.findOne({ where: { productId } });
+  let cartItem = await CartItem.findOne({ where: { productId, userId: req.user.id } });
   if (cartItem) {
     cartItem.quantity += quantity;
     await cartItem.save();
   } else {
-    cartItem = await CartItem.create({ productId, quantity, deliveryOptionId: "1" });
+    cartItem = await CartItem.create({ userId: req.user.id, productId, quantity, deliveryOptionId: "1" });
   }
 
   res.status(201).json(cartItem);
@@ -49,7 +56,7 @@ router.put('/:productId', async (req, res) => {
   const { productId } = req.params;
   const { quantity, deliveryOptionId } = req.body;
 
-  const cartItem = await CartItem.findOne({ where: { productId } });
+  const cartItem = await CartItem.findOne({ where: { productId, userId: req.user.id } });
   if (!cartItem) {
     return res.status(404).json({ error: 'Cart item not found' });
   }
@@ -76,7 +83,7 @@ router.put('/:productId', async (req, res) => {
 router.delete('/:productId', async (req, res) => {
   const { productId } = req.params;
 
-  const cartItem = await CartItem.findOne({ where: { productId } });
+  const cartItem = await CartItem.findOne({ where: { productId, userId: req.user.id } });
   if (!cartItem) {
     return res.status(404).json({ error: 'Cart item not found' });
   }
