@@ -25,6 +25,7 @@ if (isUsingRDS) {
     host: process.env.RDS_HOSTNAME,
     port: process.env.RDS_PORT || defaultPort,
     dialect: dbType,
+    dialectOptions,
     logging: false
   });
 } else {
