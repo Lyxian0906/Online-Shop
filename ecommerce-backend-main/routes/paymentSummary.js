@@ -2,11 +2,12 @@ import express from 'express';
 import { CartItem } from '../models/CartItem.js';
 import { Product } from '../models/Product.js';
 import { DeliveryOption } from '../models/DeliveryOption.js';
+import { requireAuth } from '../middleware/auth.js';
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-  const cartItems = await CartItem.findAll();
+router.get('/', requireAuth, async (req, res) => {
+  const cartItems = await CartItem.findAll({ where: { userId: req.user.id } });
   let totalItems = 0;
   let productCostCents = 0;
   let shippingCostCents = 0;
@@ -14,6 +15,8 @@ router.get('/', async (req, res) => {
   for (const item of cartItems) {
     const product = await Product.findByPk(item.productId);
     const deliveryOption = await DeliveryOption.findByPk(item.deliveryOptionId);
+    if (!product || !deliveryOption) continue;
+
     totalItems += item.quantity;
     productCostCents += product.priceCents * item.quantity;
     shippingCostCents += deliveryOption.priceCents;

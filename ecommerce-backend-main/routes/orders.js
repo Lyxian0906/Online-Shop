@@ -3,12 +3,21 @@ import { Order } from '../models/Order.js';
 import { Product } from '../models/Product.js';
 import { DeliveryOption } from '../models/DeliveryOption.js';
 import { CartItem } from '../models/CartItem.js';
+import { requireAuth } from '../middleware/auth.js';
 
 const router = express.Router();
 
+/*
+Cheese user
+*/
+router.use(requireAuth);
+
 router.get('/', async (req, res) => {
   const expand = req.query.expand;
-  let orders = await Order.unscoped().findAll({ order: [['orderTimeMs', 'DESC']] }); // Sort by most recent
+  let orders = await Order.unscoped().findAll({
+    where: { userId: req.user.id },
+    order: [['orderTimeMs', 'DESC']] // Sort by most recent
+  });
 
   if (expand === 'products') {
     orders = await Promise.all(orders.map(async (order) => {
@@ -30,42 +39,50 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const cartItems = await CartItem.findAll();
+  const cartItems = await CartItem.findAll({ where: { userId: req.user.id } });
 
   if (cartItems.length === 0) {
     return res.status(400).json({ error: 'Cart is empty' });
   }
 
   let totalCostCents = 0;
-  const products = await Promise.all(cartItems.map(async (item) => {
+  const products = [];
+
+  for (const item of cartItems) {
     const product = await Product.findByPk(item.productId);
     if (!product) {
-      throw new Error(`Product not found: ${item.productId}`);
+      return res.status(400).json({ error: `Product not found: ${item.productId}` });
     }
+    if (!product.inStock) {
+      return res.status(400).json({ error: `Sold out: ${product.name}` });
+    }
+
     const deliveryOption = await DeliveryOption.findByPk(item.deliveryOptionId);
     if (!deliveryOption) {
-      throw new Error(`Invalid delivery option: ${item.deliveryOptionId}`);
+      return res.status(400).json({ error: `Invalid delivery option: ${item.deliveryOptionId}` });
     }
+
     const productCost = product.priceCents * item.quantity;
     const shippingCost = deliveryOption.priceCents;
     totalCostCents += productCost + shippingCost;
-    const estimatedDeliveryTimeMs = Date.now() + deliveryOption.deliveryDays * 24 * 60 * 60 * 1000;
-    return {
+
+    products.push({
       productId: item.productId,
       quantity: item.quantity,
-      estimatedDeliveryTimeMs
-    };
-  }));
+      estimatedDeliveryTimeMs: Date.now() + deliveryOption.deliveryDays * 24 * 60 * 60 * 1000
+    });
+  }
 
   totalCostCents = Math.round(totalCostCents * 1.1);
 
   const order = await Order.create({
+    userId: req.user.id,
     orderTimeMs: Date.now(),
     totalCostCents,
     products
   });
 
-  await CartItem.destroy({ where: {} });
+  await CartItem.destroy({ where: { userId: req.user.id } });
 
   res.status(201).json(order);
 });
@@ -74,7 +91,8 @@ router.get('/:orderId', async (req, res) => {
   const { orderId } = req.params;
   const expand = req.query.expand;
 
-  let order = await Order.findByPk(orderId);
+  // Only find the order if it belongs to the logged-in user.
+  let order = await Order.findOne({ where: { id: orderId, userId: req.user.id } });
   if (!order) {
     return res.status(404).json({ error: 'Order not found' });
   }

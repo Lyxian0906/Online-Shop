@@ -7,7 +7,7 @@ import { requireAuth } from '../middleware/auth.js';
 const router = express.Router();
 
 /*
-Every cart needs a user
+Every cart need to have a logged user
 
 */
 router.use(requireAuth);
@@ -37,6 +37,10 @@ router.post('/', async (req, res) => {
     return res.status(400).json({ error: 'Product not found' });
   }
 
+  if (!product.inStock) {
+    return res.status(400).json({ error: 'Product is sold out' });
+  }
+
   if (typeof quantity !== 'number' || quantity < 1 || quantity > 10) {
     return res.status(400).json({ error: 'Quantity must be a number between 1 and 10' });
   }
@@ -46,7 +50,12 @@ router.post('/', async (req, res) => {
     cartItem.quantity += quantity;
     await cartItem.save();
   } else {
-    cartItem = await CartItem.create({ userId: req.user.id, productId, quantity, deliveryOptionId: "1" });
+    cartItem = await CartItem.create({
+      userId: req.user.id,
+      productId,
+      quantity,
+      deliveryOptionId: "1"
+    });
   }
 
   res.status(201).json(cartItem);
