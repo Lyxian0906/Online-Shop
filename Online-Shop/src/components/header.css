@@ -183,3 +183,10 @@
   text-align: center;
   box-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
 }
+
+.logout-button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}

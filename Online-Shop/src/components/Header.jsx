@@ -1,7 +1,8 @@
 import "./Header.css";
 import { NavLink } from "react-router";
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router"; 
+import { useNavigate, useSearchParams } from "react-router";
+import { useAuth } from "../context/AuthContext";
 
 export function Header({ cart }) {
 	let totalQuantity = 0;
@@ -10,9 +11,9 @@ export function Header({ cart }) {
 	});
 
 	const navigate = useNavigate();
+	const { isLoggedIn, signOut } = useAuth();
 	const [searchParams] = useSearchParams();
-    const searchText = searchParams.get("search");
-	
+	const searchText = searchParams.get("search");
 
 	const [search, setSearch] = useState(searchText || "");
 
@@ -50,6 +51,19 @@ export function Header({ cart }) {
 				<NavLink className="orders-link header-link" to="/orders">
 					<span className="orders-text">Orders</span>
 				</NavLink>
+
+				{isLoggedIn ? (
+					<button
+						className="orders-link header-link logout-button"
+						onClick={signOut}
+					>
+						<span className="orders-text">Log out</span>
+					</button>
+				) : (
+					<NavLink className="orders-link header-link" to="/login">
+						<span className="orders-text">Log in</span>
+					</NavLink>
+				)}
 
 				<NavLink className="cart-link header-link" to="/checkout">
 					<img className="cart-icon" src="images/icons/cart-icon.png" />
