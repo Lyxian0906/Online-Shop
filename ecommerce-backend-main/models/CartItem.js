@@ -14,6 +14,9 @@ export const CartItem = sequelize.define('CartItem', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
+  userId: {
+    type: DataTypes.UUID
+  },
   deliveryOptionId: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -32,4 +35,5 @@ export const CartItem = sequelize.define('CartItem', {
   defaultScope: {
     order: [['createdAt', 'ASC']]
   }
+  
 });

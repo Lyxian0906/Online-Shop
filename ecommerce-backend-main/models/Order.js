@@ -11,6 +11,9 @@ export const Order = sequelize.define('Order', {
     type: DataTypes.BIGINT,
     allowNull: false
   },
+  userId: {
+    type: DataTypes.UUID
+  },
   totalCostCents: {
     type: DataTypes.INTEGER,
     allowNull: false
