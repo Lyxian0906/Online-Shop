@@ -2,6 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 import { AuthProvider } from "../context/AuthContext";
+import "../lib/setupAxios";   
+
 import "./index.css";
 import App from "../src/App";
 

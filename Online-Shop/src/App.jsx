@@ -8,7 +8,7 @@ import { TrackingPage } from "./pages/tracking/TrackingPage";
 import { NotFound } from "./pages/notFound/NotFound";
 import { LoginPage } from "./pages/login/LoginPage";
 import { RequireAuth } from "./components/RequireAuth";
-import { useAuth } from "./context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 window.axios = axios;
 
