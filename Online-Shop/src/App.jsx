@@ -8,6 +8,7 @@ import { TrackingPage } from "./pages/tracking/TrackingPage";
 import { NotFound } from "./pages/notFound/NotFound";
 import { LoginPage } from "./pages/login/LoginPage";
 import { RequireAuth } from "./components/RequireAuth";
+import { useAuth } from "./context/AuthContext";
 
 window.axios = axios;
 
@@ -15,13 +16,20 @@ window.axios = axios;
 //component we want it to be used in
 function App() {
 	const [cart, setCart] = useState([]);
+	const { isLoggedIn } = useAuth();
+
 	const loadCart = async () => {
+		if (!isLoggedIn) {
+			setCart([]); // logged out = empty cart, no request
+			return;
+		}
 		const response = await axios.get("/api/cart-items?expand=product");
 		setCart(response.data);
 	};
 	useEffect(() => {
-		loadCart();
-	}, []);
+  loadCart();
+}, [isLoggedIn]); //We reload the cart whenever someon logs in and logs out 
+
 	return (
 		<Routes>
 			<Route index element={<HomePage cart={cart} loadCart={loadCart} />} />
