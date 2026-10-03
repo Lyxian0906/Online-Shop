@@ -1,0 +1,153 @@
+.admin-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.admin-page h1 {
+  margin: 0 0 24px;
+  font-size: 24px;
+}
+
+.admin-page h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 480px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.admin-form h2 {
+  margin-bottom: 8px;
+}
+
+.admin-form label {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.admin-page input {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.admin-page button {
+  font: inherit;
+  padding: 8px 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.admin-page button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.admin-page input:focus-visible,
+.admin-page button:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.admin-form-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.admin-page .admin-primary {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+}
+
+.admin-error {
+  color: #b00020;
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+
+.admin-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.admin-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.admin-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-meta {
+  font-size: 14px;
+  color: #555;
+}
+
+.admin-soldout {
+  color: #b00020;
+  font-weight: 600;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-page .admin-danger {
+  color: #b00020;
+  border-color: #b00020;
+}
+
+@media (max-width: 640px) {
+  .admin-row {
+    flex-wrap: wrap;
+  }
+
+  .admin-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
