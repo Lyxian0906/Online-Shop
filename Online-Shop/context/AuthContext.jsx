@@ -56,3 +56,16 @@ export function useAuth() {
   }
   return context;
 }
+/*
+This page only checks who is logged in and then tells the rest of the app
+This part of the app remember 3 things
+
+Line 13, the session that's basically if there's someone loggedd in or not :)
+Line 28 that's the profile, that checks the role (admin or customer)
+Line 38 there's a loadin part, that's the one that makes the app wait if it's still checking
+
+
+
+
+
+*/
