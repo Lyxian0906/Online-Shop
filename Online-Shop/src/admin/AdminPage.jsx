@@ -223,6 +223,17 @@ export function AdminPage() {
 
 
 /*
+This page is basically a manage product screen
+This page do 2 things, one is showing the products, and the other changing them
 
+This also remember a few things like
+the product list from the dataBase
+the form, that are the thing u write in the boxes
+editingId, which basically is i it's empty is that u are adding a new product, and a productId means you're editing one product
+error reads the message of something fails for some reason 
+
+Each of the buttons on this page sends a request to the server
+For example if we click the add Product this page calls POST /api/products and creates a product
+Same as  to save changes on PUT /api/products/:id 
 
 */
