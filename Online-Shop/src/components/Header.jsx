@@ -11,7 +11,7 @@ export function Header({ cart }) {
 	});
 
 	const navigate = useNavigate();
-	const { isLoggedIn, signOut } = useAuth();
+	const { isLoggedIn, isAdmin, signOut } = useAuth();
 	const [searchParams] = useSearchParams();
 	const searchText = searchParams.get("search");
 
@@ -51,7 +51,11 @@ export function Header({ cart }) {
 				<NavLink className="orders-link header-link" to="/orders">
 					<span className="orders-text">Orders</span>
 				</NavLink>
-
+				{isAdmin && (
+					<NavLink className="orders-link header-link" to="/admin">
+						<span className="orders-text">Admin</span>
+					</NavLink>
+				)}
 				{isLoggedIn ? (
 					<button
 						className="orders-link header-link logout-button"

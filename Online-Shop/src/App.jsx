@@ -27,8 +27,8 @@ function App() {
 		setCart(response.data);
 	};
 	useEffect(() => {
-  loadCart();
-}, [isLoggedIn]); //We reload the cart whenever someon logs in and logs out 
+		loadCart();
+	}, [isLoggedIn]); //We reload the cart whenever someon logs in and logs out
 
 	return (
 		<Routes>
@@ -47,6 +47,14 @@ function App() {
 					<RequireAuth>
 						<OrdersPage cart={cart} loadCart={loadCart} />{" "}
 					</RequireAuth>
+				}
+			/>
+			<Route
+				path="/admin"
+				element={
+					<RequireAdmin>
+						<AdminPage />
+					</RequireAdmin>
 				}
 			/>
 			<Route
