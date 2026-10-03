@@ -9,6 +9,8 @@ import { NotFound } from "./pages/notFound/NotFound";
 import { LoginPage } from "./pages/login/LoginPage";
 import { RequireAuth } from "./components/RequireAuth";
 import { useAuth } from "../context/AuthContext";
+import { RequireAdmin } from "./components/RequireAdmin";
+import { AdminPage } from "./pages/admin/AdminPage";
 
 window.axios = axios;
 
@@ -59,7 +61,11 @@ function App() {
 			/>
 			<Route
 				path="tracking/:orderId/:productId"
-				element={<TrackingPage cart={cart} />}
+				element={
+					<RequireAuth>
+						<TrackingPage cart={cart} />
+					</RequireAuth>
+				}
 			/>
 			<Route path="/login" element={<LoginPage />} />
 			<Route path="*" element={<NotFound />} />
