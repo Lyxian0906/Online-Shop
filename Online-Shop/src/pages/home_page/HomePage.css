@@ -204,3 +204,8 @@
 .home-page .add-to-cart-button:active {
 	transform: translateY(0);
 }
+
+.add-to-cart-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

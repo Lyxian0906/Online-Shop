@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { formatMoney } from "../../../utils/money";
 import axios from "axios";
 
@@ -8,14 +9,25 @@ import axios from "axios";
 export function Product({ product, loadCart }) {
 	const [quantity, setQuantity] = useState(1);
 	const [added, setAdded] = useState(false);
+	const navigate = useNavigate();
+
+	const soldOut = product.inStock === false;
 
 	const addToCart = async () => {
 		//We will update it in backend
 		//We use async since the backend doesn't load right up
-		await axios.post("/api/cart-items", {
-			productId: product.id,
-			quantity,
-		});
+		try {
+			await axios.post("/api/cart-items", {
+				productId: product.id,
+				quantity,
+			});
+		} catch (error) {
+			// 401 = not logged in (or the session expired), so send them to log in
+			if (error.response?.status === 401) {
+				navigate("/login");
+			}
+			return;
+		}
 
 		await loadCart(); //We will upload the page without refresh
 		//The cart doesn't load right up either
@@ -32,7 +44,7 @@ export function Product({ product, loadCart }) {
 		setQuantity(quantitySelected);
 	};
 	return (
-		<div className="product-container"  data-testid="product-container">
+		<div className="product-container" data-testid="product-container">
 			<div className="product-image-container">
 				<img
 					className="product-image"
@@ -57,7 +69,7 @@ export function Product({ product, loadCart }) {
 			<div className="product-price">{formatMoney(product.priceCents)}</div>
 
 			<div className="product-quantity-container">
-				<select value={quantity} onChange={selectQuantity}>
+				<select value={quantity} onChange={selectQuantity} disabled={soldOut}>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -82,8 +94,9 @@ export function Product({ product, loadCart }) {
 				className="add-to-cart-button button-primary"
 				data-testid="add-to-cart-button"
 				onClick={addToCart}
+				disabled={soldOut}
 			>
-				Add to Cart
+				{soldOut ? "Sold out" : "Add to Cart"}
 			</button>
 		</div>
 	);
