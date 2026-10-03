@@ -37,8 +37,8 @@ export function AuthProvider({ children }) {
 
   const value = {
     session,
-    profile,
-    loading,
+    profile: profile ?? null,
+    loading: loading || (Boolean(userId) && profile === undefined),
     isLoggedIn: Boolean(session),
     isAdmin: profile?.role === 'admin',
     signUp: (email, password) => supabase.auth.signUp({ email, password }),
