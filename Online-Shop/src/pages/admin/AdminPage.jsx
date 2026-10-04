@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminPage.css";
+import { AdminNav } from './AdminNav';
 
 const emptyForm = { name: "", image: "", price: "", keywords: "" };
 
@@ -115,6 +116,7 @@ export function AdminPage() {
 	return (
 		<div className="admin-page">
 			<h1>Manage products</h1>
+			<AdminNav />
 
 			<form className="admin-form" onSubmit={handleSubmit}>
 				<h2>{editingId ? "Edit product" : "Add a product"}</h2>

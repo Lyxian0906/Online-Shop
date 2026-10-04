@@ -13,6 +13,7 @@ import { RequireAdmin } from "./components/RequireAdmin";
 import { AdminPage } from "./pages/admin/AdminPage";
 import { ForgotPasswordPage } from "./pages/login/ForgotPasswordPage";
 import { ResetPasswordPage } from "./pages/login/ResetPasswordPage";
+import { AdminOrdersPage } from "./pages/admin/AdminOrdersPage";
 
 window.axios = axios;
 
@@ -73,6 +74,14 @@ function App() {
 			/>
 			<Route path="/login" element={<LoginPage />} />
 			<Route path="*" element={<NotFound />} />
+			<Route
+				path="/admin/orders"
+				element={
+					<RequireAdmin>
+						<AdminOrdersPage />
+					</RequireAdmin>
+				}
+			/>
 		</Routes>
 	);
 }
