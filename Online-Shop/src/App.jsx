@@ -11,6 +11,8 @@ import { RequireAuth } from "./components/RequireAuth";
 import { useAuth } from "../context/AuthContext";
 import { RequireAdmin } from "./components/RequireAdmin";
 import { AdminPage } from "./pages/admin/AdminPage";
+import { ForgotPasswordPage } from "./pages/login/ForgotPasswordPage";
+import { ResetPasswordPage } from "./pages/login/ResetPasswordPage";
 
 window.axios = axios;
 
@@ -59,6 +61,8 @@ function App() {
 					</RequireAdmin>
 				}
 			/>
+			<Route path="/forgot-password" element={<ForgotPasswordPage />} />
+			<Route path="/reset-password" element={<ResetPasswordPage />} />
 			<Route
 				path="tracking/:orderId/:productId"
 				element={
