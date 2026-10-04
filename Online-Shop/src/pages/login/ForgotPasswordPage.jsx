@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { supabase } from '../../lib/supabase';
+import { supabase } from '../../../lib/supabase';
 import './LoginPage.css'; // reuses the login page styles
 
 export function ForgotPasswordPage() {

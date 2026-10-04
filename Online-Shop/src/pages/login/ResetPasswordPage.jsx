@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { supabase } from "../../lib/supabase";
-import { useAuth } from "../../context/AuthContext";
+import { supabase } from "../../../lib/supabase";
+import { useAuth } from "../../../context/AuthContext";
 import "./LoginPage.css"; // reuses the login page styles
 
 export function ResetPasswordPage() {
