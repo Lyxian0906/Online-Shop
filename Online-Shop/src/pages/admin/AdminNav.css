@@ -1,0 +1,24 @@
+.admin-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.admin-nav a {
+  padding: 8px 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.admin-nav a.active {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+}
+
+.admin-nav a:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
