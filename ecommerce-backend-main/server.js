@@ -20,6 +20,8 @@ import { defaultDeliveryOptions } from './defaultData/defaultDeliveryOptions.js'
 import { defaultCart } from './defaultData/defaultCart.js';
 import { defaultOrders } from './defaultData/defaultOrders.js';
 import fs from 'fs';
+import adminOrderRoutes from './routes/adminOrders.js';
+  
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -40,6 +42,7 @@ app.use('/api/cart-items', cartItemRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/payment-summary', paymentSummaryRoutes);
 app.use('/api/me', meRoutes);
+app.use('/api/admin/orders', adminOrderRoutes);
 
 // Serve static files from the dist folder
 app.use(express.static(path.join(__dirname, 'dist')));
