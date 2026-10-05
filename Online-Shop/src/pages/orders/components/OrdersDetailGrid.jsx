@@ -2,12 +2,12 @@ import dayjs from "dayjs";
 import axios from "axios";
 import { Fragment } from "react";
 import { Link } from "react-router";
+import { OrderChat } from "../../components/OrderChat";
 
 export function OrderDetailGrid({ order, loadCart }) {
 	const addToCart = async (productId) => {
 		await axios.post("/api/cart-items", { productId, quantity: 1 });
 		await loadCart();
-		
 	};
 
 	return (
@@ -44,6 +44,10 @@ export function OrderDetailGrid({ order, loadCart }) {
 									Track package
 								</button>
 							</Link>
+						</div>
+
+						<div className="order-chat-wrapper">
+							<OrderChat orderId={order.id} />
 						</div>
 					</Fragment>
 				);
