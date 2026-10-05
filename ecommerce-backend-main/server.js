@@ -4,6 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import meRoutes from './routes/me.js';
 import { Profile } from './models/Profile.js';
+import { OrderMessage } from './models/OrderMessage.js';
 import { fileURLToPath } from 'url';
 import { sequelize } from './models/index.js';
 import productRoutes from './routes/products.js';
@@ -21,6 +22,7 @@ import { defaultCart } from './defaultData/defaultCart.js';
 import { defaultOrders } from './defaultData/defaultOrders.js';
 import fs from 'fs';
 import adminOrderRoutes from './routes/adminOrders.js';
+import orderMessageRoutes from './routes/orderMessages.js';
   
 
 const app = express();
@@ -43,6 +45,7 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/payment-summary', paymentSummaryRoutes);
 app.use('/api/me', meRoutes);
 app.use('/api/admin/orders', adminOrderRoutes);
+app.use('/api/orders/:orderId/messages', orderMessageRoutes);
 
 // Serve static files from the dist folder
 app.use(express.static(path.join(__dirname, 'dist')));
