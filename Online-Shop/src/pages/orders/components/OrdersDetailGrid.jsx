@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import axios from "axios";
 import { Fragment } from "react";
 import { Link } from "react-router";
-import { OrderChat } from "../../components/OrderChat";
+import { OrderChat } from "../../../components/OrderChat";
 
 export function OrderDetailGrid({ order, loadCart }) {
 	const addToCart = async (productId) => {
