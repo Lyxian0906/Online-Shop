@@ -147,9 +147,26 @@ listRef: the LIST of messages so the code can scroll it
 
 The tree effects
 
-Loadin messages
+Loading messages
+This is the first useEffect
+
+Whenever the number of messages changes, this will scroll tot he botton of them so u can see the most recent ones
+
+sendin a message: send Line 50
+preventDefault this stops the browser for realoading we already used this
+it trims the texts to erase any blank spaces and also if it's empty it does nothing
+
+Then it sends POST to the message
+if it's sucessful then adds the messages returned to the list, and then clears the box and then it calls onSent(),
+if one was given.
+
+If it isn't sucessful then it shows an error
 
 
+The who wrote it on line 73, this basically checksif the message sender id matched the user id, 
+so if it matches the message bubble says "you" and it goes to the right
+
+If it doens't it says admin and the bubble foes to the left
 
 
 
