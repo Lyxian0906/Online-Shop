@@ -56,7 +56,7 @@ export function LoginPage() {
 			<form className="login-form" onSubmit={handleSubmit}>
 				<h1>{isLogin ? "Log in" : "Create account"}</h1>
 
-				<label htmlFor="email">Email</label>
+				<label htmlFor="email" className="labelMail">Email</label>
 				<input
 					id="email"
 					type="email"
@@ -66,7 +66,7 @@ export function LoginPage() {
 					required
 				/>
 
-				<label htmlFor="password">Password</label>
+				<label htmlFor="password" className="labelPass">Password</label>
 				<input
 					id="password"
 					type="password"

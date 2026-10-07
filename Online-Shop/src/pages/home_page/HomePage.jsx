@@ -13,7 +13,7 @@ export function HomePage({ cart, loadCart }) {
 	const search = searchParams.get("search");
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState("");
-/*
+	/*
 The loading thing needs to be in a try catch
 so we alwaysshow the circle thing whenever our page is loading
 then we set it to false so it dissapears
@@ -30,7 +30,6 @@ then we set it to false so it dissapears
 				const response = await axios.get(urlPath);
 				setProducts(response.data);
 			} catch {
-				
 				setError("Could not load the products. Please try again.");
 			}
 			setLoading(false);
@@ -39,7 +38,7 @@ then we set it to false so it dissapears
 	}, [search]);
 
 	//We can't return 2 pages so we wrap it into a segment
-/*
+	/*
 Here we use that loading thing,
 First we leave the header so it stays while we load the info
 As u can see we have three line between the brakets
