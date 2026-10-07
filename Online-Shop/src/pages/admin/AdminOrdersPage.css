@@ -1,0 +1,110 @@
+.order-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.order-user {
+  font-weight: 600;
+}
+
+.order-meta {
+  font-size: 14px;
+  color: #555;
+}
+
+.order-total,
+.order-line label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.order-total input {
+  width: 110px;
+}
+
+.order-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.order-line {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #e3e3e3;
+}
+
+.order-line-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.order-line input[type="number"] {
+  width: 70px;
+}
+
+.order-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.order-saved {
+  color: #1b6e2d;
+  font-size: 14px;
+  margin: 8px 0 0;
+}
+
+@media (max-width: 640px) {
+  .order-header,
+  .order-line {
+    flex-wrap: wrap;
+  }
+
+  .order-line-name {
+    flex-basis: 100%;
+    white-space: normal;
+  }
+}
+
+.order-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e3e3e3;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.order-badge.needs-reply {
+  background: #b00020;
+  color: #fff;
+}
