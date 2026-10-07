@@ -1,0 +1,39 @@
+.product-filters {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.product-filters label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+}
+
+.product-filters select {
+	font: inherit;
+	padding: 6px 8px;
+	border: 1px solid #bbb;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.product-filters input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.product-filters select:focus-visible,
+.product-filters input:focus-visible {
+	outline: 2px solid #1a73e8;
+	outline-offset: 2px;
+}
+
+.no-results {
+	padding: 32px 0;
+	color: #555;
+}
