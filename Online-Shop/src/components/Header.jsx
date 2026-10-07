@@ -51,6 +51,11 @@ export function Header({ cart }) {
 				<NavLink className="orders-link header-link" to="/orders">
 					<span className="orders-text">Orders</span>
 				</NavLink>
+				{isLoggedIn && (
+					<NavLink className="orders-link header-link" to="/account">
+						<span className="orders-text">Account</span>
+					</NavLink>
+				)}
 				{isAdmin && (
 					<NavLink className="orders-link header-link" to="/admin">
 						<span className="orders-text">Admin</span>
