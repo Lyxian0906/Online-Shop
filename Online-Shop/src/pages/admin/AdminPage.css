@@ -42,6 +42,10 @@
   border-radius: 6px;
 }
 
+.admin-page h1{
+  color:#1a73e8;
+}
+
 .admin-page button {
   font: inherit;
   padding: 8px 12px;
@@ -142,6 +146,17 @@
   border-color: #b00020;
 }
 
+.admin-list-header{
+  color: #1a73e8;
+}
+
+.admin-name{
+  color: #1a73e8;
+}
+
+.admin-meta{
+  color: aliceblue;
+}
 @media (max-width: 640px) {
   .admin-row {
     flex-wrap: wrap;
@@ -152,3 +167,4 @@
     justify-content: flex-start;
   }
 }
+
