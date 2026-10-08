@@ -23,7 +23,7 @@ export function AccountPage({ cart }) {
 	const [error, setError] = useState("");
 	const [message, setMessage] = useState("");
 	const [saving, setSaving] = useState(false);
-/*
+	/*
 	This happens when we clic the save the password box
 	the event.prevent... it's the one that stops the web from reloading
 
@@ -46,7 +46,6 @@ export function AccountPage({ cart }) {
 		}
 
 		setSaving(true);
-
 
 		const { error: checkError } = await supabase.auth.signInWithPassword({
 			email,
@@ -83,7 +82,6 @@ export function AccountPage({ cart }) {
 		setConfirm("");
 		setMessage("Password updated.");
 	}
-
 
 	/*
 	This logs u out and send u to home page
