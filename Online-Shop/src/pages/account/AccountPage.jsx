@@ -6,9 +6,15 @@ import { supabase } from "../../../lib/supabase";
 import "./AccountPage.css";
 
 export function AccountPage({ cart }) {
+	/*This line reads from the notice board, and reads who's logged in*/
 	const { session, profile, isAdmin, signOut } = useAuth();
 	const navigate = useNavigate();
 
+	/*
+    Right after login the profile can still be empty (the server hasn't answered yet),
+    so if it's empty we read the email from the session instead.
+    That gives us 2 places to get the email, and '' as a last resort so it's never undefined.
+*/
 	const email = profile?.email ?? session?.user?.email ?? "";
 
 	const [currentPassword, setCurrentPassword] = useState("");
@@ -17,7 +23,14 @@ export function AccountPage({ cart }) {
 	const [error, setError] = useState("");
 	const [message, setMessage] = useState("");
 	const [saving, setSaving] = useState(false);
+/*
+	This happens when we clic the save the password box
+	the event.prevent... it's the one that stops the web from reloading
 
+	So the first if, it's to verify if the 2 passwords match
+	The second one is to see if the new password is different from the current one
+	The last one is to check if the current password is correct
+*/
 	async function handleSubmit(event) {
 		event.preventDefault();
 		setError("");
@@ -39,6 +52,10 @@ export function AccountPage({ cart }) {
 			email,
 			password: currentPassword,
 		});
+		/*
+		This line is the one that tries to loggin with the current pass, u need to know ur old pass to change it ehehe
+		
+		*/
 
 		if (checkError) {
 			setSaving(false);
@@ -46,7 +63,11 @@ export function AccountPage({ cart }) {
 			return;
 		}
 
-		// 2. Save the new one.
+		/*
+		
+		This changes the password
+		
+		*/
 		const { error: updateError } = await supabase.auth.updateUser({
 			password: newPassword,
 		});
@@ -63,6 +84,11 @@ export function AccountPage({ cart }) {
 		setMessage("Password updated.");
 	}
 
+
+	/*
+	This logs u out and send u to home page
+	
+	*/
 	async function handleSignOut() {
 		await signOut();
 		navigate("/");
