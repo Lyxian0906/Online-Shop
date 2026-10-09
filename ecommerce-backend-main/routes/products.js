@@ -5,6 +5,9 @@ import { requireAuth, requireAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
 
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const MAX_DESCRIPTION_LENGTH = 2000;
+
 // Accepts ["a","b"] or "a,b" and returns a clean array (or null if invalid).
 function cleanKeywords(keywords) {
   if (Array.isArray(keywords)) {
@@ -16,11 +19,7 @@ function cleanKeywords(keywords) {
   return null;
 }
 
-/* 
-Public
-Anyone can browse products (sold-out ones included, with inStock: false).
-*/
-
+// Public: anyone can browse products (sold-out ones included, with inStock: false).
 router.get('/', async (req, res) => {
   const search = req.query.search;
 
@@ -45,11 +44,25 @@ router.get('/', async (req, res) => {
 
   res.json(products);
 });
-/*
-Admin adds product
-*/
+
+// Public: one product (used by the product page).
+router.get('/:id', async (req, res) => {
+  // A malformed id would make the database throw, so answer "not found" right away.
+  if (!UUID_PATTERN.test(req.params.id)) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  const product = await Product.findByPk(req.params.id);
+  if (!product) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  res.json(product);
+});
+
+// Admin: add a product
 router.post('/', requireAuth, requireAdmin, async (req, res) => {
-  const { name, image, priceCents, keywords, rating, inStock } = req.body;
+  const { name, image, priceCents, keywords, rating, inStock, description } = req.body;
 
   if (typeof name !== 'string' || !name.trim()) {
     return res.status(400).json({ error: 'Name is required' });
@@ -63,6 +76,12 @@ router.post('/', requireAuth, requireAdmin, async (req, res) => {
   if (inStock !== undefined && typeof inStock !== 'boolean') {
     return res.status(400).json({ error: 'inStock must be true or false' });
   }
+  if (description !== undefined && typeof description !== 'string') {
+    return res.status(400).json({ error: 'description must be text' });
+  }
+  if (description && description.length > MAX_DESCRIPTION_LENGTH) {
+    return res.status(400).json({ error: `Description can be at most ${MAX_DESCRIPTION_LENGTH} characters` });
+  }
 
   const product = await Product.create({
     name: name.trim(),
@@ -70,23 +89,21 @@ router.post('/', requireAuth, requireAdmin, async (req, res) => {
     priceCents,
     keywords: cleanKeywords(keywords) ?? [],
     rating: rating ?? { stars: 0, count: 0 },
-    inStock: inStock ?? true
+    inStock: inStock ?? true,
+    description: (description ?? '').trim()
   });
 
   res.status(201).json(product);
 });
 
-/* 
-Admin can:
-edit a product (name, image, price, keywords, rating, inStock)
-*/
+// Admin: edit a product (name, image, price, keywords, rating, inStock, description)
 router.put('/:id', requireAuth, requireAdmin, async (req, res) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {
     return res.status(404).json({ error: 'Product not found' });
   }
 
-  const { name, image, priceCents, keywords, rating, inStock } = req.body;
+  const { name, image, priceCents, keywords, rating, inStock, description } = req.body;
 
   if (name !== undefined) {
     if (typeof name !== 'string' || !name.trim()) {
@@ -128,11 +145,21 @@ router.put('/:id', requireAuth, requireAdmin, async (req, res) => {
     product.inStock = inStock;
   }
 
+  if (description !== undefined) {
+    if (typeof description !== 'string') {
+      return res.status(400).json({ error: 'description must be text' });
+    }
+    if (description.length > MAX_DESCRIPTION_LENGTH) {
+      return res.status(400).json({ error: `Description can be at most ${MAX_DESCRIPTION_LENGTH} characters` });
+    }
+    product.description = description.trim();
+  }
+
   await product.save();
   res.json(product);
 });
 
-/*Admin can delete things*/ 
+// Admin: remove a product
 router.delete('/:id', requireAuth, requireAdmin, async (req, res) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {
