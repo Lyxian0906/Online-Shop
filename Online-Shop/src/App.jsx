@@ -14,7 +14,8 @@ import { AdminPage } from "./pages/admin/AdminPage";
 import { ForgotPasswordPage } from "./pages/login/ForgotPasswordPage";
 import { ResetPasswordPage } from "./pages/login/ResetPasswordPage";
 import { AdminOrdersPage } from "./pages/admin/AdminOrdersPage";
-import {AccountPage} from "./pages/account/AccountPage";
+import { ProductPage } from "./pages/product/ProductPage";
+import { AccountPage } from "./pages/account/AccountPage";
 
 window.axios = axios;
 
@@ -62,6 +63,10 @@ function App() {
 						<AdminPage />
 					</RequireAdmin>
 				}
+			/>
+			<Route
+				path="/product/:productId"
+				element={<ProductPage cart={cart} loadCart={loadCart} />}
 			/>
 			<Route path="/forgot-password" element={<ForgotPasswordPage />} />
 			<Route path="/reset-password" element={<ResetPasswordPage />} />
