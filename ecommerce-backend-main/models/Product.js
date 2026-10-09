@@ -28,6 +28,11 @@ export const Product = sequelize.define('Product', {
     allowNull: false,
     defaultValue: true
   },
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+    defaultValue: ''
+  },
   keywords: {
     type: DataTypes.STRING,
     allowNull: false,
