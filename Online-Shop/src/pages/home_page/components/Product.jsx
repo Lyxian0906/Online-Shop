@@ -46,15 +46,20 @@ export function Product({ product, loadCart }) {
 	return (
 		<div className="product-container" data-testid="product-container">
 			<div className="product-image-container">
-				<img
-					className="product-image"
-					src={product.image}
-					data-testid="product-image"
-				/>
+				<Link to={`/product/${product.id}`}>
+					<img
+						className="product-image"
+						src={product.image}
+						data-testid="product-image"
+					/>
+				</Link>
 			</div>
 
-			<div className="product-name limit-text-to-2-lines">{product.name}</div>
-
+			<div className="product-name limit-text-to-2-lines">
+				<Link to={`/product/${product.id}`} className="product-name-link">
+					{product.name}
+				</Link>
+			</div>
 			<div className="product-rating-container">
 				<img
 					className="product-rating-stars "

@@ -157,6 +157,15 @@
 .admin-meta{
   color: aliceblue;
 }
+
+.admin-page textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  resize: vertical;
+}
+
 @media (max-width: 640px) {
   .admin-row {
     flex-wrap: wrap;
