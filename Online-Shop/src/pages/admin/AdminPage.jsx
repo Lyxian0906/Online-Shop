@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminPage.css";
-import { AdminNav } from './AdminNav';
+import { AdminNav } from "./AdminNav";
 
-const emptyForm = { name: "", image: "", price: "", keywords: "" };
+const emptyForm = {
+	name: "",
+	image: "",
+	price: "",
+	keywords: "",
+	description: "",
+};
 
 export function AdminPage() {
 	const [products, setProducts] = useState([]);
@@ -45,6 +51,7 @@ export function AdminPage() {
 			image: form.image,
 			priceCents,
 			keywords: form.keywords, // the server accepts "a, b, c"
+			description: form.description,
 		};
 
 		setSaving(true);
@@ -71,6 +78,7 @@ export function AdminPage() {
 			image: product.image,
 			price: (product.priceCents / 100).toFixed(2),
 			keywords: product.keywords.join(", "),
+			description: product.description ?? "",
 		});
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
@@ -159,7 +167,15 @@ export function AdminPage() {
 					value={form.keywords}
 					onChange={updateField}
 				/>
-
+				<label htmlFor="description">Description</label>
+				<textarea
+					id="description"
+					name="description"
+					value={form.description}
+					onChange={updateField}
+					rows={4}
+					maxLength={2000}
+				/>
 				{error && (
 					<p className="admin-error" role="alert">
 						{error}
@@ -222,7 +238,6 @@ export function AdminPage() {
 		</div>
 	);
 }
-
 
 /*
 This page is basically a manage product screen
