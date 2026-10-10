@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import { formatMoney } from "../../../utils/money";
 import axios from "axios";
 

@@ -23,6 +23,7 @@
 
 .order-user {
   font-weight: 600;
+  color: #fff;
 }
 
 .order-meta {
@@ -73,6 +74,10 @@
   display: flex;
   gap: 8px;
   margin-top: 12px;
+}
+
+span{
+  color: rgb(236, 239, 238);
 }
 
 .order-saved {
