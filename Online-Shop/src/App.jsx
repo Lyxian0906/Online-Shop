@@ -14,7 +14,7 @@ import { AdminPage } from "./pages/admin/AdminPage";
 import { ForgotPasswordPage } from "./pages/login/ForgotPasswordPage";
 import { ResetPasswordPage } from "./pages/login/ResetPasswordPage";
 import { AdminOrdersPage } from "./pages/admin/AdminOrdersPage";
-import { ProductPage } from "./pages/product/ProductPage";
+import { ProductPage } from "./pages/product/ProductsPage";
 import { AccountPage } from "./pages/account/AccountPage";
 
 window.axios = axios;
