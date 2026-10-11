@@ -1,7 +1,7 @@
 .product-page {
   max-width: 980px;
   margin: 0 auto;
-  padding: 84px 16px 64px;
+  padding: 24px 16px 64px;
 }
 
 .product-page-back {
@@ -37,7 +37,6 @@
 .product-page-name {
   margin: 0 0 12px;
   font-size: 26px;
-  color: #f6f6f6;
 }
 
 .product-page-rating {
@@ -46,19 +45,17 @@
   gap: 8px;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #faf8f8;
+  color: #555;
 }
 
 .product-page-rating img {
   width: 100px;
-  
 }
 
 .product-page-price {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #f6f6f6;
 }
 
 .product-page-soldout {
@@ -70,7 +67,6 @@
 .product-page-subtitle {
   margin: 16px 0 6px;
   font-size: 16px;
-  color: #82a8de;
 }
 
 .product-page-description {
@@ -78,7 +74,6 @@
   line-height: 1.5;
   white-space: pre-line; /* keeps the line breaks the admin typed */
   overflow-wrap: anywhere;
-  color: #f6f6f6;
 }
 
 .product-page-buy {
@@ -86,7 +81,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  color: #f6f6f6;
 }
 
 .product-page-buy select {
@@ -118,4 +112,16 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
+}
+
+.product-page-lowstock {
+  color: #b35900;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.product-page-error {
+  color: #b00020;
+  font-size: 14px;
+  margin: 12px 0 0;
 }

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./AdminPage.css";
 import { AdminNav } from "./AdminNav";
+import "./AdminPage.css";
 
 const emptyForm = {
 	name: "",
 	image: "",
 	price: "",
+	stock: "",
 	keywords: "",
 	description: "",
 };
@@ -46,10 +47,17 @@ export function AdminPage() {
 			return;
 		}
 
+		const stock = Number(form.stock);
+		if (form.stock === "" || !Number.isInteger(stock) || stock < 0) {
+			setError("Stock must be a whole number, 0 or more");
+			return;
+		}
+
 		const body = {
 			name: form.name,
 			image: form.image,
 			priceCents,
+			stock,
 			keywords: form.keywords, // the server accepts "a, b, c"
 			description: form.description,
 		};
@@ -77,6 +85,7 @@ export function AdminPage() {
 			name: product.name,
 			image: product.image,
 			price: (product.priceCents / 100).toFixed(2),
+			stock: String(product.stock ?? 0),
 			keywords: product.keywords.join(", "),
 			description: product.description ?? "",
 		});
@@ -89,11 +98,11 @@ export function AdminPage() {
 		setError("");
 	};
 
-	const toggleStock = async (product) => {
+	// Sold out = stock 0. To put units back, use Edit and type the new stock.
+	const markSoldOut = async (product) => {
 		setError("");
-		const inStock = product.inStock !== false;
 		try {
-			await axios.put(`/api/products/${product.id}`, { inStock: !inStock });
+			await axios.put(`/api/products/${product.id}`, { stock: 0 });
 			await loadProducts();
 		} catch (err) {
 			showError(err);
@@ -103,7 +112,7 @@ export function AdminPage() {
 	const deleteProduct = async (product) => {
 		const sure = window.confirm(
 			`Delete "${product.name}"? It will also be removed from every cart. ` +
-				"Marking it as sold out is safer if customers already ordered it.",
+				"Setting its stock to 0 is safer if customers already ordered it.",
 		);
 		if (!sure) return;
 
@@ -160,6 +169,18 @@ export function AdminPage() {
 					required
 				/>
 
+				<label htmlFor="stock">Stock (units available, 0 = sold out)</label>
+				<input
+					id="stock"
+					name="stock"
+					type="number"
+					min="0"
+					step="1"
+					value={form.stock}
+					onChange={updateField}
+					required
+				/>
+
 				<label htmlFor="keywords">Keywords (separated by commas)</label>
 				<input
 					id="keywords"
@@ -167,6 +188,7 @@ export function AdminPage() {
 					value={form.keywords}
 					onChange={updateField}
 				/>
+
 				<label htmlFor="description">Description</label>
 				<textarea
 					id="description"
@@ -176,6 +198,7 @@ export function AdminPage() {
 					rows={4}
 					maxLength={2000}
 				/>
+
 				{error && (
 					<p className="admin-error" role="alert">
 						{error}
@@ -206,7 +229,7 @@ export function AdminPage() {
 
 			<ul className="admin-list">
 				{visibleProducts.map((product) => {
-					const inStock = product.inStock !== false;
+					const soldOut = product.stock <= 0;
 					return (
 						<li key={product.id} className="admin-row">
 							<img className="admin-thumb" src={product.image} alt="" />
@@ -214,15 +237,18 @@ export function AdminPage() {
 							<div className="admin-info">
 								<div className="admin-name">{product.name}</div>
 								<div className="admin-meta">
-									${(product.priceCents / 100).toFixed(2)}
-									{!inStock && <span className="admin-soldout"> Sold out</span>}
+									${(product.priceCents / 100).toFixed(2)} &middot; Stock:{" "}
+									{product.stock}
+									{soldOut && <span className="admin-soldout"> Sold out</span>}
 								</div>
 							</div>
 
 							<div className="admin-actions">
-								<button onClick={() => toggleStock(product)}>
-									{inStock ? "Mark sold out" : "Back in stock"}
-								</button>
+								{!soldOut && (
+									<button onClick={() => markSoldOut(product)}>
+										Mark sold out
+									</button>
+								)}
 								<button onClick={() => startEdit(product)}>Edit</button>
 								<button
 									className="admin-danger"
