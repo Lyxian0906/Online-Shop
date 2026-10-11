@@ -1,5 +1,6 @@
 import express from 'express';
 import { Order } from '../models/Order.js';
+import { sequelize } from '../models/index.js';
 import { Product } from '../models/Product.js';
 import { DeliveryOption } from '../models/DeliveryOption.js';
 import { CartItem } from '../models/CartItem.js';
@@ -18,6 +19,14 @@ If a user trys to add an sold out product it won't work
 
 */
 router.use(requireAuth);
+
+// An error we throw on purpose when checkout cannot continue (empty cart, sold out...).
+class CheckoutError extends Error {
+  constructor(message, status = 400) {
+    super(message);
+    this.status = status;
+  }
+}
 
 router.get('/', async (req, res) => {
   const expand = req.query.expand;
@@ -45,53 +54,82 @@ router.get('/', async (req, res) => {
   res.json(orders);
 });
 
-router.post('/', async (req, res) => {
-  const cartItems = await CartItem.findAll({ where: { userId: req.user.id } });
+router.post('/', async (req, res, next) => {
+  try {
+    // Everything inside the transaction happens "all or nothing":
+    // if any step throws, the database goes back to how it was before.
+    const order = await sequelize.transaction(async (transaction) => {
+      const cartItems = await CartItem.findAll({
+        where: { userId: req.user.id },
+        transaction
+      });
 
-  if (cartItems.length === 0) {
-    return res.status(400).json({ error: 'Cart is empty' });
-  }
+      if (cartItems.length === 0) {
+        throw new CheckoutError('Cart is empty');
+      }
 
-  let totalCostCents = 0;
-  const products = [];
+      let totalCostCents = 0;
+      const products = [];
 
-  for (const item of cartItems) {
-    const product = await Product.findByPk(item.productId);
-    if (!product) {
-      return res.status(400).json({ error: `Product not found: ${item.productId}` });
-    }
-    if (!product.inStock) {
-      return res.status(400).json({ error: `Sold out: ${product.name}` });
-    }
+      for (const item of cartItems) {
+        // lock = nobody else can change this product's row until we finish.
+        // This stops two people from buying the last unit at the same time.
+        const product = await Product.findByPk(item.productId, {
+          transaction,
+          lock: transaction.LOCK.UPDATE
+        });
+        if (!product) {
+          throw new CheckoutError(`Product not found: ${item.productId}`);
+        }
 
-    const deliveryOption = await DeliveryOption.findByPk(item.deliveryOptionId);
-    if (!deliveryOption) {
-      return res.status(400).json({ error: `Invalid delivery option: ${item.deliveryOptionId}` });
-    }
+        if (product.stock < item.quantity) {
+          throw new CheckoutError(
+            product.stock === 0
+              ? `Sold out: ${product.name}`
+              : `Only ${product.stock} left of ${product.name}`,
+            409
+          );
+        }
 
-    const productCost = product.priceCents * item.quantity;
-    const shippingCost = deliveryOption.priceCents;
-    totalCostCents += productCost + shippingCost;
+        const deliveryOption = await DeliveryOption.findByPk(item.deliveryOptionId, { transaction });
+        if (!deliveryOption) {
+          throw new CheckoutError(`Invalid delivery option: ${item.deliveryOptionId}`);
+        }
 
-    products.push({
-      productId: item.productId,
-      quantity: item.quantity,
-      estimatedDeliveryTimeMs: Date.now() + deliveryOption.deliveryDays * 24 * 60 * 60 * 1000
+        totalCostCents += product.priceCents * item.quantity + deliveryOption.priceCents;
+
+        // Take the units out of the stock
+        product.stock -= item.quantity;
+        await product.save({ transaction });
+
+        products.push({
+          productId: item.productId,
+          quantity: item.quantity,
+          estimatedDeliveryTimeMs: Date.now() + deliveryOption.deliveryDays * 24 * 60 * 60 * 1000
+        });
+      }
+
+      totalCostCents = Math.round(totalCostCents * 1.1);
+
+      const newOrder = await Order.create({
+        userId: req.user.id,
+        orderTimeMs: Date.now(),
+        totalCostCents,
+        products
+      }, { transaction });
+
+      await CartItem.destroy({ where: { userId: req.user.id }, transaction });
+
+      return newOrder;
     });
+
+    res.status(201).json(order);
+  } catch (err) {
+    if (err instanceof CheckoutError) {
+      return res.status(err.status).json({ error: err.message });
+    }
+    next(err);
   }
-
-  totalCostCents = Math.round(totalCostCents * 1.1);
-
-  const order = await Order.create({
-    userId: req.user.id,
-    orderTimeMs: Date.now(),
-    totalCostCents,
-    products
-  });
-
-  await CartItem.destroy({ where: { userId: req.user.id } });
-
-  res.status(201).json(order);
 });
 
 router.get('/:orderId', async (req, res) => {
