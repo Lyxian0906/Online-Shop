@@ -23,16 +23,6 @@ export const Product = sequelize.define('Product', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  inStock: {
-    type: DataTypes.BOOLEAN,
-    allowNull: false,
-    defaultValue: true
-  },
-  description: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-    defaultValue: ''
-  },
   keywords: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -41,6 +31,27 @@ export const Product = sequelize.define('Product', {
     },
     set(val) {
       this.setDataValue('keywords', val.join(','));
+    }
+  },
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+    defaultValue: ''
+  },
+  // How many units we have. 0 means sold out.
+  stock: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    defaultValue: 10,
+    validate: { min: 0 }
+  },
+  // Not a real column. It is calculated from stock every time, so there is only
+  // ONE place to change (stock) and the two can never disagree.
+  // The frontend can keep reading product.inStock like before.
+  inStock: {
+    type: DataTypes.VIRTUAL(DataTypes.BOOLEAN, ['stock']),
+    get() {
+      return this.getDataValue('stock') > 0;
     }
   },
   createdAt: {
