@@ -40,8 +40,8 @@ router.post('/', async (req, res) => {
     return res.status(400).json({ error: 'Product not found' });
   }
 
-  if (!product.inStock) {
-    return res.status(400).json({ error: 'Product is sold out' });
+  if (product.stock <= 0) {
+    return res.status(409).json({ error: 'Product is sold out' });
   }
 
   if (typeof quantity !== 'number' || quantity < 1 || quantity > 10) {
@@ -49,6 +49,16 @@ router.post('/', async (req, res) => {
   }
 
   let cartItem = await CartItem.findOne({ where: { productId, userId: req.user.id } });
+
+  // What the user would have in the cart after this click must not pass the stock.
+  const alreadyInCart = cartItem ? cartItem.quantity : 0;
+  if (alreadyInCart + quantity > product.stock) {
+    const message = alreadyInCart > 0
+      ? `Only ${product.stock} in stock, and you already have ${alreadyInCart} in your cart.`
+      : `Only ${product.stock} in stock.`;
+    return res.status(409).json({ error: message });
+  }
+
   if (cartItem) {
     cartItem.quantity += quantity;
     await cartItem.save();
@@ -77,6 +87,12 @@ router.put('/:productId', async (req, res) => {
     if (typeof quantity !== 'number' || quantity < 1) {
       return res.status(400).json({ error: 'Quantity must be a number greater than 0' });
     }
+
+    const product = await Product.findByPk(productId);
+    if (product && quantity > product.stock) {
+      return res.status(409).json({ error: `Only ${product.stock} in stock.` });
+    }
+
     cartItem.quantity = quantity;
   }
 

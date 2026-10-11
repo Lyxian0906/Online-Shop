@@ -7,6 +7,7 @@ const router = express.Router();
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const MAX_DESCRIPTION_LENGTH = 2000;
+const MAX_STOCK = 100000; //Max stock we can have
 
 // Accepts ["a","b"] or "a,b" and returns a clean array (or null if invalid).
 function cleanKeywords(keywords) {
@@ -62,7 +63,7 @@ router.get('/:id', async (req, res) => {
 
 // Admin: add a product
 router.post('/', requireAuth, requireAdmin, async (req, res) => {
-  const { name, image, priceCents, keywords, rating, inStock, description } = req.body;
+  const { name, image, priceCents, keywords, rating, stock, description } = req.body;
 
   if (typeof name !== 'string' || !name.trim()) {
     return res.status(400).json({ error: 'Name is required' });
@@ -73,8 +74,8 @@ router.post('/', requireAuth, requireAdmin, async (req, res) => {
   if (!Number.isInteger(priceCents) || priceCents < 0) {
     return res.status(400).json({ error: 'priceCents must be a whole number, 0 or more' });
   }
-  if (inStock !== undefined && typeof inStock !== 'boolean') {
-    return res.status(400).json({ error: 'inStock must be true or false' });
+  if (!Number.isInteger(stock) || stock < 0 || stock > MAX_STOCK) {
+    return res.status(400).json({ error: `Stock must be a whole number from 0 to ${MAX_STOCK}` });
   }
   if (description !== undefined && typeof description !== 'string') {
     return res.status(400).json({ error: 'description must be text' });
@@ -89,21 +90,21 @@ router.post('/', requireAuth, requireAdmin, async (req, res) => {
     priceCents,
     keywords: cleanKeywords(keywords) ?? [],
     rating: rating ?? { stars: 0, count: 0 },
-    inStock: inStock ?? true,
+    stock,
     description: (description ?? '').trim()
   });
 
   res.status(201).json(product);
 });
 
-// Admin: edit a product (name, image, price, keywords, rating, inStock, description)
+// Admin: edit a product (name, image, price, keywords, rating, stock, description)
 router.put('/:id', requireAuth, requireAdmin, async (req, res) => {
   const product = await Product.findByPk(req.params.id);
   if (!product) {
     return res.status(404).json({ error: 'Product not found' });
   }
 
-  const { name, image, priceCents, keywords, rating, inStock, description } = req.body;
+  const { name, image, priceCents, keywords, rating, stock, description } = req.body; 
 
   if (name !== undefined) {
     if (typeof name !== 'string' || !name.trim()) {
@@ -138,11 +139,11 @@ router.put('/:id', requireAuth, requireAdmin, async (req, res) => {
     product.rating = rating;
   }
 
-  if (inStock !== undefined) {
-    if (typeof inStock !== 'boolean') {
-      return res.status(400).json({ error: 'inStock must be true or false' });
+  if (stock !== undefined) {
+    if (!Number.isInteger(stock) || stock < 0 || stock > MAX_STOCK) {
+      return res.status(400).json({ error: `Stock must be a whole number from 0 to ${MAX_STOCK}` });
     }
-    product.inStock = inStock;
+    product.stock = stock;
   }
 
   if (description !== undefined) {
