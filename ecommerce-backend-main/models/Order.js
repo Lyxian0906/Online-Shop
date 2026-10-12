@@ -18,6 +18,17 @@ export const Order = sequelize.define('Order', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
+  // 'paid' for every order that went through the (fake) payment.
+  // Older orders get 'paid' too, so nothing looks unpaid by mistake.
+  paymentStatus: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: 'paid'
+  },
+  // The fake receipt number, like MOCK-1A2B3C4D (empty for older orders)
+  paymentReference: {
+    type: DataTypes.STRING
+  },
   products: {
     type: DataTypes.JSON,
     allowNull: false

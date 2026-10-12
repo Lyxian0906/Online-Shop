@@ -5,6 +5,8 @@ import { Product } from '../models/Product.js';
 import { DeliveryOption } from '../models/DeliveryOption.js';
 import { CartItem } from '../models/CartItem.js';
 import { requireAuth } from '../middleware/auth.js';
+import { chargeTestCard, PAYMENT_SCENARIOS } from '../services/mockPayment.js';
+
 
 const router = express.Router();
 
@@ -19,6 +21,8 @@ If a user trys to add an sold out product it won't work
 
 */
 router.use(requireAuth);
+
+
 
 // An error we throw on purpose when checkout cannot continue (empty cart, sold out...).
 class CheckoutError extends Error {
