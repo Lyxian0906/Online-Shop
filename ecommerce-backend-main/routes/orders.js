@@ -60,6 +60,13 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res, next) => {
   try {
+    // The checkout form sends which fake card was used:
+    // 'success', 'declined' or 'insufficient_funds'.
+    const { scenario } = req.body;
+    if (!PAYMENT_SCENARIOS.includes(scenario)) {
+      return res.status(400).json({ error: 'Choose a valid payment method' });
+    }
+
     // Everything inside the transaction happens "all or nothing":
     // if any step throws, the database goes back to how it was before.
     const order = await sequelize.transaction(async (transaction) => {
@@ -115,10 +122,21 @@ router.post('/', async (req, res, next) => {
 
       totalCostCents = Math.round(totalCostCents * 1.1);
 
+      // Charge the (fake) card. The amount is the total WE calculated above,
+      // never a number sent by the browser.
+      // If the payment fails we throw, and the transaction undoes everything,
+      // including the stock we just took out. No order, cart stays as it was.
+      const payment = chargeTestCard({ scenario, amountCents: totalCostCents });
+      if (!payment.ok) {
+        throw new CheckoutError(payment.message, 402);
+      }
+
       const newOrder = await Order.create({
         userId: req.user.id,
         orderTimeMs: Date.now(),
         totalCostCents,
+        paymentStatus: 'paid',
+        paymentReference: payment.reference,
         products
       }, { transaction });
 
