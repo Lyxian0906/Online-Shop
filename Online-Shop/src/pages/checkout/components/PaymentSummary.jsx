@@ -1,105 +1,222 @@
 import { useState } from "react";
-import { formatMoney } from "../../../utils/money";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import { formatMoney } from "../../utils/money";
+import "./PaymentForm.css";
 
-// The fake "test cards": the number you type decides what happens.
-// We only send the result name (scenario) to the server, never the card number.
-const TEST_CARDS = {
-    "4242424242424242": "success",
-    "4000000000000002": "declined",
-    "4000000000009995": "insufficient_funds",
-};
+// These are TEST cards, like the ones real payment companies give to developers.
+// The number you type decides what happens. No real money is ever used.
+const TEST_CARDS = [
+    { number: "4242424242424242", scenario: "success", label: "Always works" },
+    { number: "4000000000000002", scenario: "declined", label: "Always declined" },
+    { number: "4000000000009995", scenario: "insufficient_funds", label: "Not enough money" },
+];
 
-export function PaymentSummary({paymentSummary, loadCart}){
+// "4242424242424242" -> "4242 4242 4242 4242"
+function formatCardNumber(value) {
+    const digits = value.replace(/\D/g, "").slice(0, 16);
+    return digits.replace(/(.{4})/g, "$1 ").trim();
+}
+
+// "1228" -> "12/28"
+function formatExpiry(value) {
+    const digits = value.replace(/\D/g, "").slice(0, 4);
+    if (digits.length <= 2) return digits;
+    return `${digits.slice(0, 2)}/${digits.slice(2)}`;
+}
+
+// The month must be 01-12 and the date can't be in the past
+function isExpiryValid(expiry) {
+    const match = /^(\d{2})\/(\d{2})$/.exec(expiry);
+    if (!match) return false;
+
+    const month = Number(match[1]);
+    const year = 2000 + Number(match[2]);
+    if (month < 1 || month > 12) return false;
+
+    const now = new Date();
+    const currentMonth = now.getMonth() + 1;
+    const currentYear = now.getFullYear();
+    return year > currentYear || (year === currentYear && month >= currentMonth);
+}
+
+// Waits some milliseconds, so "Processing..." is visible for a moment like a real payment
+function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Usage:
+// <PaymentForm totalCents={paymentSummary.totalCostCents} onSuccess={(order) => ...} />
+export function PaymentForm({ totalCents, onSuccess }) {
     const navigate = useNavigate();
-    const [cardNumber, setCardNumber] = useState("");
-    const [error, setError] = useState("");
-    const [paying, setPaying] = useState(false);
 
-    const createOrder = async () => {
-        const scenario = TEST_CARDS[cardNumber.replace(/\s/g, "")];
-        if (!scenario) {
-            setError("Use a test card, for example 4242 4242 4242 4242");
+    const [cardNumber, setCardNumber] = useState("");
+    const [name, setName] = useState("");
+    const [expiry, setExpiry] = useState("");
+    const [cvc, setCvc] = useState("");
+    const [error, setError] = useState("");
+    const [processing, setProcessing] = useState(false);
+
+    // The "Use this card" buttons fill the form with a test card
+    const fillTestCard = (number) => {
+        const nextYear = (new Date().getFullYear() + 3) % 100;
+        setCardNumber(formatCardNumber(number));
+        setExpiry(`12/${String(nextYear).padStart(2, "0")}`);
+        setCvc("123");
+        if (!name.trim()) setName("Test Customer");
+        setError("");
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setError("");
+
+        //Checks the form here in the browser first
+        const digits = cardNumber.replace(/\s/g, "");
+
+        if (!name.trim()) {
+            setError("Enter the name on the card.");
+            return;
+        }
+        if (digits.length !== 16) {
+            setError("The card number must have 16 digits.");
+            return;
+        }
+        if (!isExpiryValid(expiry)) {
+            setError("The expiry date is not valid.");
+            return;
+        }
+        if (!/^\d{3}$/.test(cvc)) {
+            setError("The security code must have 3 digits.");
             return;
         }
 
-        setError("");
-        setPaying(true);
-        try {
-            await axios.post('/api/orders', { scenario });
-            await loadCart();
-            navigate('/orders');
-        } catch (err) {
-            // The backend sends messages like "Your card was declined."
-            // or "Sold out: ..." inside err.response.data.error
-            setError(err.response?.data?.error || "Payment failed");
-        } finally {
-            setPaying(false);
+        const testCard = TEST_CARDS.find((card) => card.number === digits);
+        if (!testCard) {
+            setError("This is test mode. Use one of the test cards below.");
+            return;
         }
+
+        // Sends the payment. We send ONLY the kind of card (the scenario).
+        // The card number never leaves this page and is never saved anywhere.
+        setProcessing(true);
+        let order;
+        try {
+            const [response] = await Promise.all([
+                axios.post("/api/orders", { paymentScenario: testCard.scenario }),
+                wait(1200),
+            ]);
+            order = response.data;
+        } catch (err) {
+            if (err.response?.status === 401) {
+                navigate("/login");
+                return;
+            }
+            // 402 = payment declined, 409 = not enough stock, 400 = something else
+            setError(err.response?.data?.error || "Something went wrong. Try again.");
+            setCvc("");
+            setProcessing(false);
+            return;
+        }
+
+        //It worked: let the checkout page continue (refresh the cart, go to orders...)
+        await onSuccess(order);
+        setProcessing(false);
     };
-/*
-    When we create an order our cart is gonna be empty so we also need to reload the cart
 
+    return (
+        <div className="payment-form">
+            <h2>Payment</h2>
 
-    Then we are gonna navigate to another page, in this case the order so we can check our order,
-    navigate is not async, it loads inmediately
-*/
-    return(
-        <div className="payment-summary">
-                                <div className="payment-summary-title">Payment Summary</div>
-                                {paymentSummary && (
-                                    <>
-                                        <div className="payment-summary-row">
-                                            <div>Items ({paymentSummary.totalItems}):</div>
-                                            <div className="payment-summary-money">
-                                                {formatMoney(paymentSummary.productCostCents)}
-                                            </div>
-                                        </div>
-                                        <div className="payment-summary-row">
-                                            <div>Shipping &amp; handling:</div>
-                                            <div className="payment-summary-money">
-                                                {formatMoney(paymentSummary.shippingCostCents)}
-                                            </div>
-                                        </div>
-                                        <div className="payment-summary-row subtotal-row">
-                                            <div>Total before tax:</div>
-                                            <div className="payment-summary-money">
-                                                {formatMoney(paymentSummary.totalCostBeforeTaxCents)}
-                                            </div>
-                                        </div>
-                                        <div className="payment-summary-row">
-                                            <div>Estimated tax (10%):</div>
-                                            <div className="payment-summary-money">
-                                                {formatMoney(paymentSummary.taxCents)}
-                                            </div>
-                                        </div>
-                                        <div className="payment-summary-row total-row">
-                                            <div>Order total:</div>
-                                            <div className="payment-summary-money">
-                                                {formatMoney(paymentSummary.totalCostCents)}
-                                            </div>
-                                        </div>
+            <p className="payment-test-banner">
+                <strong>Test mode.</strong> No real payment is made. Never type a real
+                card number here.
+            </p>
 
-                                        <input
-                                            type="text"
-                                            placeholder="Test card: 4242 4242 4242 4242"
-                                            value={cardNumber}
-                                            onChange={(event) => setCardNumber(event.target.value)}
-                                            style={{ width: "100%", boxSizing: "border-box", padding: 8, marginTop: 12 }}
-                                        />
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="card-name">Name on the card</label>
+                <input
+                    id="card-name"
+                    type="text"
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                    autoComplete="off"
+                />
 
-                                        {error && (
-                                            <div style={{ color: "red", marginTop: 8 }}>{error}</div>
-                                        )}
+                <label htmlFor="card-number">Card number</label>
+                <input
+                    id="card-number"
+                    type="text"
+                    inputMode="numeric"
+                    placeholder="4242 4242 4242 4242"
+                    value={cardNumber}
+                    onChange={(event) => setCardNumber(formatCardNumber(event.target.value))}
+                    autoComplete="off"
+                />
 
-                                        <button className="place-order-button button-primary"
-                                        onClick={createOrder}
-                                        disabled={paying}>
-                                            {paying ? "Processing..." : "Place your order"}
-                                        </button>
-                                    </>
-                                )}
-                            </div>
+                <div className="payment-row">
+                    <div>
+                        <label htmlFor="card-expiry">Expiry (MM/YY)</label>
+                        <input
+                            id="card-expiry"
+                            type="text"
+                            inputMode="numeric"
+                            placeholder="12/30"
+                            value={expiry}
+                            onChange={(event) => setExpiry(formatExpiry(event.target.value))}
+                            autoComplete="off"
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="card-cvc">Security code</label>
+                        <input
+                            id="card-cvc"
+                            type="text"
+                            inputMode="numeric"
+                            placeholder="123"
+                            maxLength={3}
+                            value={cvc}
+                            onChange={(event) => setCvc(event.target.value.replace(/\D/g, ""))}
+                            autoComplete="off"
+                        />
+                    </div>
+                </div>
+
+                {error && (
+                    <p className="payment-error" role="alert">
+                        {error}
+                    </p>
+                )}
+
+                <button
+                    type="submit"
+                    className="payment-pay-button button-primary"
+                    disabled={processing}
+                >
+                    {processing ? "Processing..." : `Pay ${formatMoney(totalCents)}`}
+                </button>
+            </form>
+
+            <div className="payment-test-cards">
+                <h3>Test cards</h3>
+                <p>Any future date and any 3 digits work.</p>
+                <ul>
+                    {TEST_CARDS.map((card) => (
+                        <li key={card.number}>
+                            <code>{formatCardNumber(card.number)}</code>
+                            <span>{card.label}</span>
+                            <button
+                                type="button"
+                                onClick={() => fillTestCard(card.number)}
+                                disabled={processing}
+                            >
+                                Use this card
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
     );
 }
