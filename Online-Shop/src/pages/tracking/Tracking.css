@@ -27,6 +27,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: -0.3px;
+  color: #fff;
 }
 
 .tracking-page .order-tracking-card {
@@ -40,10 +41,11 @@
 .tracking-page .product-info {
   font-weight: 600;
   margin-bottom: 3px;
+  color: #fff;
 }
 
 .tracking-page .product-quantity {
-  color: rgb(120, 120, 120);
+  color: rgb(219, 204, 204);
   font-size: 14px;
 }
 
@@ -62,7 +64,7 @@
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 15px;
-  color: rgb(150, 150, 150);
+  color: rgb(229, 219, 219);
 }
 
 .tracking-page .progress-label {
