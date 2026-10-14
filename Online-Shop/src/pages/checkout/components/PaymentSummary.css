@@ -1,0 +1,125 @@
+.payment-form {
+    max-width: 420px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.payment-form h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.payment-test-banner {
+    margin: 0 0 16px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #fff4d6;
+    color: #5c4300;
+    font-size: 14px;
+}
+
+.payment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.payment-form label {
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.payment-form input {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    padding: 9px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+.payment-form input:focus-visible,
+.payment-form button:focus-visible {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+.payment-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.payment-error {
+    margin: 6px 0 0;
+    color: #b00020;
+    font-size: 14px;
+}
+
+.payment-pay-button {
+    margin-top: 14px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.payment-pay-button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.payment-test-cards {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.payment-test-cards h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+.payment-test-cards p {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+.payment-test-cards ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-test-cards li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+.payment-test-cards code {
+    font-size: 13px;
+}
+
+.payment-test-cards span {
+    flex: 1;
+    color: #555;
+}
+
+.payment-test-cards button {
+    font: inherit;
+    font-size: 13px;
+    padding: 4px 8px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.payment-test-cards button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
