@@ -37,6 +37,7 @@
 .product-page-name {
   margin: 0 0 12px;
   font-size: 26px;
+  color: #1a73e8;
 }
 
 .product-page-rating {
@@ -56,6 +57,7 @@
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 12px;
+  color: #f6f6f7;
 }
 
 .product-page-soldout {
@@ -67,6 +69,7 @@
 .product-page-subtitle {
   margin: 16px 0 6px;
   font-size: 16px;
+  color: #1c3353;
 }
 
 .product-page-description {
@@ -74,6 +77,7 @@
   line-height: 1.5;
   white-space: pre-line; /* keeps the line breaks the admin typed */
   overflow-wrap: anywhere;
+  color: #1a73e8;
 }
 
 .product-page-buy {
