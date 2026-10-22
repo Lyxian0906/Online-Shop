@@ -3,8 +3,7 @@ import 'dotenv/config';
 import cors from 'cors';
 import path from 'path';
 import meRoutes from './routes/me.js';
-import { Profile } from './models/Profile.js';
-import { OrderMessage } from './models/OrderMessage.js';
+import helmet from 'helmet';
 import { fileURLToPath } from 'url';
 import { sequelize } from './models/index.js';
 import productRoutes from './routes/products.js';
@@ -29,6 +28,20 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+//Use helmet
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        //This line is important is the lines in which helps where the page may send requests, it's now pointing at supabase
+        'connect-src': ["'self'", process.env.SUPABASE_URL],
+        'upgrade-insecure-requests': null,
+      },
+    },
+    crossOriginResourcePolicy: { policy: 'cross-origin' },
+  })
+);
+
 
 // Middleware
 app.use(cors());
