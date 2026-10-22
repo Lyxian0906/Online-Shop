@@ -124,7 +124,7 @@
 }
 
 .header .right-section {
-  width: 180px;
+  width: 400px;
   flex-shrink: 0;
   display: flex;
   justify-content: end;

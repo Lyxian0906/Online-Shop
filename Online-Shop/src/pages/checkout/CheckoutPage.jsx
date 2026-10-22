@@ -47,6 +47,7 @@ everytime.
 			<CheckoutHeader cart={cart} />
 			<div className="checkout-page">
 				<div className="page-title">Review your order</div>
+				<p></p>
 
 				<div className="checkout-grid">
 					<OrderSummary cart={cart} deliveryOptions={deliveryOptions} loadCart={loadCart} />
