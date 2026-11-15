@@ -1,0 +1,7 @@
+Products with no image file in your folder:
+
+
+Files in your folder that matched no product:
+re7_p5.png
+zelda_breath_of_the_wild.png
+zelds_OOT.png
