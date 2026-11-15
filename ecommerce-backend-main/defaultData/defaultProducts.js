@@ -1,7 +1,7 @@
 export const defaultProducts = [
   {
     "id": "a1e4531e-937c-40f5-9c0f-9ac9ba9f3382",
-    "image": "/images/products/animal_crossing_gamecube.png",
+    "image": "/images/products/animal_crossing_gamecube.jpg",
     "name": "Animal Crossing",
     "rating": {
       "stars": 3.5,
@@ -16,7 +16,7 @@ export const defaultProducts = [
   },
   {
     "id": "b39d05f5-8599-4be1-ab2c-14b78970d31b",
-    "image": "/images/products/animal_crossing_new_horizons.png",
+    "image": "/images/products/animal_crossing_new_horizons.jpg",
     "name": "Animal Crossing: New Horizons",
     "rating": {
       "stars": 4.5,
@@ -31,7 +31,7 @@ export const defaultProducts = [
   },
   {
     "id": "daaa0771-3567-4f39-94bc-6656330e2b66",
-    "image": "/images/products/assassins_creed_mirage.png",
+    "image": "/images/products/assassins_creed_mirage.jpg",
     "name": "Assassin's Creed Mirage",
     "rating": {
       "stars": 4,
@@ -46,7 +46,7 @@ export const defaultProducts = [
   },
   {
     "id": "555908be-f1df-4c4d-9e9b-cb83eff19cb8",
-    "image": "/images/products/assassins_creed_shadows.png",
+    "image": "/images/products/assassins_creed_shadows.jpg",
     "name": "Assassin's Creed Shadows",
     "rating": {
       "stars": 4,
@@ -62,7 +62,7 @@ export const defaultProducts = [
   },
   {
     "id": "6e69c09c-048f-4040-9861-7c8c92b55d6f",
-    "image": "/images/products/assassins_creed_valhalla.png",
+    "image": "/images/products/assassins_creed_valhalla.jpg",
     "name": "Assassin's Creed Valhalla",
     "rating": {
       "stars": 4,
@@ -77,7 +77,7 @@ export const defaultProducts = [
   },
   {
     "id": "0ca4d669-aec6-4864-a6bf-4f3df9ae7d11",
-    "image": "/images/products/astro_bot.png",
+    "image": "/images/products/astro_bot.jpg",
     "name": "Astro Bot",
     "rating": {
       "stars": 5,
@@ -91,7 +91,7 @@ export const defaultProducts = [
   },
   {
     "id": "ba12be4d-30ea-4d44-abd7-4276eb7d65bc",
-    "image": "/images/products/avatar_frontiers_of_pandora.png",
+    "image": "/images/products/avatar_frontiers_of_pandora.jpg",
     "name": "Avatar: Frontiers of Pandora",
     "rating": {
       "stars": 4,
@@ -107,7 +107,7 @@ export const defaultProducts = [
   },
   {
     "id": "5c6f4959-5e33-45af-a2ce-046da94c5e59",
-    "image": "/images/products/balatro.png",
+    "image": "/images/products/balatro.jpg",
     "name": "Balatro",
     "rating": {
       "stars": 4.5,
@@ -123,7 +123,7 @@ export const defaultProducts = [
   },
   {
     "id": "198ad2e0-4d7a-4b14-ab38-b462f1b458d7",
-    "image": "/images/products/baldurs_gate_3.png",
+    "image": "/images/products/baldurs_gate_3.jpg",
     "name": "Baldur's Gate 3",
     "rating": {
       "stars": 5,
@@ -138,7 +138,7 @@ export const defaultProducts = [
   },
   {
     "id": "9239a624-f991-4300-b6a0-b2b1ea4bf81b",
-    "image": "/images/products/bayonetta_2_wiiu.png",
+    "image": "/images/products/bayonetta_2_wiiu.jpg",
     "name": "Bayonetta 2",
     "rating": {
       "stars": 4.5,
@@ -153,7 +153,7 @@ export const defaultProducts = [
   },
   {
     "id": "f78ce22c-518b-4dbe-832d-21415587a930",
-    "image": "/images/products/bayonetta_3.png",
+    "image": "/images/products/bayonetta_3.jpg",
     "name": "Bayonetta 3",
     "rating": {
       "stars": 4,
@@ -168,7 +168,7 @@ export const defaultProducts = [
   },
   {
     "id": "d1800c4b-c9ae-4a5e-9ea1-f6fcd5fbff6b",
-    "image": "/images/products/bloodborne.png",
+    "image": "/images/products/bloodborne.jpg",
     "name": "Bloodborne",
     "rating": {
       "stars": 4.5,
@@ -183,7 +183,7 @@ export const defaultProducts = [
   },
   {
     "id": "52bdb921-695f-4c8f-ab47-7f366cfd6852",
-    "image": "/images/products/cyberpunk_2077.png",
+    "image": "/images/products/cyberpunk_2077.jpg",
     "name": "Cyberpunk 2077",
     "rating": {
       "stars": 4,
@@ -199,7 +199,7 @@ export const defaultProducts = [
   },
   {
     "id": "e07b522f-b533-442d-ab75-b9120cb0f8f4",
-    "image": "/images/products/demons_souls_ps5.png",
+    "image": "/images/products/demons_souls_ps5.jpg",
     "name": "Demon's Souls",
     "rating": {
       "stars": 4.5,
@@ -214,7 +214,7 @@ export const defaultProducts = [
   },
   {
     "id": "b282534d-df0a-4534-b501-bd6849826f3b",
-    "image": "/images/products/donkey_kong_bananza.png",
+    "image": "/images/products/donkey_kong_bananza.jpg",
     "name": "Donkey Kong Bananza",
     "rating": {
       "stars": 4.5,
