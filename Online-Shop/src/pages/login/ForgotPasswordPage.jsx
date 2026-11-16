@@ -1,23 +1,42 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
-import { supabase } from '../../../lib/supabase';
-import './LoginPage.css'; // reuses the login page styles
+import { useRef, useState } from "react";
+import { Link } from "react-router";
+import { Turnstile } from "@marsidev/react-turnstile";
+import { supabase } from "../../../lib/supabase";
+import "./LoginPage.css"; // reuses the login page styles
 
 export function ForgotPasswordPage() {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
+  // The captcha gives us a token. Supabase checks it on its side.
+  const [captchaToken, setCaptchaToken] = useState("");
+  const captchaRef = useRef(null);
+
   async function handleSubmit(event) {
     event.preventDefault();
-    setError('');
+    setError("");
+
+    if (!captchaToken) {
+      setError("Please complete the captcha");
+      return;
+    }
+
     setSubmitting(true);
 
     // Supabase emails a link. When clicked, it brings the user to /reset-password
-    const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password`
-    });
+    const { error: resetError } = await supabase.auth.resetPasswordForEmail(
+      email,
+      {
+        redirectTo: `${window.location.origin}/reset-password`,
+        captchaToken,
+      },
+    );
+
+    // The token only works once, so get a fresh one after every attempt
+    captchaRef.current?.reset();
+    setCaptchaToken("");
 
     setSubmitting(false);
 
@@ -35,9 +54,12 @@ export function ForgotPasswordPage() {
         <div className="login-form">
           <h1>Check your email</h1>
           <p className="login-message">
-            If an account exists for that email, we sent a link to reset the password.
+            If an account exists for that email, we sent a link to reset the
+            password.
           </p>
-          <Link className="login-switch" to="/login">Back to log in</Link>
+          <Link className="login-switch" to="/login">
+            Back to log in
+          </Link>
         </div>
       </div>
     );
@@ -58,13 +80,30 @@ export function ForgotPasswordPage() {
           required
         />
 
-        {error && <p className="login-error" role="alert">{error}</p>}
+        {error && (
+          <p className="login-error" role="alert">
+            {error}
+          </p>
+        )}
 
-        <button type="submit" className="login-submit" disabled={submitting}>
-          {submitting ? 'Please wait...' : 'Send reset link'}
+        <Turnstile
+          ref={captchaRef}
+          siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+          onSuccess={setCaptchaToken}
+          onExpire={() => setCaptchaToken("")}
+        />
+
+        <button
+          type="submit"
+          className="login-submit"
+          disabled={submitting || !captchaToken}
+        >
+          {submitting ? "Please wait..." : "Send reset link"}
         </button>
 
-        <Link className="login-switch" to="/login">Back to log in</Link>
+        <Link className="login-switch" to="/login">
+          Back to log in
+        </Link>
       </form>
     </div>
   );
