@@ -4,6 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import meRoutes from './routes/me.js';
 import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 import { fileURLToPath } from 'url';
 import { sequelize } from './models/index.js';
 import productRoutes from './routes/products.js';
@@ -28,6 +29,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Behind the AWS load balancer every visitor would look like the same address,
+// so we tell Express to trust the first proxy. Without this the rate limit
+// below would count everybody together.
+app.set('trust proxy', 1);
+
 //Use helmet
 app.use(
   helmet({
@@ -35,6 +42,11 @@ app.use(
       directives: {
         //This line is important is the lines in which helps where the page may send requests, it's now pointing at supabase
         'connect-src': ["'self'", process.env.SUPABASE_URL],
+        // Product images are stored in Supabase Storage
+        'img-src': ["'self'", 'data:', 'https://*.supabase.co'],
+        // The Cloudflare Turnstile captcha loads a script and shows an iframe
+        'script-src': ["'self'", 'https://challenges.cloudflare.com'],
+        'frame-src': ["'self'", 'https://challenges.cloudflare.com'],
         'upgrade-insecure-requests': null,
       },
     },
@@ -44,8 +56,34 @@ app.use(
 
 
 // Middleware
-app.use(cors());
+// Only these websites may call the API from a browser.
+// In production set ALLOWED_ORIGINS=https://your-domain.com (separate several with commas)
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173').split(',');
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // No origin = same-site requests and tools like Postman
+    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error('Not allowed by CORS'));
+  },
+}));
 app.use(express.json());
+
+// Rate limits: how many requests one visitor can make in 15 minutes
+app.use('/api', rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 300,
+  standardHeaders: true,
+  legacyHeaders: false,
+}));
+
+// Stricter for checkout
+app.use('/api/orders', rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 60,
+  standardHeaders: true,
+  legacyHeaders: false,
+}));
 
 // Serve images from the images folder
 app.use('/images', express.static(path.join(__dirname, 'images')));
@@ -82,7 +120,10 @@ app.use((err, req, res, next) => {
 /* eslint-enable no-unused-vars */
 
 // Sync database and load default data if none exist
-await sequelize.sync({alter: true});
+// alter: true changes the tables to match the models, which is handy while
+// developing but risky on a live database, so in production we only create
+// missing tables. Set NODE_ENV=production on the server.
+await sequelize.sync(process.env.NODE_ENV === 'production' ? {} : { alter: true });
 
 const productCount = await Product.count();
 if (productCount === 0) {
